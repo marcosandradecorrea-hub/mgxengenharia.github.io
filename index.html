@@ -258,6 +258,56 @@
   }
   footer .foot{display:flex; gap:10px; justify-content:space-between; flex-wrap:wrap; border-top:1px solid var(--line); padding-top:14px;}
 
+  /* Hamburger button */
+  .menu-toggle{
+    display:none;
+    background:none;
+    border:none;
+    cursor:pointer;
+    padding:8px;
+    border-radius:8px;
+    flex-direction:column;
+    gap:5px;
+    align-items:center;
+    justify-content:center;
+  }
+  .menu-toggle span{
+    display:block;
+    width:22px;
+    height:2px;
+    background:var(--ink);
+    border-radius:2px;
+    transition:all .25s ease;
+  }
+  .menu-toggle.open span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+  .menu-toggle.open span:nth-child(2){ opacity:0; }
+  .menu-toggle.open span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+
+  /* Mobile nav drawer */
+  .nav-mobile{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0; right:0;
+    background:rgba(255,255,255,.98);
+    border-bottom:1px solid rgba(229,231,235,.8);
+    padding:12px 0 20px;
+    flex-direction:column;
+    gap:2px;
+    backdrop-filter:blur(10px);
+    z-index:49;
+  }
+  .nav-mobile.open{ display:flex; }
+  .nav-mobile a{
+    text-decoration:none;
+    color:var(--muted);
+    font-weight:600;
+    font-size:15px;
+    padding:12px 24px;
+    border-radius:0;
+  }
+  .nav-mobile a:hover{ color:var(--ink); background:rgba(17,24,39,.04); }
+
   /* Responsive */
   @media (max-width: 980px){
     .hero-grid{grid-template-columns:1fr;}
@@ -265,8 +315,10 @@
     .split{grid-template-columns:1fr;}
     .gallery{grid-template-columns:repeat(2, 1fr);}
     h1{font-size:34px;}
-    nav{display:none;}
+    nav.nav{display:none;}
     .brand b{display:none;}
+    .menu-toggle{display:flex;}
+    .topbar{ position:sticky; }
   }
 
   h1,h2,h3{font-family:'Space Grotesk','Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; letter-spacing:-0.02em}
@@ -485,7 +537,18 @@ section{
 <a href="#portfolio">Portfólio</a>
 <a href="#contato">Contato</a>
 </nav>
+<button aria-label="Abrir menu" class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+  <span></span><span></span><span></span>
+</button>
 </div>
+<nav aria-label="Menu mobile" class="nav-mobile" id="navMobile">
+<a href="#servicos" onclick="closeMenu()">Serviços</a>
+<a href="#quem-somos" onclick="closeMenu()">Quem somos</a>
+<a href="#spda" onclick="closeMenu()">SPDA (Laudo &amp; Inspeção)</a>
+<a href="#avcb" onclick="closeMenu()">AVCB</a>
+<a href="#portfolio" onclick="closeMenu()">Portfólio</a>
+<a href="#contato" onclick="closeMenu()">Contato</a>
+</nav>
 </div>
 <main class="container hero" id="topo">
 <div class="hero-grid">
@@ -726,7 +789,7 @@ section{
 </div>
 <div class="panel">
 <div class="contact-box">
-<div class="contact-line">E-mail: mgx.engenharia.si@gmail.com</div>
+<div class="contact-line">E-mail: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0e636976206b60696b60666f7c676f207d674e69636f6762206d6163">[email&#160;protected]</a></div>
 <a class="btn primary" href="https://wa.me/5532984729995?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MGX%20e%20gostaria%20de%20um%20or%C3%A7amento." rel="noopener" target="_blank">💬 WhatsApp</a>
 </div>
 <p class="note">Dica: para orçamento, envie endereço, tipo de obra e prazo desejado.</p>
@@ -756,7 +819,7 @@ section{
 </div>
 </div>
 </div>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (function(){
   const thumbs = Array.from(document.querySelectorAll('.thumb[data-src]'));
   const lightbox = document.getElementById('lightbox');
@@ -802,12 +865,30 @@ section{
   });
 
   window.addEventListener('keydown', (e) => {
-    if(!lightbox.classList.contains('open')) return;
     if(e.key === 'Escape') close();
-    if(e.key === 'ArrowLeft') prev();
-    if(e.key === 'ArrowRight') next();
   });
 })();
+</script>
+<script>
+function toggleMenu(){
+  const btn = document.getElementById('menuToggle');
+  const nav = document.getElementById('navMobile');
+  btn.classList.toggle('open');
+  nav.classList.toggle('open');
+}
+function closeMenu(){
+  document.getElementById('menuToggle').classList.remove('open');
+  document.getElementById('navMobile').classList.remove('open');
+}
+// Close menu on outside click
+document.addEventListener('click', function(e){
+  const btn = document.getElementById('menuToggle');
+  const nav = document.getElementById('navMobile');
+  if(!btn.contains(e.target) && !nav.contains(e.target)){
+    btn.classList.remove('open');
+    nav.classList.remove('open');
+  }
+});
 </script>
 </body>
 </html>
