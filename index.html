@@ -13,8 +13,8 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>MGX Engenharia | Projetos Elétricos, SPDA, Telecom e Inspeções</title>
 <meta name="description" content="MGX Engenharia e Soluções Integradas — projetos elétricos em BIM/Revit, SPDA, telecom, AVCB e laudos de inspeção de SPDA com medições rastreáveis. Juiz de Fora e região."/>
-<meta name="theme-color" content="#16181C"/>
-<link rel="canonical" href="https://mgxengenharia.com.br/"/>
+<meta name="theme-color" content="#1A1A1A"/>
+<link rel="canonical" href="https://www.mgxengenhariasi.com.br/"/>
 <link rel="icon" type="image/png" href="img/mgx-icone.png"/>
 <link rel="apple-touch-icon" href="img/mgx-icone.png"/>
 <meta property="og:type" content="website"/>
@@ -22,35 +22,35 @@
 <meta property="og:site_name" content="MGX Engenharia e Soluções Integradas"/>
 <meta property="og:title" content="MGX Engenharia | Projetos Elétricos, SPDA, Telecom e Inspeções"/>
 <meta property="og:description" content="Projetos elétricos em BIM/Revit, SPDA, telecom, AVCB e laudos de inspeção com medições rastreáveis. Juiz de Fora e região."/>
-<meta property="og:url" content="https://mgxengenharia.com.br/"/>
-<meta property="og:image" content="https://mgxengenharia.com.br/img/exemplo-projeto-eletrico-4-3d-casa.jpg"/>
+<meta property="og:url" content="https://www.mgxengenhariasi.com.br/"/>
+<meta property="og:image" content="https://www.mgxengenhariasi.com.br/img/exemplo-projeto-eletrico-4-3d-casa.jpg"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <style>
   :root{
-    /* Identidade MGX — extraída da logo oficial */
-    --brand:#FEBD59;        /* amarelo âmbar MGX */
-    --brand-hi:#FFD28A;     /* âmbar claro (hover em fundo escuro) */
-    --brand-deep:#9A6410;   /* âmbar escuro (texto sobre fundo claro) */
-    --graphite:#545454;     /* cinza MGX */
+    /* Identidade MGX — cores oficiais do papel timbrado e da logo */
+    --brand:#FFD966;        /* amarelo MGX (papel timbrado) */
+    --brand-hi:#FFE79A;     /* âmbar claro (hover em fundo escuro) */
+    --brand-deep:#8C6209;   /* âmbar escuro (texto sobre fundo claro) */
+    --graphite:#404040;     /* grafite MGX (logo e timbrado) */
 
-    --ink:#16181C;          /* fundo escuro */
-    --ink-2:#1E2126;        /* superfície escura elevada */
-    --ink-line:#2E3238;
+    --ink:#1A1A1A;          /* fundo escuro */
+    --ink-2:#242424;        /* superfície escura elevada */
+    --ink-line:#333333;
 
-    --paper:#FAFAF8;        /* fundo claro */
+    --paper:#FAFAF9;        /* fundo claro */
     --surface:#FFFFFF;
-    --line:#E6E4DF;
-    --text:#1A1C20;
-    --muted:#6B6F76;
-    --muted-dark:#A3A69C;
+    --line:#E4E2DE;
+    --text:#1F1F1F;
+    --muted:#6A6A6A;
+    --muted-dark:#A8A8A8;
 
     --radius:16px;
     --radius-sm:10px;
-    --shadow:0 1px 2px rgba(22,24,28,.04), 0 12px 32px rgba(22,24,28,.07);
-    --shadow-lg:0 2px 4px rgba(22,24,28,.05), 0 24px 60px rgba(22,24,28,.12);
+    --shadow:0 1px 2px rgba(26,26,26,.04), 0 12px 32px rgba(26,26,26,.07);
+    --shadow-lg:0 2px 4px rgba(26,26,26,.05), 0 24px 60px rgba(26,26,26,.12);
     --maxw:1180px;
   }
 
@@ -77,7 +77,7 @@
   /* ---------- Topbar ---------- */
   .topbar{
     position:sticky; top:0; z-index:60;
-    background:rgba(22,24,28,.86);
+    background:rgba(26,26,26,.86);
     backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
     border-bottom:1px solid rgba(255,255,255,.08);
   }
@@ -127,14 +127,14 @@
 
   /* ---------- Blocos escuros / claros ---------- */
   .dark{
-    background:var(--ink); color:#EDEDEA; position:relative; overflow:hidden;
+    background:var(--ink); color:#EDEDED; position:relative; overflow:hidden;
   }
   /* grade sutil de prancha técnica */
   .dark::before{
     content:""; position:absolute; inset:0; pointer-events:none;
     background-image:
-      linear-gradient(rgba(254,189,89,.045) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(254,189,89,.045) 1px, transparent 1px);
+      linear-gradient(rgba(255,217,102,.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,217,102,.045) 1px, transparent 1px);
     background-size:64px 64px;
     mask-image:radial-gradient(ellipse 90% 70% at 50% 0%, #000 35%, transparent 100%);
     -webkit-mask-image:radial-gradient(ellipse 90% 70% at 50% 0%, #000 35%, transparent 100%);
@@ -166,10 +166,10 @@
   .kicker{
     display:inline-flex; align-items:center; gap:9px;
     font-size:13px; font-weight:500; color:var(--brand);
-    border:1px solid rgba(254,189,89,.28); background:rgba(254,189,89,.07);
+    border:1px solid rgba(255,217,102,.28); background:rgba(255,217,102,.07);
     padding:7px 15px; border-radius:100px; margin-bottom:26px;
   }
-  .kicker .dot{width:6px; height:6px; border-radius:50%; background:var(--brand); box-shadow:0 0 0 4px rgba(254,189,89,.18)}
+  .kicker .dot{width:6px; height:6px; border-radius:50%; background:var(--brand); box-shadow:0 0 0 4px rgba(255,217,102,.18)}
   .hero h1{
     font-size:clamp(36px, 6.2vw, 68px); font-weight:700; letter-spacing:-.035em; color:#fff;
   }
@@ -183,8 +183,8 @@
     border:1px solid transparent; cursor:pointer; transition:transform .16s, background .18s, border-color .18s, box-shadow .18s;
     font-family:'Inter',sans-serif;
   }
-  .btn.primary{background:var(--brand); color:var(--ink); box-shadow:0 8px 24px rgba(254,189,89,.22)}
-  .btn.primary:hover{background:var(--brand-hi); transform:translateY(-2px); box-shadow:0 12px 30px rgba(254,189,89,.3)}
+  .btn.primary{background:var(--brand); color:var(--ink); box-shadow:0 8px 24px rgba(255,217,102,.22)}
+  .btn.primary:hover{background:var(--brand-hi); transform:translateY(-2px); box-shadow:0 12px 30px rgba(255,217,102,.3)}
   .btn.ghost{border-color:rgba(255,255,255,.22); color:#fff; background:rgba(255,255,255,.03)}
   .btn.ghost:hover{border-color:var(--brand); color:var(--brand); transform:translateY(-2px)}
   .btn.dark{background:var(--ink); color:#fff}
@@ -202,7 +202,7 @@
   .bullets li{display:flex; gap:12px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:rgba(255,255,255,.86)}
   .check{
     flex-shrink:0; width:20px; height:20px; border-radius:50%; margin-top:2px;
-    background:rgba(254,189,89,.14); border:1px solid rgba(254,189,89,.4); position:relative;
+    background:rgba(255,217,102,.14); border:1px solid rgba(255,217,102,.4); position:relative;
   }
   .check::after{
     content:""; position:absolute; left:6.4px; top:3.4px; width:4.5px; height:8.5px;
@@ -229,8 +229,8 @@
     overflow:hidden; display:flex; flex-direction:column;
     transition:transform .22s, box-shadow .22s, border-color .22s;
   }
-  .svc:hover{transform:translateY(-5px); box-shadow:var(--shadow-lg); border-color:rgba(254,189,89,.55)}
-  .svc-media{aspect-ratio:16/10; overflow:hidden; background:#F0EEE9; border-bottom:1px solid var(--line)}
+  .svc:hover{transform:translateY(-5px); box-shadow:var(--shadow-lg); border-color:rgba(255,217,102,.55)}
+  .svc-media{aspect-ratio:16/10; overflow:hidden; background:#F2F0EC; border-bottom:1px solid var(--line)}
   .svc-media img{width:100%; height:100%; object-fit:cover; transition:transform .5s ease}
   .svc:hover .svc-media img{transform:scale(1.045)}
   .svc-body{padding:24px; display:flex; flex-direction:column; flex:1}
@@ -250,7 +250,7 @@
   .split.even{grid-template-columns:1fr 1fr}
 
   .bullets.on-light li{color:var(--text)}
-  .bullets.on-light .check{background:rgba(254,189,89,.16); border-color:rgba(154,100,16,.4)}
+  .bullets.on-light .check{background:rgba(255,217,102,.16); border-color:rgba(140,98,9,.4)}
   .bullets.on-light .check::after{border-color:var(--brand-deep)}
 
   .note{font-size:14px; color:var(--muted); margin:14px 0 0; line-height:1.55}
@@ -262,10 +262,10 @@
   .dark .step{background:rgba(255,255,255,.04); border-color:rgba(255,255,255,.1)}
   .num{
     width:34px; height:34px; border-radius:9px; display:grid; place-items:center;
-    background:rgba(254,189,89,.16); color:var(--brand-deep);
+    background:rgba(255,217,102,.16); color:var(--brand-deep);
     font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; margin-bottom:13px;
   }
-  .dark .num{background:rgba(254,189,89,.14); color:var(--brand)}
+  .dark .num{background:rgba(255,217,102,.14); color:var(--brand)}
   .step h4{font-size:16px; font-weight:600; margin:0 0 6px}
   .step p{margin:0; font-size:14.5px; color:var(--muted); line-height:1.55}
   .dark .step p{color:var(--muted-dark)}
@@ -276,7 +276,7 @@
     background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-sm); padding:22px;
     transition:border-color .2s, transform .2s;
   }
-  .card:hover{border-color:rgba(254,189,89,.55); transform:translateY(-3px)}
+  .card:hover{border-color:rgba(255,217,102,.55); transform:translateY(-3px)}
   .dark .card{background:rgba(255,255,255,.04); border-color:rgba(255,255,255,.1)}
   .card h3{margin-bottom:8px}
   .card p{margin:0; font-size:14.5px; color:var(--muted); line-height:1.55}
@@ -292,16 +292,16 @@
   .meta{display:flex; flex-wrap:wrap; gap:8px; margin-top:16px}
   .pill{
     font-size:12.5px; font-weight:600; letter-spacing:.03em; padding:6px 13px; border-radius:100px;
-    background:rgba(254,189,89,.13); color:var(--brand-deep); border:1px solid rgba(254,189,89,.32);
+    background:rgba(255,217,102,.13); color:var(--brand-deep); border:1px solid rgba(255,217,102,.32);
   }
-  .dark .pill{color:var(--brand); background:rgba(254,189,89,.1)}
+  .dark .pill{color:var(--brand); background:rgba(255,217,102,.1)}
 
-  .figure{border-radius:var(--radius-sm); overflow:hidden; border:1px solid var(--line); background:#F0EEE9}
+  .figure{border-radius:var(--radius-sm); overflow:hidden; border:1px solid var(--line); background:#F2F0EC}
   .dark .figure{border-color:rgba(255,255,255,.12); background:rgba(255,255,255,.04)}
   .figure img{width:100%; height:100%; object-fit:cover; cursor:zoom-in; transition:transform .45s}
   .figure:hover img{transform:scale(1.03)}
   /* Diagramas e documentos precisam aparecer inteiros — cortar esconde legendas. */
-  .figure.fit{background:#F4F2ED}
+  .figure.fit{background:#F4F2EE}
   .figure.fit img{object-fit:contain; padding:10px}
   .dark .figure.fit{background:rgba(255,255,255,.05)}
 
@@ -318,7 +318,7 @@
   .thumb::after{
     content:"⤢"; position:absolute; right:9px; bottom:7px; width:26px; height:26px;
     display:grid; place-items:center; border-radius:7px; font-size:13px;
-    background:rgba(22,24,28,.72); color:var(--brand); opacity:0; transition:opacity .2s;
+    background:rgba(26,26,26,.72); color:var(--brand); opacity:0; transition:opacity .2s;
   }
   .thumb:hover::after{opacity:1}
 
@@ -326,7 +326,7 @@
   .contact-wrap{
     display:grid; grid-template-columns:1.1fr .9fr; gap:clamp(24px,4vw,48px); align-items:center;
     background:linear-gradient(135deg, var(--ink-2) 0%, var(--ink) 100%);
-    border:1px solid rgba(254,189,89,.22); border-radius:20px;
+    border:1px solid rgba(255,217,102,.22); border-radius:20px;
     padding:clamp(28px,4.5vw,52px);
   }
   .contact-wrap h2{margin-bottom:12px}
@@ -336,17 +336,17 @@
     background:rgba(255,255,255,.045); border:1px solid rgba(255,255,255,.1); border-radius:12px;
     text-decoration:none; transition:border-color .2s, background .2s, transform .2s;
   }
-  .contact-item:hover{border-color:var(--brand); background:rgba(254,189,89,.07); transform:translateX(3px)}
+  .contact-item:hover{border-color:var(--brand); background:rgba(255,217,102,.07); transform:translateX(3px)}
   .ci-ico{
     flex-shrink:0; width:38px; height:38px; border-radius:10px; display:grid; place-items:center;
-    background:rgba(254,189,89,.14); font-size:17px;
+    background:rgba(255,217,102,.14); font-size:17px;
   }
   .ci-txt{display:flex; flex-direction:column; min-width:0}
   .ci-txt small{font-size:11.5px; letter-spacing:.13em; text-transform:uppercase; color:var(--brand); font-weight:600}
   .ci-txt b{font-size:15.5px; color:#fff; font-weight:600; overflow-wrap:anywhere}
 
   /* ---------- Rodapé ---------- */
-  footer{background:#101215; color:rgba(255,255,255,.6); padding:44px 0 34px; border-top:1px solid rgba(255,255,255,.08)}
+  footer{background:#141414; color:rgba(255,255,255,.6); padding:44px 0 34px; border-top:1px solid rgba(255,255,255,.08)}
   .foot{display:flex; flex-wrap:wrap; gap:18px; justify-content:space-between; align-items:center; font-size:14px}
   .foot img{height:26px; width:auto; margin-bottom:9px}
   .foot-links{display:flex; flex-wrap:wrap; gap:16px}
