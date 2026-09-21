@@ -157,8 +157,16 @@
   .check{flex-shrink:0; width:19px; height:19px; border-radius:50%; margin-top:2px; background:rgba(255,217,102,.14); border:1px solid rgba(255,217,102,.42); position:relative}
   .check::after{content:""; position:absolute; left:6px; top:3.2px; width:4.2px; height:8px; border:solid var(--brand); border-width:0 1.8px 1.8px 0; transform:rotate(43deg)}
 
+  /* lista de diferenciais abaixo do hero */
+  .hero-bullets{
+    grid-template-columns:repeat(4,1fr); gap:18px 26px;
+    margin-top:clamp(32px,4.5vw,50px); padding-top:clamp(28px,4vw,40px);
+    border-top:1px solid rgba(255,255,255,.12);
+  }
+  .hero-bullets li{font-size:14.5px}
+
   /* faixa de credenciais */
-  .credbar{margin-top:clamp(44px,6vw,74px); border-top:1px solid rgba(255,255,255,.12); display:grid; grid-template-columns:repeat(4,1fr)}
+  .credbar{margin-top:clamp(32px,4.5vw,52px); border-top:1px solid rgba(255,255,255,.12); display:grid; grid-template-columns:repeat(4,1fr)}
   .cred{padding:24px 22px 28px; border-right:1px solid rgba(255,255,255,.12)}
   .cred:last-child{border-right:0}
   .cred b{display:block; font-family:'Space Grotesk',sans-serif; font-size:21px; font-weight:600; color:var(--brand); margin-bottom:4px; letter-spacing:-.01em}
@@ -300,11 +308,47 @@
     *{animation-duration:.01ms !important; transition-duration:.01ms !important}
   }
 
+  /* ---------------- Foto do hero ---------------- */
+  .hero-photo{position:relative; border-radius:var(--r-lg); overflow:hidden; aspect-ratio:3/4; background:#242424}
+  .hero-photo img{width:100%; height:100%; object-fit:cover}
+  /* moldura em L, no amarelo da marca */
+  .hero-photo::after{
+    content:""; position:absolute; right:0; bottom:0; width:56%; height:42%;
+    border-right:3px solid var(--brand); border-bottom:3px solid var(--brand);
+    border-bottom-right-radius:var(--r-lg); pointer-events:none;
+  }
+  .photo-chip{
+    position:absolute; left:16px; bottom:16px; z-index:2;
+    background:rgba(26,26,26,.82); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px);
+    border:1px solid rgba(255,217,102,.35); border-radius:10px; padding:11px 15px; max-width:76%;
+  }
+  .photo-chip b{display:block; color:var(--brand); font-size:11px; letter-spacing:.15em; text-transform:uppercase; font-weight:700; margin-bottom:3px}
+  .photo-chip span{display:block; color:#fff; font-size:13.5px; line-height:1.4; font-weight:500}
+
+  /* ---------------- Execução em campo ---------------- */
+  .field{display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:190px; gap:13px}
+  .field figure{
+    margin:0; position:relative; overflow:hidden; border-radius:var(--r);
+    border:1px solid rgba(255,255,255,.13); background:rgba(255,255,255,.04);
+  }
+  .field figure img{width:100%; height:100%; object-fit:cover; transition:transform .5s}
+  .field figure:hover img{transform:scale(1.05)}
+  .field .tall{grid-row:span 2}
+  .field .wide{grid-column:span 2}
+  .field figcaption{
+    position:absolute; left:0; right:0; bottom:0; padding:22px 14px 11px;
+    background:linear-gradient(transparent, rgba(16,16,16,.88));
+    color:#fff; font-size:13px; font-weight:500; line-height:1.35;
+  }
+  .field figcaption em{display:block; font-style:normal; color:var(--brand); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; font-weight:700; margin-bottom:2px}
+
   /* ---------------- Responsivo ---------------- */
   @media (max-width:1040px){
+    .field{grid-template-columns:repeat(2,1fr); grid-auto-rows:170px}
     .services,.sectors{grid-template-columns:repeat(2,1fr)}
     .gallery{grid-template-columns:repeat(3,1fr)}
     .credbar{grid-template-columns:repeat(2,1fr)}
+    .hero-bullets{grid-template-columns:repeat(2,1fr)}
     .cred:nth-child(2){border-right:0}
     .cred:nth-child(1),.cred:nth-child(2){border-bottom:1px solid rgba(255,255,255,.12)}
     .steps.four{grid-template-columns:repeat(2,1fr)}
@@ -316,6 +360,7 @@
     .hero-grid{grid-template-columns:1fr; gap:28px}
     .split,.split.even{grid-template-columns:1fr}
     .steps,.steps.four{grid-template-columns:1fr}
+    .hero-bullets{grid-template-columns:1fr; gap:12px}
     .cards{grid-template-columns:1fr}
     .benefits{grid-template-columns:1fr}
     .contact-wrap{grid-template-columns:1fr}
@@ -326,6 +371,8 @@
     .container{width:min(var(--maxw),100% - 32px)}
     .services,.sectors{grid-template-columns:1fr}
     .gallery{grid-template-columns:repeat(2,1fr)}
+    .field{grid-template-columns:1fr; grid-auto-rows:220px}
+    .field .tall,.field .wide{grid-row:auto; grid-column:auto}
     .cta-row .btn{width:100%}
     .foot-grid{grid-template-columns:1fr}
     .wa-float span{display:none}
@@ -367,6 +414,7 @@
     </a>
     <nav aria-label="Menu" class="nav">
       <a href="#servicos">Serviços</a>
+      <a href="#execucao">Execução</a>
       <a href="#setores">Setores</a>
       <a href="#empresa">A empresa</a>
       <a href="#processo">Como trabalhamos</a>
@@ -379,6 +427,7 @@
   <div class="container">
     <nav aria-label="Menu mobile" class="nav-mobile" id="navMobile">
       <a href="#servicos" onclick="closeMenu()">Serviços</a>
+      <a href="#execucao" onclick="closeMenu()">Execução em campo</a>
       <a href="#setores" onclick="closeMenu()">Setores atendidos</a>
       <a href="#empresa" onclick="closeMenu()">A empresa</a>
       <a href="#processo" onclick="closeMenu()">Como trabalhamos</a>
@@ -409,16 +458,21 @@
         </div>
       </div>
 
-      <aside class="hero-card">
-        <h3>Por que a MGX</h3>
-        <ul class="bullets">
-          <li><span class="check"></span> Responsável técnico registrado no CREA-MG</li>
-          <li><span class="check"></span> ART emitida em projetos e laudos</li>
-          <li><span class="check"></span> Projetos em BIM (Revit) e compatibilizados</li>
-          <li><span class="check"></span> Medições com terrômetro e miliohmímetro aferidos</li>
-        </ul>
+      <aside class="hero-photo">
+        <img alt="Engenheiro da MGX em levantamento de campo com estação total" fetchpriority="high" src="img/campo-levantamento-estacao-total.jpg"/>
+        <div class="photo-chip">
+          <b>Levantamento em campo</b>
+          <span>Estação total para locação e cadastro da edificação</span>
+        </div>
       </aside>
     </div>
+
+    <ul class="bullets hero-bullets">
+      <li><span class="check"></span> Responsável técnico registrado no CREA-MG</li>
+      <li><span class="check"></span> ART emitida em projetos e laudos</li>
+      <li><span class="check"></span> Projetos em BIM (Revit) e compatibilizados</li>
+      <li><span class="check"></span> Medições com instrumentos aferidos</li>
+    </ul>
 
     <div class="credbar">
       <div class="cred"><b>Desde 2022</b><span>Empresa constituída e ativa, hoje MGX Engenharia e Soluções Integradas LTDA</span></div>
@@ -496,6 +550,48 @@
   </div>
 </section>
 
+<!-- ============ EXECUÇÃO EM CAMPO ============ -->
+<section class="section dark" id="execucao">
+  <div class="container">
+    <div class="section-title reveal">
+      <div class="eyebrow">Além do projeto</div>
+      <h2>Execução em campo</h2>
+      <p>
+        A MGX não entrega só a prancha. Em segurança contra incêndio e SPDA, executamos e acompanhamos a
+        instalação — extintores, sinalização, abrigos e aterramento — até a edificação ficar em conformidade.
+      </p>
+    </div>
+
+    <div class="field reveal">
+      <figure class="tall">
+        <img alt="Levantamento de campo com estação total" loading="lazy" src="img/campo-estacao-total-edificacao.jpg"/>
+        <figcaption><em>Levantamento</em>Cadastro da edificação com estação total</figcaption>
+      </figure>
+      <figure class="wide">
+        <img alt="Abrigo de extintor instalado em edificação" loading="lazy" src="img/incendio-abrigo-extintor.jpg"/>
+        <figcaption><em>Incêndio</em>Abrigo de extintor instalado e sinalizado</figcaption>
+      </figure>
+      <figure class="tall">
+        <img alt="Extintor e placas de sinalização de segurança instalados" loading="lazy" src="img/incendio-extintor-placas.jpg"/>
+        <figcaption><em>Incêndio</em>Extintor e placas conforme as ITs do CBMMG</figcaption>
+      </figure>
+      <figure>
+        <img alt="Sinalização de rota de fuga instalada em corredor" loading="lazy" src="img/incendio-sinalizacao-corredor.jpg"/>
+        <figcaption><em>Sinalização</em>Rota de fuga em ambiente comercial</figcaption>
+      </figure>
+      <figure>
+        <img alt="Extintor e sinalização de saída instalados em hall" loading="lazy" src="img/incendio-extintor-hall.jpg"/>
+        <figcaption><em>Sinalização</em>Saída de emergência em edificação</figcaption>
+      </figure>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn primary" href="https://wa.me/5532984729995?text=Ol%C3%A1%2C%20preciso%20de%20execu%C3%A7%C3%A3o%20de%20itens%20de%20seguran%C3%A7a%20contra%20inc%C3%AAndio." target="_blank" rel="noopener" onclick="return gtag_report_conversion('https://wa.me/5532984729995?text=Ol%C3%A1%2C%20preciso%20de%20execu%C3%A7%C3%A3o%20de%20itens%20de%20seguran%C3%A7a%20contra%20inc%C3%AAndio.');">Falar sobre execução</a>
+      <a class="btn ghost" href="#avcb">Ver AVCB</a>
+    </div>
+  </div>
+</section>
+
 <!-- ============ SETORES ============ -->
 <section class="section white" id="setores">
   <div class="container">
@@ -550,7 +646,6 @@
         <div class="cargo">Engenheiro Eletricista</div>
         <dl>
           <dt>Registro</dt><dd>CREA-MG 339105</dd>
-          <dt>Entidade</dt><dd>Clube de Engenharia de Juiz de Fora</dd>
           <dt>Empresa</dt><dd>MGX Engenharia e Soluções Integradas LTDA</dd>
           <dt>CNPJ</dt><dd>47.670.234/0001-00</dd>
         </dl>
