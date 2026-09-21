@@ -11,8 +11,8 @@
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>MGX Engenharia | Projetos Elétricos, SPDA, Telecom e Inspeções</title>
-<meta name="description" content="MGX Engenharia e Soluções Integradas — projetos elétricos em BIM/Revit, SPDA, telecom, AVCB e laudos de inspeção de SPDA com medições rastreáveis. Juiz de Fora e região."/>
+<title>MGX Engenharia | Projetos Elétricos, SPDA, Telecom e Laudos Técnicos</title>
+<meta name="description" content="MGX Engenharia e Soluções Integradas — projetos elétricos em BIM/Revit, SPDA, telecom, AVCB e laudos de inspeção com medições rastreáveis e ART. Responsável técnico CREA-MG 339105. Juiz de Fora e região."/>
 <meta name="theme-color" content="#1A1A1A"/>
 <link rel="canonical" href="https://www.mgxengenhariasi.com.br/"/>
 <link rel="icon" type="image/png" href="img/mgx-icone.png"/>
@@ -20,38 +20,38 @@
 <meta property="og:type" content="website"/>
 <meta property="og:locale" content="pt_BR"/>
 <meta property="og:site_name" content="MGX Engenharia e Soluções Integradas"/>
-<meta property="og:title" content="MGX Engenharia | Projetos Elétricos, SPDA, Telecom e Inspeções"/>
-<meta property="og:description" content="Projetos elétricos em BIM/Revit, SPDA, telecom, AVCB e laudos de inspeção com medições rastreáveis. Juiz de Fora e região."/>
+<meta property="og:title" content="MGX Engenharia | Projetos Elétricos, SPDA, Telecom e Laudos Técnicos"/>
+<meta property="og:description" content="Projetos elétricos em BIM/Revit, SPDA, telecom, AVCB e laudos de inspeção com ART. Juiz de Fora e região."/>
 <meta property="og:url" content="https://www.mgxengenhariasi.com.br/"/>
 <meta property="og:image" content="https://www.mgxengenhariasi.com.br/img/exemplo-projeto-eletrico-4-3d-casa.jpg"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
 <style>
   :root{
     /* Identidade MGX — cores oficiais do papel timbrado e da logo */
     --brand:#FFD966;        /* amarelo MGX (papel timbrado) */
-    --brand-hi:#FFE79A;     /* âmbar claro (hover em fundo escuro) */
-    --brand-deep:#8C6209;   /* âmbar escuro (texto sobre fundo claro) */
+    --brand-hi:#FFE79A;     /* amarelo claro — hover sobre fundo escuro */
+    --brand-deep:#8C6209;   /* amarelo escuro — texto sobre fundo claro */
     --graphite:#404040;     /* grafite MGX (logo e timbrado) */
+    --gray-mid:#7F7F7F;     /* cinza médio MGX */
 
-    --ink:#1A1A1A;          /* fundo escuro */
-    --ink-2:#242424;        /* superfície escura elevada */
-    --ink-line:#333333;
+    --ink:#1A1A1A;
+    --ink-2:#232323;
+    --ink-line:#383838;
 
-    --paper:#FAFAF9;        /* fundo claro */
+    --paper:#F7F6F4;
     --surface:#FFFFFF;
-    --line:#E4E2DE;
+    --line:#E1DFDA;
+    --line-2:#CFCCC6;
     --text:#1F1F1F;
-    --muted:#6A6A6A;
-    --muted-dark:#A8A8A8;
+    --muted:#63635F;
+    --muted-dark:#A8A8A4;
 
-    --radius:16px;
-    --radius-sm:10px;
-    --shadow:0 1px 2px rgba(26,26,26,.04), 0 12px 32px rgba(26,26,26,.07);
-    --shadow-lg:0 2px 4px rgba(26,26,26,.05), 0 24px 60px rgba(26,26,26,.12);
-    --maxw:1180px;
+    --r:8px;             /* raio contido: leitura técnica, não "app" */
+    --r-lg:12px;
+    --maxw:1200px;
   }
 
   *{box-sizing:border-box}
@@ -59,340 +59,240 @@
   body{
     margin:0;
     font-family:'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
-    background:var(--paper);
-    color:var(--text);
-    font-size:17px;
-    line-height:1.65;
-    -webkit-font-smoothing:antialiased;
+    background:var(--paper); color:var(--text);
+    font-size:16.5px; line-height:1.65; -webkit-font-smoothing:antialiased;
   }
   img{max-width:100%; display:block}
   a{color:inherit}
 
-  h1,h2,h3,h4{font-family:'Space Grotesk', 'Inter', sans-serif; line-height:1.12; letter-spacing:-.02em; margin:0}
-  h2{font-size:clamp(28px, 4vw, 42px); font-weight:600}
-  h3{font-size:19px; font-weight:600; letter-spacing:-.01em}
+  h1,h2,h3,h4{font-family:'Space Grotesk','Inter',sans-serif; line-height:1.15; letter-spacing:-.02em; margin:0}
+  h2{font-size:clamp(27px,3.6vw,40px); font-weight:600}
+  h3{font-size:18.5px; font-weight:600; letter-spacing:-.005em}
+  h4{font-size:16px; font-weight:600}
 
-  .container{width:min(var(--maxw), 92%); margin-inline:auto}
+  .container{width:min(var(--maxw),92%); margin-inline:auto}
 
-  /* ---------- Topbar ---------- */
-  .topbar{
-    position:sticky; top:0; z-index:60;
-    background:rgba(26,26,26,.86);
-    backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
-    border-bottom:1px solid rgba(255,255,255,.08);
-  }
-  .topbar-inner{display:flex; align-items:center; justify-content:space-between; gap:18px; padding:13px 0}
+  /* ---------------- Barra institucional ---------------- */
+  .utilbar{background:var(--ink-2); color:var(--muted-dark); font-size:13px; border-bottom:1px solid rgba(255,255,255,.07)}
+  .utilbar-in{display:flex; justify-content:space-between; align-items:center; gap:16px; padding:8px 0; flex-wrap:wrap}
+  .utilbar b{color:var(--brand); font-weight:600}
+  .utilbar a{text-decoration:none}
+  .utilbar a:hover{color:#fff}
+  .util-right{display:flex; gap:20px; flex-wrap:wrap}
+
+  /* ---------------- Topbar ---------------- */
+  .topbar{position:sticky; top:0; z-index:60; background:rgba(26,26,26,.94); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:1px solid rgba(255,255,255,.09)}
+  .topbar-in{display:flex; align-items:center; justify-content:space-between; gap:18px; padding:12px 0}
   .brand{display:flex; align-items:center; gap:11px; text-decoration:none; flex-shrink:0}
-  .brand img{height:30px; width:auto}
-  .brand-txt{display:flex; flex-direction:column; line-height:1.05}
-  .brand-txt b{font-family:'Space Grotesk',sans-serif; font-size:16px; font-weight:600; color:#fff; letter-spacing:.01em}
-  .brand-txt span{font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--brand); font-weight:500}
+  .brand img{height:32px; width:auto}
+  .brand-txt{display:flex; flex-direction:column; line-height:1.08}
+  .brand-txt b{font-family:'Space Grotesk',sans-serif; font-size:16.5px; font-weight:600; color:#fff}
+  .brand-txt span{font-size:9px; letter-spacing:.17em; text-transform:uppercase; color:var(--brand); font-weight:600}
 
-  .nav{display:flex; align-items:center; gap:4px}
-  .nav a{
-    text-decoration:none; color:rgba(255,255,255,.76); font-size:14.5px; font-weight:500;
-    padding:8px 12px; border-radius:8px; transition:color .18s, background .18s;
-  }
-  .nav a:hover{color:#fff; background:rgba(255,255,255,.07)}
-  .nav .nav-cta{
-    background:var(--brand); color:var(--ink); font-weight:600; margin-left:8px; padding:9px 16px;
-  }
+  .nav{display:flex; align-items:center; gap:2px}
+  .nav a{text-decoration:none; color:rgba(255,255,255,.78); font-size:14.5px; font-weight:500; padding:8px 11px; border-radius:6px; transition:color .18s,background .18s}
+  .nav a:hover{color:#fff; background:rgba(255,255,255,.08)}
+  .nav .nav-cta{background:var(--brand); color:var(--ink); font-weight:700; margin-left:10px; padding:10px 18px}
   .nav .nav-cta:hover{background:var(--brand-hi); color:var(--ink)}
 
-  .menu-toggle{
-    display:none; background:transparent; border:1px solid rgba(255,255,255,.2); border-radius:9px;
-    width:42px; height:38px; cursor:pointer; padding:0; position:relative;
-  }
-  .menu-toggle span{
-    display:block; width:18px; height:1.8px; background:#fff; border-radius:2px;
-    margin:3.4px auto; transition:transform .25s, opacity .2s;
-  }
-  .menu-toggle.open span:nth-child(1){transform:translateY(5.2px) rotate(45deg)}
+  .menu-toggle{display:none; background:transparent; border:1px solid rgba(255,255,255,.22); border-radius:7px; width:44px; height:40px; cursor:pointer; padding:0}
+  .menu-toggle span{display:block; width:18px; height:1.8px; background:#fff; border-radius:2px; margin:3.6px auto; transition:transform .25s,opacity .2s}
+  .menu-toggle.open span:nth-child(1){transform:translateY(5.4px) rotate(45deg)}
   .menu-toggle.open span:nth-child(2){opacity:0}
-  .menu-toggle.open span:nth-child(3){transform:translateY(-5.2px) rotate(-45deg)}
-
-  .nav-mobile{
-    display:none; flex-direction:column; gap:2px; padding:0 0 14px;
-    border-top:1px solid rgba(255,255,255,.08);
-  }
+  .menu-toggle.open span:nth-child(3){transform:translateY(-5.4px) rotate(-45deg)}
+  .nav-mobile{display:none; flex-direction:column; padding:0 0 14px; border-top:1px solid rgba(255,255,255,.09)}
   .nav-mobile.open{display:flex}
-  .nav-mobile a{
-    text-decoration:none; color:rgba(255,255,255,.82); padding:13px 4px; font-size:16px; font-weight:500;
-    border-bottom:1px solid rgba(255,255,255,.06);
-  }
-  .nav-mobile a.mob-cta{
-    background:var(--brand); color:var(--ink); font-weight:600; text-align:center;
-    border-radius:10px; margin-top:12px; border:0;
-  }
+  .nav-mobile a{text-decoration:none; color:rgba(255,255,255,.84); padding:13px 4px; font-size:16px; font-weight:500; border-bottom:1px solid rgba(255,255,255,.07)}
+  .nav-mobile a.mob-cta{background:var(--brand); color:var(--ink); font-weight:700; text-align:center; border-radius:8px; margin-top:12px; border:0}
 
-  /* ---------- Blocos escuros / claros ---------- */
-  .dark{
-    background:var(--ink); color:#EDEDED; position:relative; overflow:hidden;
-  }
-  /* grade sutil de prancha técnica */
+  /* ---------------- Blocos ---------------- */
+  .dark{background:var(--ink); color:#E8E8E6; position:relative; overflow:hidden}
   .dark::before{
     content:""; position:absolute; inset:0; pointer-events:none;
-    background-image:
-      linear-gradient(rgba(255,217,102,.045) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,217,102,.045) 1px, transparent 1px);
-    background-size:64px 64px;
-    mask-image:radial-gradient(ellipse 90% 70% at 50% 0%, #000 35%, transparent 100%);
-    -webkit-mask-image:radial-gradient(ellipse 90% 70% at 50% 0%, #000 35%, transparent 100%);
+    background-image:linear-gradient(rgba(255,217,102,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,217,102,.05) 1px,transparent 1px);
+    background-size:72px 72px;
+    mask-image:radial-gradient(ellipse 85% 65% at 50% 0%,#000 30%,transparent 100%);
+    -webkit-mask-image:radial-gradient(ellipse 85% 65% at 50% 0%,#000 30%,transparent 100%);
   }
   .dark > *{position:relative; z-index:1}
   .dark h1,.dark h2,.dark h3,.dark h4{color:#fff}
   .dark p{color:var(--muted-dark)}
 
-  .section{padding:clamp(56px, 8vw, 104px) 0; scroll-margin-top:72px}
+  .section{padding:clamp(54px,7.5vw,100px) 0; scroll-margin-top:70px}
   .section.paper{background:var(--paper)}
-  .section.white{background:var(--surface)}
+  .section.white{background:var(--surface); border-block:1px solid var(--line)}
 
-  /* ---------- Cabeçalho de seção ---------- */
-  .eyebrow{
-    display:inline-flex; align-items:center; gap:9px;
-    font-size:11.5px; font-weight:700; letter-spacing:.18em; text-transform:uppercase;
-    color:var(--brand-deep); margin-bottom:16px;
-  }
+  .eyebrow{display:inline-flex; align-items:center; gap:9px; font-size:11px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--brand-deep); margin-bottom:15px}
   .dark .eyebrow{color:var(--brand)}
-  .eyebrow::before{content:""; width:22px; height:2px; background:currentColor; border-radius:2px}
+  .eyebrow::before{content:""; width:24px; height:2px; background:currentColor}
 
-  .section-title{max-width:720px; margin-bottom:clamp(32px, 5vw, 52px)}
-  .section-title p{margin:14px 0 0; color:var(--muted); font-size:17.5px}
+  .section-title{max-width:740px; margin-bottom:clamp(30px,4.5vw,50px)}
+  .section-title p{margin:13px 0 0; color:var(--muted); font-size:17px}
   .dark .section-title p{color:var(--muted-dark)}
 
-  /* ---------- HERO ---------- */
-  .hero{padding:clamp(64px, 9vw, 116px) 0 0; scroll-margin-top:72px}
-  .hero-grid{display:grid; grid-template-columns:1.25fr .85fr; gap:clamp(32px,5vw,64px); align-items:center}
-  .kicker{
-    display:inline-flex; align-items:center; gap:9px;
-    font-size:13px; font-weight:500; color:var(--brand);
-    border:1px solid rgba(255,217,102,.28); background:rgba(255,217,102,.07);
-    padding:7px 15px; border-radius:100px; margin-bottom:26px;
-  }
-  .kicker .dot{width:6px; height:6px; border-radius:50%; background:var(--brand); box-shadow:0 0 0 4px rgba(255,217,102,.18)}
-  .hero h1{
-    font-size:clamp(36px, 6.2vw, 68px); font-weight:700; letter-spacing:-.035em; color:#fff;
-  }
-  .hero h1 em{font-style:normal; color:var(--brand); position:relative; white-space:nowrap}
-  .lead{font-size:clamp(17px, 2vw, 20px); color:var(--muted-dark); margin:22px 0 0; max-width:60ch; line-height:1.6}
+  /* ---------------- Hero ---------------- */
+  .hero{padding:clamp(56px,8vw,104px) 0 0; scroll-margin-top:70px}
+  .hero-grid{display:grid; grid-template-columns:1.3fr .8fr; gap:clamp(30px,5vw,60px); align-items:center}
+  .kicker{display:inline-flex; align-items:center; gap:9px; font-size:12.5px; font-weight:600; color:var(--brand); border:1px solid rgba(255,217,102,.3); background:rgba(255,217,102,.07); padding:7px 15px; border-radius:100px; margin-bottom:24px}
+  .kicker .dot{width:6px; height:6px; border-radius:50%; background:var(--brand); box-shadow:0 0 0 4px rgba(255,217,102,.16)}
+  .hero h1{font-size:clamp(33px,5.6vw,60px); font-weight:700; letter-spacing:-.035em; color:#fff}
+  .hero h1 em{font-style:normal; color:var(--brand)}
+  .lead{font-size:clamp(16.5px,1.8vw,19px); color:var(--muted-dark); margin:20px 0 0; max-width:60ch}
 
-  .cta-row{display:flex; flex-wrap:wrap; gap:13px; margin-top:34px}
-  .btn{
-    display:inline-flex; align-items:center; justify-content:center; gap:9px;
-    padding:14px 26px; border-radius:11px; text-decoration:none; font-weight:600; font-size:15.5px;
-    border:1px solid transparent; cursor:pointer; transition:transform .16s, background .18s, border-color .18s, box-shadow .18s;
-    font-family:'Inter',sans-serif;
-  }
-  .btn.primary{background:var(--brand); color:var(--ink); box-shadow:0 8px 24px rgba(255,217,102,.22)}
-  .btn.primary:hover{background:var(--brand-hi); transform:translateY(-2px); box-shadow:0 12px 30px rgba(255,217,102,.3)}
-  .btn.ghost{border-color:rgba(255,255,255,.22); color:#fff; background:rgba(255,255,255,.03)}
+  .cta-row{display:flex; flex-wrap:wrap; gap:12px; margin-top:30px}
+  .btn{display:inline-flex; align-items:center; justify-content:center; gap:9px; padding:14px 26px; border-radius:var(--r); text-decoration:none; font-weight:600; font-size:15.5px; border:1px solid transparent; cursor:pointer; transition:transform .16s,background .18s,border-color .18s; font-family:'Inter',sans-serif}
+  .btn.primary{background:var(--brand); color:var(--ink); font-weight:700}
+  .btn.primary:hover{background:var(--brand-hi); transform:translateY(-2px)}
+  .btn.ghost{border-color:rgba(255,255,255,.24); color:#fff}
   .btn.ghost:hover{border-color:var(--brand); color:var(--brand); transform:translateY(-2px)}
   .btn.dark{background:var(--ink); color:#fff}
   .btn.dark:hover{background:#000; transform:translateY(-2px)}
-  .btn.outline{border-color:var(--line); background:var(--surface); color:var(--text)}
+  .btn.outline{border-color:var(--line-2); background:var(--surface); color:var(--text)}
   .btn.outline:hover{border-color:var(--graphite); transform:translateY(-2px)}
 
-  /* painel lateral do hero */
-  .hero-card{
-    background:rgba(255,255,255,.035); border:1px solid rgba(255,255,255,.1);
-    border-radius:var(--radius); padding:28px; backdrop-filter:blur(6px);
-  }
-  .hero-card h3{font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--brand); font-weight:600; margin-bottom:18px}
-  .bullets{list-style:none; padding:0; margin:0; display:grid; gap:14px}
-  .bullets li{display:flex; gap:12px; align-items:flex-start; font-size:15.5px; line-height:1.5; color:rgba(255,255,255,.86)}
-  .check{
-    flex-shrink:0; width:20px; height:20px; border-radius:50%; margin-top:2px;
-    background:rgba(255,217,102,.14); border:1px solid rgba(255,217,102,.4); position:relative;
-  }
-  .check::after{
-    content:""; position:absolute; left:6.4px; top:3.4px; width:4.5px; height:8.5px;
-    border:solid var(--brand); border-width:0 1.8px 1.8px 0; transform:rotate(43deg);
-  }
+  .hero-card{background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.11); border-radius:var(--r-lg); padding:26px}
+  .hero-card h3{font-size:11.5px; letter-spacing:.17em; text-transform:uppercase; color:var(--brand); font-weight:700; margin-bottom:18px}
+  .bullets{list-style:none; padding:0; margin:0; display:grid; gap:13px}
+  .bullets li{display:flex; gap:11px; align-items:flex-start; font-size:15px; line-height:1.5; color:rgba(255,255,255,.87)}
+  .check{flex-shrink:0; width:19px; height:19px; border-radius:50%; margin-top:2px; background:rgba(255,217,102,.14); border:1px solid rgba(255,217,102,.42); position:relative}
+  .check::after{content:""; position:absolute; left:6px; top:3.2px; width:4.2px; height:8px; border:solid var(--brand); border-width:0 1.8px 1.8px 0; transform:rotate(43deg)}
 
   /* faixa de credenciais */
-  .credbar{
-    margin-top:clamp(48px,7vw,80px); border-top:1px solid rgba(255,255,255,.1);
-    display:grid; grid-template-columns:repeat(4,1fr);
-  }
-  .cred{padding:26px 22px 30px; border-right:1px solid rgba(255,255,255,.1)}
+  .credbar{margin-top:clamp(44px,6vw,74px); border-top:1px solid rgba(255,255,255,.12); display:grid; grid-template-columns:repeat(4,1fr)}
+  .cred{padding:24px 22px 28px; border-right:1px solid rgba(255,255,255,.12)}
   .cred:last-child{border-right:0}
-  .cred b{
-    display:block; font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:600;
-    color:var(--brand); letter-spacing:-.01em; margin-bottom:5px;
-  }
+  .cred b{display:block; font-family:'Space Grotesk',sans-serif; font-size:21px; font-weight:600; color:var(--brand); margin-bottom:4px; letter-spacing:-.01em}
   .cred span{font-size:13.5px; color:var(--muted-dark); line-height:1.45; display:block}
 
-  /* ---------- Cards de serviço ---------- */
-  .services{display:grid; grid-template-columns:repeat(3,1fr); gap:22px}
-  .svc{
-    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
-    overflow:hidden; display:flex; flex-direction:column;
-    transition:transform .22s, box-shadow .22s, border-color .22s;
-  }
-  .svc:hover{transform:translateY(-5px); box-shadow:var(--shadow-lg); border-color:rgba(255,217,102,.55)}
-  .svc-media{aspect-ratio:16/10; overflow:hidden; background:#F2F0EC; border-bottom:1px solid var(--line)}
-  .svc-media img{width:100%; height:100%; object-fit:cover; transition:transform .5s ease}
-  .svc:hover .svc-media img{transform:scale(1.045)}
-  .svc-body{padding:24px; display:flex; flex-direction:column; flex:1}
-  .svc-body h3{margin-bottom:9px}
-  .svc-body > p{margin:0 0 16px; color:var(--muted); font-size:15px; line-height:1.6}
-  .svc-body ul{list-style:none; padding:0; margin:auto 0 0; display:grid; gap:7px; border-top:1px solid var(--line); padding-top:15px}
-  .svc-body li{font-size:14px; color:var(--muted); display:flex; gap:9px; align-items:flex-start}
-  .svc-body li::before{content:""; flex-shrink:0; width:5px; height:5px; border-radius:50%; background:var(--brand); margin-top:8px}
+  /* ---------------- Serviços ---------------- */
+  .services{display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
+  .svc{background:var(--surface); border:1px solid var(--line); border-radius:var(--r-lg); overflow:hidden; display:flex; flex-direction:column; transition:transform .2s,border-color .2s,box-shadow .2s}
+  .svc:hover{transform:translateY(-4px); border-color:var(--brand); box-shadow:0 18px 44px rgba(26,26,26,.1)}
+  .svc-media{aspect-ratio:16/10; overflow:hidden; background:#EEECE7; border-bottom:1px solid var(--line)}
+  .svc-media img{width:100%; height:100%; object-fit:cover; transition:transform .5s}
+  .svc:hover .svc-media img{transform:scale(1.04)}
+  .svc-body{padding:22px; display:flex; flex-direction:column; flex:1}
+  .svc-body h3{margin-bottom:8px}
+  .svc-body > p{margin:0 0 15px; color:var(--muted); font-size:14.5px; line-height:1.6}
+  .svc-body ul{list-style:none; padding:15px 0 0; margin:auto 0 0; display:grid; gap:6px; border-top:1px solid var(--line)}
+  .svc-body li{font-size:13.5px; color:var(--muted); display:flex; gap:9px; align-items:flex-start}
+  .svc-body li::before{content:""; flex-shrink:0; width:5px; height:5px; border-radius:50%; background:var(--brand-deep); margin-top:8px}
 
-  /* ---------- Painéis genéricos ---------- */
-  .panel{
-    background:var(--surface); border:1px solid var(--line);
-    border-radius:var(--radius); padding:clamp(24px,3.5vw,40px);
-  }
-  .dark .panel{background:rgba(255,255,255,.04); border-color:rgba(255,255,255,.1)}
-  .split{display:grid; grid-template-columns:1.08fr .92fr; gap:26px; align-items:start}
+  /* ---------------- Setores ---------------- */
+  .sectors{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:var(--r-lg); overflow:hidden}
+  .sector{background:var(--surface); padding:26px 24px; transition:background .2s}
+  .sector:hover{background:#FFFDF6}
+  .sector .ico{font-size:22px; margin-bottom:12px; display:block}
+  .sector b{display:block; font-family:'Space Grotesk',sans-serif; font-size:16.5px; font-weight:600; margin-bottom:6px}
+  .sector span{font-size:14px; color:var(--muted); line-height:1.55}
+
+  /* ---------------- Painéis ---------------- */
+  .panel{background:var(--surface); border:1px solid var(--line); border-radius:var(--r-lg); padding:clamp(22px,3vw,36px)}
+  .dark .panel{background:rgba(255,255,255,.04); border-color:rgba(255,255,255,.11)}
+  .split{display:grid; grid-template-columns:1.08fr .92fr; gap:24px; align-items:start}
   .split.even{grid-template-columns:1fr 1fr}
-
   .bullets.on-light li{color:var(--text)}
-  .bullets.on-light .check{background:rgba(255,217,102,.16); border-color:rgba(140,98,9,.4)}
+  .bullets.on-light .check{background:rgba(255,217,102,.2); border-color:rgba(140,98,9,.38)}
   .bullets.on-light .check::after{border-color:var(--brand-deep)}
-
-  .note{font-size:14px; color:var(--muted); margin:14px 0 0; line-height:1.55}
+  .note{font-size:13.5px; color:var(--muted); margin:13px 0 0; line-height:1.55}
   .dark .note{color:var(--muted-dark)}
 
-  /* ---------- Etapas numeradas ---------- */
-  .steps{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
-  .step{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-sm); padding:22px}
-  .dark .step{background:rgba(255,255,255,.04); border-color:rgba(255,255,255,.1)}
-  .num{
-    width:34px; height:34px; border-radius:9px; display:grid; place-items:center;
-    background:rgba(255,217,102,.16); color:var(--brand-deep);
-    font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; margin-bottom:13px;
-  }
+  /* responsável técnico */
+  .rt{background:var(--ink); color:#fff; border-radius:var(--r-lg); padding:28px; border:1px solid var(--ink-line)}
+  .rt .eyebrow{color:var(--brand)}
+  .rt h3{font-size:20px; margin-bottom:4px; color:#fff}
+  .rt .cargo{color:var(--brand); font-size:14px; font-weight:600; margin-bottom:18px}
+  .rt dl{display:grid; grid-template-columns:auto 1fr; gap:9px 18px; margin:0; font-size:14.5px}
+  .rt dt{color:var(--muted-dark)}
+  .rt dd{margin:0; color:#fff; font-weight:600}
+
+  /* ---------------- Etapas ---------------- */
+  .steps{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+  .steps.four{grid-template-columns:repeat(4,1fr)}
+  .step{background:var(--surface); border:1px solid var(--line); border-radius:var(--r); padding:22px}
+  .dark .step{background:rgba(255,255,255,.04); border-color:rgba(255,255,255,.11)}
+  .num{width:32px; height:32px; border-radius:7px; display:grid; place-items:center; background:rgba(255,217,102,.22); color:var(--brand-deep); font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:14.5px; margin-bottom:13px}
   .dark .num{background:rgba(255,217,102,.14); color:var(--brand)}
-  .step h4{font-size:16px; font-weight:600; margin:0 0 6px}
-  .step p{margin:0; font-size:14.5px; color:var(--muted); line-height:1.55}
+  .step h4{margin:0 0 6px}
+  .step p{margin:0; font-size:14px; color:var(--muted); line-height:1.55}
   .dark .step p{color:var(--muted-dark)}
 
-  /* ---------- Cards simples ---------- */
-  .cards{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
-  .card{
-    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-sm); padding:22px;
-    transition:border-color .2s, transform .2s;
-  }
-  .card:hover{border-color:rgba(255,217,102,.55); transform:translateY(-3px)}
-  .dark .card{background:rgba(255,255,255,.04); border-color:rgba(255,255,255,.1)}
-  .card h3{margin-bottom:8px}
-  .card p{margin:0; font-size:14.5px; color:var(--muted); line-height:1.55}
+  .cards{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+  .card{background:var(--surface); border:1px solid var(--line); border-radius:var(--r); padding:22px; transition:border-color .2s,transform .2s}
+  .card:hover{border-color:var(--brand); transform:translateY(-3px)}
+  .dark .card{background:rgba(255,255,255,.04); border-color:rgba(255,255,255,.11)}
+  .card h3{margin-bottom:7px}
+  .card p{margin:0; font-size:14px; color:var(--muted); line-height:1.55}
   .dark .card p{color:var(--muted-dark)}
 
-  /* BIM: grade de benefícios sobre escuro */
-  .benefits{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.1); border-radius:var(--radius); overflow:hidden}
+  .benefits{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.12); border-radius:var(--r-lg); overflow:hidden}
   .benefit{background:var(--ink); padding:24px}
-  .benefit b{display:block; font-family:'Space Grotesk',sans-serif; font-size:16.5px; font-weight:600; color:#fff; margin-bottom:7px}
-  .benefit span{font-size:14.5px; color:var(--muted-dark); line-height:1.55}
+  .benefit b{display:block; font-family:'Space Grotesk',sans-serif; font-size:16px; font-weight:600; color:#fff; margin-bottom:6px}
+  .benefit span{font-size:14px; color:var(--muted-dark); line-height:1.55}
 
-  /* pílulas */
-  .meta{display:flex; flex-wrap:wrap; gap:8px; margin-top:16px}
-  .pill{
-    font-size:12.5px; font-weight:600; letter-spacing:.03em; padding:6px 13px; border-radius:100px;
-    background:rgba(255,217,102,.13); color:var(--brand-deep); border:1px solid rgba(255,217,102,.32);
-  }
-  .dark .pill{color:var(--brand); background:rgba(255,217,102,.1)}
+  .meta{display:flex; flex-wrap:wrap; gap:7px; margin-top:15px}
+  .pill{font-size:12px; font-weight:600; padding:6px 12px; border-radius:100px; background:rgba(255,217,102,.18); color:var(--brand-deep); border:1px solid rgba(140,98,9,.28)}
+  .dark .pill{color:var(--brand); background:rgba(255,217,102,.1); border-color:rgba(255,217,102,.28)}
 
-  .figure{border-radius:var(--radius-sm); overflow:hidden; border:1px solid var(--line); background:#F2F0EC}
-  .dark .figure{border-color:rgba(255,255,255,.12); background:rgba(255,255,255,.04)}
+  .figure{border-radius:var(--r); overflow:hidden; border:1px solid var(--line); background:#EEECE7}
+  .dark .figure{border-color:rgba(255,255,255,.13); background:rgba(255,255,255,.04)}
   .figure img{width:100%; height:100%; object-fit:cover; cursor:zoom-in; transition:transform .45s}
   .figure:hover img{transform:scale(1.03)}
   /* Diagramas e documentos precisam aparecer inteiros — cortar esconde legendas. */
-  .figure.fit{background:#F4F2EE}
+  .figure.fit{background:#F2F0EB}
   .figure.fit img{object-fit:contain; padding:10px}
   .dark .figure.fit{background:rgba(255,255,255,.05)}
 
-  /* ---------- Portfólio ---------- */
-  .gallery{display:grid; grid-template-columns:repeat(4,1fr); gap:14px}
-  .thumb{
-    padding:0; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.04);
-    border-radius:12px; overflow:hidden; cursor:zoom-in; aspect-ratio:4/3;
-    transition:transform .22s, border-color .22s; position:relative;
-  }
+  /* ---------------- Portfólio ---------------- */
+  .gallery{display:grid; grid-template-columns:repeat(4,1fr); gap:13px}
+  .thumb{padding:0; border:1px solid rgba(255,255,255,.13); background:rgba(255,255,255,.04); border-radius:var(--r); overflow:hidden; cursor:zoom-in; aspect-ratio:4/3; transition:transform .2s,border-color .2s; position:relative}
   .thumb:hover{transform:translateY(-4px); border-color:var(--brand)}
   .thumb img{width:100%; height:100%; object-fit:cover; transition:transform .45s}
-  .thumb:hover img{transform:scale(1.06)}
-  .thumb::after{
-    content:"⤢"; position:absolute; right:9px; bottom:7px; width:26px; height:26px;
-    display:grid; place-items:center; border-radius:7px; font-size:13px;
-    background:rgba(26,26,26,.72); color:var(--brand); opacity:0; transition:opacity .2s;
-  }
+  .thumb:hover img{transform:scale(1.05)}
+  .thumb::after{content:"⤢"; position:absolute; right:8px; bottom:7px; width:25px; height:25px; display:grid; place-items:center; border-radius:6px; font-size:12.5px; background:rgba(26,26,26,.75); color:var(--brand); opacity:0; transition:opacity .2s}
   .thumb:hover::after{opacity:1}
 
-  /* ---------- Contato ---------- */
-  .contact-wrap{
-    display:grid; grid-template-columns:1.1fr .9fr; gap:clamp(24px,4vw,48px); align-items:center;
-    background:linear-gradient(135deg, var(--ink-2) 0%, var(--ink) 100%);
-    border:1px solid rgba(255,217,102,.22); border-radius:20px;
-    padding:clamp(28px,4.5vw,52px);
-  }
-  .contact-wrap h2{margin-bottom:12px}
-  .contact-list{display:grid; gap:12px; margin-top:6px}
-  .contact-item{
-    display:flex; align-items:center; gap:13px; padding:15px 18px;
-    background:rgba(255,255,255,.045); border:1px solid rgba(255,255,255,.1); border-radius:12px;
-    text-decoration:none; transition:border-color .2s, background .2s, transform .2s;
-  }
-  .contact-item:hover{border-color:var(--brand); background:rgba(255,217,102,.07); transform:translateX(3px)}
-  .ci-ico{
-    flex-shrink:0; width:38px; height:38px; border-radius:10px; display:grid; place-items:center;
-    background:rgba(255,217,102,.14); font-size:17px;
-  }
+  /* ---------------- Contato ---------------- */
+  .contact-wrap{display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(24px,4vw,44px); align-items:center; background:var(--ink); border:1px solid var(--ink-line); border-top:3px solid var(--brand); border-radius:var(--r-lg); padding:clamp(26px,4vw,48px)}
+  .contact-list{display:grid; gap:11px}
+  .contact-item{display:flex; align-items:center; gap:13px; padding:14px 17px; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.11); border-radius:var(--r); text-decoration:none; transition:border-color .2s,background .2s,transform .2s}
+  a.contact-item:hover{border-color:var(--brand); background:rgba(255,217,102,.08); transform:translateX(3px)}
+  .ci-ico{flex-shrink:0; width:36px; height:36px; border-radius:8px; display:grid; place-items:center; background:rgba(255,217,102,.15); font-size:16px}
   .ci-txt{display:flex; flex-direction:column; min-width:0}
-  .ci-txt small{font-size:11.5px; letter-spacing:.13em; text-transform:uppercase; color:var(--brand); font-weight:600}
-  .ci-txt b{font-size:15.5px; color:#fff; font-weight:600; overflow-wrap:anywhere}
+  .ci-txt small{font-size:10.5px; letter-spacing:.15em; text-transform:uppercase; color:var(--brand); font-weight:700}
+  .ci-txt b{font-size:15px; color:#fff; font-weight:600; overflow-wrap:anywhere}
 
-  /* ---------- Rodapé ---------- */
-  footer{background:#141414; color:rgba(255,255,255,.6); padding:44px 0 34px; border-top:1px solid rgba(255,255,255,.08)}
-  .foot{display:flex; flex-wrap:wrap; gap:18px; justify-content:space-between; align-items:center; font-size:14px}
-  .foot img{height:26px; width:auto; margin-bottom:9px}
-  .foot-links{display:flex; flex-wrap:wrap; gap:16px}
-  .foot-links a{color:rgba(255,255,255,.62); text-decoration:none; transition:color .18s}
-  .foot-links a:hover{color:var(--brand)}
+  /* ---------------- Rodapé ---------------- */
+  footer{background:#141414; color:rgba(255,255,255,.62); padding:48px 0 28px; border-top:1px solid rgba(255,255,255,.09); font-size:14px}
+  .foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1.2fr; gap:32px; padding-bottom:30px; border-bottom:1px solid rgba(255,255,255,.09)}
+  .foot-grid img{height:30px; width:auto; margin-bottom:14px}
+  .foot-grid h4{font-size:12px; letter-spacing:.16em; text-transform:uppercase; margin-bottom:14px; color:var(--brand)}
+  .foot-grid ul{list-style:none; padding:0; margin:0; display:grid; gap:9px}
+  .foot-grid a{color:rgba(255,255,255,.66); text-decoration:none; transition:color .18s}
+  .foot-grid a:hover{color:var(--brand)}
+  .foot-bottom{padding-top:20px; display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; font-size:13px; color:rgba(255,255,255,.5)}
 
-  /* ---------- Botão flutuante WhatsApp ---------- */
-  .wa-float{
-    position:fixed; right:18px; bottom:18px; z-index:70;
-    display:inline-flex; align-items:center; gap:10px;
-    background:#25D366; color:#fff; text-decoration:none; font-weight:600; font-size:15px;
-    padding:13px 19px; border-radius:100px; box-shadow:0 10px 30px rgba(0,0,0,.26);
-    transition:transform .18s, box-shadow .18s;
-  }
-  .wa-float:hover{transform:translateY(-3px); box-shadow:0 16px 38px rgba(0,0,0,.32)}
+  /* ---------------- WhatsApp flutuante ---------------- */
+  .wa-float{position:fixed; right:18px; bottom:18px; z-index:70; display:inline-flex; align-items:center; gap:10px; background:#25D366; color:#fff; text-decoration:none; font-weight:600; font-size:15px; padding:13px 19px; border-radius:100px; box-shadow:0 10px 30px rgba(0,0,0,.28); transition:transform .18s}
+  .wa-float:hover{transform:translateY(-3px)}
   .wa-float svg{width:21px; height:21px; fill:currentColor; flex-shrink:0}
 
-  /* ---------- Lightbox ---------- */
-  .lightbox{
-    position:fixed; inset:0; z-index:100; display:none;
-    background:rgba(10,11,13,.94); padding:22px; backdrop-filter:blur(4px);
-  }
+  /* ---------------- Lightbox ---------------- */
+  .lightbox{position:fixed; inset:0; z-index:100; display:none; background:rgba(12,12,12,.95); padding:22px}
   .lightbox.open{display:grid; place-items:center}
   .lb-card{width:min(1100px,100%); max-height:100%; display:flex; flex-direction:column; gap:12px}
-  .lb-top{display:flex; justify-content:space-between; align-items:center; gap:14px; color:rgba(255,255,255,.8); font-size:13.5px}
-  .lb-close{
-    background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.2); color:#fff;
-    padding:8px 15px; border-radius:9px; cursor:pointer; font-size:13.5px; font-weight:500;
-  }
+  .lb-top{display:flex; justify-content:space-between; align-items:center; gap:14px; color:rgba(255,255,255,.82); font-size:13.5px}
+  .lb-close{background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.22); color:#fff; padding:8px 15px; border-radius:7px; cursor:pointer; font-size:13.5px; font-weight:500}
   .lb-close:hover{background:var(--brand); color:var(--ink); border-color:var(--brand)}
-  .lb-imgwrap{
-    flex:1; min-height:0; display:grid; place-items:center;
-    background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.12); border-radius:14px; overflow:hidden;
-  }
+  .lb-imgwrap{flex:1; min-height:0; display:grid; place-items:center; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.13); border-radius:10px; overflow:hidden}
   .lb-imgwrap img{max-width:100%; max-height:76vh; object-fit:contain}
   .lb-controls{display:flex; justify-content:center; gap:12px}
-  .lb-btn{
-    background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.2); color:#fff;
-    width:48px; height:42px; border-radius:10px; cursor:pointer; font-size:22px; line-height:1;
-  }
+  .lb-btn{background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.22); color:#fff; width:48px; height:42px; border-radius:8px; cursor:pointer; font-size:22px; line-height:1}
   .lb-btn:hover{background:var(--brand); color:var(--ink); border-color:var(--brand)}
 
-  /* ---------- Animação de entrada ---------- */
-  /* A animação só esconde o conteúdo quando o JS está ativo e funcionando.
-     Sem JS (ou se o script falhar), tudo aparece normalmente. */
-  .js .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease}
+  /* ---------------- Entrada ---------------- */
+  /* Só esconde o conteúdo quando o JS está ativo e funcionando. */
+  .js .reveal{opacity:0; transform:translateY(16px); transition:opacity .55s ease,transform .55s ease}
   .js .reveal.in{opacity:1; transform:none}
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
@@ -400,52 +300,64 @@
     *{animation-duration:.01ms !important; transition-duration:.01ms !important}
   }
 
-  /* ---------- Responsivo ---------- */
-  @media (max-width:1000px){
-    .services{grid-template-columns:repeat(2,1fr)}
+  /* ---------------- Responsivo ---------------- */
+  @media (max-width:1040px){
+    .services,.sectors{grid-template-columns:repeat(2,1fr)}
     .gallery{grid-template-columns:repeat(3,1fr)}
     .credbar{grid-template-columns:repeat(2,1fr)}
     .cred:nth-child(2){border-right:0}
-    .cred:nth-child(1),.cred:nth-child(2){border-bottom:1px solid rgba(255,255,255,.1)}
+    .cred:nth-child(1),.cred:nth-child(2){border-bottom:1px solid rgba(255,255,255,.12)}
+    .steps.four{grid-template-columns:repeat(2,1fr)}
+    .foot-grid{grid-template-columns:1fr 1fr}
   }
   @media (max-width:860px){
     .nav{display:none}
     .menu-toggle{display:block}
-    .hero-grid{grid-template-columns:1fr; gap:30px}
+    .hero-grid{grid-template-columns:1fr; gap:28px}
     .split,.split.even{grid-template-columns:1fr}
-    .steps{grid-template-columns:1fr}
+    .steps,.steps.four{grid-template-columns:1fr}
     .cards{grid-template-columns:1fr}
     .benefits{grid-template-columns:1fr}
     .contact-wrap{grid-template-columns:1fr}
+    .utilbar .util-right{display:none}
   }
   @media (max-width:620px){
     body{font-size:16px}
-    .container{width:min(var(--maxw), 100% - 32px)}
-    .services{grid-template-columns:1fr}
+    .container{width:min(var(--maxw),100% - 32px)}
+    .services,.sectors{grid-template-columns:1fr}
     .gallery{grid-template-columns:repeat(2,1fr)}
     .cta-row .btn{width:100%}
+    .foot-grid{grid-template-columns:1fr}
     .wa-float span{display:none}
     .wa-float{padding:15px; border-radius:50%}
   }
 </style>
 <script>
-/* Marca que o JS está ativo (permite a animação de entrada sem piscar o conteúdo).
-   Rede de segurança: se o script de animação não inicializar em 3s, remove a marca
-   e todo o conteúdo volta a ficar visível. */
+/* Marca que o JS está ativo (permite a animação sem piscar o conteúdo).
+   Rede de segurança: se o script de animação não inicializar em 3s, remove a
+   marca e todo o conteúdo volta a ficar visível. */
 (function(){
   document.documentElement.classList.add('js');
   window.__revealReady = false;
-  setTimeout(function(){
-    if(!window.__revealReady) document.documentElement.classList.remove('js');
-  }, 3000);
+  setTimeout(function(){ if(!window.__revealReady) document.documentElement.classList.remove('js'); }, 3000);
 })();
 </script>
 <script> function gtag_report_conversion(url) {   var callback = function () {     if (typeof(url) != 'undefined') {       window.location = url;     }   };   gtag('event', 'conversion', {       'send_to': 'AW-17968482592/zp1vCLGu0oEcEKCShfhC',       'event_callback': callback   });   return false; } </script>
 </head>
 <body>
 
+<div class="utilbar">
+  <div class="container utilbar-in">
+    <div>MGX Engenharia e Soluções Integradas LTDA &nbsp;·&nbsp; CNPJ 47.670.234/0001-00</div>
+    <div class="util-right">
+      <span>Resp. técnico: <b>CREA-MG 339105</b></span>
+      <a href="tel:+5532984729995">(32) 98472-9995</a>
+    </div>
+  </div>
+</div>
+
 <div class="topbar">
-  <div class="container topbar-inner">
+  <div class="container topbar-in">
     <a class="brand" href="#topo">
       <img alt="MGX Engenharia e Soluções Integradas" src="img/mgx-icone.png"/>
       <span class="brand-txt">
@@ -455,23 +367,24 @@
     </a>
     <nav aria-label="Menu" class="nav">
       <a href="#servicos">Serviços</a>
-      <a href="#quem-somos">Quem somos</a>
+      <a href="#setores">Setores</a>
+      <a href="#empresa">A empresa</a>
+      <a href="#processo">Como trabalhamos</a>
       <a href="#spda">SPDA</a>
-      <a href="#avcb">AVCB</a>
       <a href="#portfolio">Portfólio</a>
       <a class="nav-cta" href="https://wa.me/5532984729995" target="_blank" rel="noopener" onclick="return gtag_report_conversion('https://wa.me/5532984729995');">Orçamento</a>
     </nav>
-    <button aria-label="Abrir menu" aria-expanded="false" class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
-    </button>
+    <button aria-label="Abrir menu" aria-expanded="false" class="menu-toggle" id="menuToggle" onclick="toggleMenu()"><span></span><span></span><span></span></button>
   </div>
   <div class="container">
     <nav aria-label="Menu mobile" class="nav-mobile" id="navMobile">
       <a href="#servicos" onclick="closeMenu()">Serviços</a>
-      <a href="#quem-somos" onclick="closeMenu()">Quem somos</a>
-      <a href="#spda" onclick="closeMenu()">SPDA (Laudo &amp; Inspeção)</a>
+      <a href="#setores" onclick="closeMenu()">Setores atendidos</a>
+      <a href="#empresa" onclick="closeMenu()">A empresa</a>
+      <a href="#processo" onclick="closeMenu()">Como trabalhamos</a>
+      <a href="#bim" onclick="closeMenu()">Projetos em BIM</a>
+      <a href="#spda" onclick="closeMenu()">SPDA (laudo e inspeção)</a>
       <a href="#avcb" onclick="closeMenu()">AVCB</a>
-      <a href="#bim" onclick="closeMenu()">BIM</a>
       <a href="#portfolio" onclick="closeMenu()">Portfólio</a>
       <a href="#contato" onclick="closeMenu()">Contato</a>
       <a class="mob-cta" href="https://wa.me/5532984729995" target="_blank" rel="noopener" onclick="return gtag_report_conversion('https://wa.me/5532984729995');">Solicitar orçamento</a>
@@ -479,44 +392,44 @@
   </div>
 </div>
 
-<!-- ===================== HERO ===================== -->
+<!-- ============ HERO ============ -->
 <header class="dark hero" id="topo">
   <div class="container">
     <div class="hero-grid">
       <div>
-        <div class="kicker"><span class="dot"></span> Juiz de Fora e região · Atendimento sob demanda</div>
-        <h1>Engenharia elétrica <em>completa</em>: projetos, inspeções e laudos.</h1>
+        <div class="kicker"><span class="dot"></span> Juiz de Fora · Zona da Mata · Minas Gerais e Rio de Janeiro</div>
+        <h1>Engenharia elétrica, SPDA e segurança contra incêndio com <em>responsabilidade técnica</em>.</h1>
         <p class="lead">
-          Projetos elétricos, SPDA e telecom para residências de alto padrão e edificações comerciais
-          e residenciais — além de inspeções e laudos de SPDA com medições rastreáveis e relatório técnico.
+          Projetos executivos, inspeções e laudos para edificações comerciais, residenciais, industriais e
+          sites de telecomunicações — com medições rastreáveis, documentação completa e ART emitida.
         </p>
         <div class="cta-row">
-          <a class="btn primary" href="https://wa.me/5532984729995" target="_blank" rel="noopener" onclick="return gtag_report_conversion('https://wa.me/5532984729995');">Solicitar orçamento →</a>
+          <a class="btn primary" href="https://wa.me/5532984729995" target="_blank" rel="noopener" onclick="return gtag_report_conversion('https://wa.me/5532984729995');">Solicitar orçamento</a>
           <a class="btn ghost" href="#servicos">Ver serviços</a>
         </div>
       </div>
 
       <aside class="hero-card">
-        <h3>Diferenciais</h3>
+        <h3>Por que a MGX</h3>
         <ul class="bullets">
-          <li><span class="check"></span> Conformidade com ABNT NBR 5410 e NBR 5419</li>
-          <li><span class="check"></span> Projetos em BIM (Revit) para maior compatibilização</li>
-          <li><span class="check"></span> Inspeções com terrômetro e miliohmímetro</li>
-          <li><span class="check"></span> Documentação técnica completa e rastreável</li>
+          <li><span class="check"></span> Responsável técnico registrado no CREA-MG</li>
+          <li><span class="check"></span> ART emitida em projetos e laudos</li>
+          <li><span class="check"></span> Projetos em BIM (Revit) e compatibilizados</li>
+          <li><span class="check"></span> Medições com terrômetro e miliohmímetro aferidos</li>
         </ul>
       </aside>
     </div>
 
     <div class="credbar">
-      <div class="cred"><b>NBR 5410</b><span>Instalações elétricas de baixa tensão</span></div>
-      <div class="cred"><b>NBR 5419</b><span>Proteção contra descargas atmosféricas</span></div>
-      <div class="cred"><b>BIM · Revit</b><span>Projetos compatibilizados entre disciplinas</span></div>
-      <div class="cred"><b>CBMMG</b><span>Instruções Técnicas para AVCB</span></div>
+      <div class="cred"><b>Desde 2022</b><span>Empresa constituída e ativa, hoje MGX Engenharia e Soluções Integradas LTDA</span></div>
+      <div class="cred"><b>CREA-MG 339105</b><span>Engenheiro eletricista como responsável técnico</span></div>
+      <div class="cred"><b>NBR 5410 · 5419</b><span>Instalações de baixa tensão e proteção contra descargas</span></div>
+      <div class="cred"><b>ITs do CBMMG</b><span>Prevenção e combate a incêndio para AVCB</span></div>
     </div>
   </div>
 </header>
 
-<!-- ===================== SERVIÇOS ===================== -->
+<!-- ============ SERVIÇOS ============ -->
 <section class="section paper" id="servicos">
   <div class="container">
     <div class="section-title reveal">
@@ -527,122 +440,147 @@
 
     <div class="services">
       <article class="svc reveal">
-        <div class="svc-media"><img alt="Projeto elétrico em BIM — vista 3D de residência" loading="lazy" src="img/exemplo-projeto-eletrico-4-3d-casa.jpg"/></div>
+        <div class="svc-media"><img alt="Projeto elétrico modelado em BIM — vista 3D" loading="lazy" src="img/exemplo-projeto-eletrico-4-3d-casa.jpg"/></div>
         <div class="svc-body">
           <h3>Projetos Elétricos (BIM/Revit)</h3>
-          <p>Projetos executivos para residências de alto padrão e edifícios comerciais e residenciais, com documentação completa e clareza para execução.</p>
-          <ul>
-            <li>Quadros, diagramas e detalhamentos</li>
-            <li>Compatibilização BIM com outras disciplinas</li>
-            <li>Memoriais e quantitativos</li>
-          </ul>
+          <p>Projetos executivos para residências de alto padrão, edifícios comerciais e residenciais, com documentação completa e clareza para execução.</p>
+          <ul><li>Quadros, diagramas e detalhamentos</li><li>Compatibilização BIM entre disciplinas</li><li>Memoriais e quantitativos</li></ul>
         </div>
       </article>
 
       <article class="svc reveal">
-        <div class="svc-media"><img alt="Projeto de telecomunicações" loading="lazy" src="img/exemplo-projeto-telecom.jpg"/></div>
+        <div class="svc-media"><img alt="Projeto de infraestrutura de telecomunicações" loading="lazy" src="img/exemplo-projeto-telecom.jpg"/></div>
         <div class="svc-body">
           <h3>Projetos de Telecom</h3>
           <p>Infraestrutura de telecomunicações para redes e sistemas: backbone, racks, prumadas e pontos, com foco em organização e expansibilidade.</p>
-          <ul>
-            <li>Racks e salas técnicas</li>
-            <li>Backbone e prumadas</li>
-            <li>Identificação e documentação</li>
-          </ul>
+          <ul><li>Racks e salas técnicas</li><li>Backbone e prumadas</li><li>Identificação e documentação</li></ul>
         </div>
       </article>
 
       <article class="svc reveal">
-        <div class="svc-media"><img alt="Projeto de SPDA — subsistemas de captação, descida e aterramento" loading="lazy" src="img/exemplo-laudo-spda-5.jpg"/></div>
+        <div class="svc-media"><img alt="Projeto de SPDA — captação, descida e aterramento" loading="lazy" src="img/exemplo-laudo-spda-5.jpg"/></div>
         <div class="svc-body">
           <h3>Projetos de SPDA (Para-raios)</h3>
           <p>Projeto de SPDA conforme ABNT NBR 5419, definido por gerenciamento de risco e detalhado para execução e manutenção do sistema.</p>
-          <ul>
-            <li>Captação, descidas e aterramento</li>
-            <li>Equipotencialização e interfaces</li>
-            <li>Recomendações e detalhamento</li>
-          </ul>
+          <ul><li>Captação, descidas e aterramento</li><li>Equipotencialização e interfaces</li><li>Análise de risco e nível de proteção</li></ul>
         </div>
       </article>
 
       <article class="svc reveal">
-        <div class="svc-media"><img alt="Laudo e inspeção de SPDA" loading="lazy" src="img/exemplo-laudo-spda-6.jpg"/></div>
+        <div class="svc-media"><img alt="Laudo de medição de resistência de aterramento" loading="lazy" src="img/laudo-exemplo-2.jpg"/></div>
         <div class="svc-body">
-          <h3>Laudo e Inspeção de SPDA</h3>
-          <p>Inspeções em campo com medições, registro fotográfico e relatório técnico para conformidade e redução de risco.</p>
-          <ul>
-            <li>Medição com terrômetro</li>
-            <li>Continuidade com miliohmímetro</li>
-            <li>Relatório e recomendações</li>
-          </ul>
+          <h3>Laudos e Inspeções de SPDA</h3>
+          <p>Inspeções em campo com medições, registro fotográfico e relatório técnico assinado, para conformidade e redução de risco.</p>
+          <ul><li>Resistência de aterramento com terrômetro</li><li>Continuidade com miliohmímetro</li><li>Relatório com não conformidades e ART</li></ul>
         </div>
       </article>
 
       <article class="svc reveal">
         <div class="svc-media"><img alt="Projeto de prevenção e combate a incêndio (AVCB)" loading="lazy" src="img/exemplo-avcb-1.jpg"/></div>
         <div class="svc-body">
-          <h3>AVCB (Corpo de Bombeiros)</h3>
-          <p>Apoio completo para regularização junto ao Corpo de Bombeiros, com foco em segurança, conformidade e liberação para funcionamento do imóvel.</p>
-          <ul>
-            <li>Orientação documental e adequações</li>
-            <li>Projeto/As Built quando aplicável</li>
-            <li>Conformidade com ITs do CBMMG</li>
-          </ul>
+          <h3>AVCB e Segurança contra Incêndio</h3>
+          <p>Projetos, adequações e acompanhamento para regularização junto ao Corpo de Bombeiros, com foco em liberação para funcionamento do imóvel.</p>
+          <ul><li>Projetos de prevenção e combate a incêndio</li><li>Orientação documental e adequações</li><li>Conformidade com as ITs do CBMMG</li></ul>
         </div>
       </article>
 
       <article class="svc reveal">
         <div class="svc-media"><img alt="Diagrama multifilar de proteção" loading="lazy" src="img/exemplo-projeto-eletrico-6-diagrama-multifilar.jpg"/></div>
         <div class="svc-body">
-          <h3>Documentação Técnica</h3>
-          <p>Diagramas unifilares e multifilares, diagramas de proteção, memoriais descritivos e de cálculo — documentação pronta para obra e para aprovação.</p>
-          <ul>
-            <li>Unifilares e multifilares</li>
-            <li>Diagramas de proteção</li>
-            <li>Memoriais e listas de materiais</li>
-          </ul>
+          <h3>Documentação e Pareceres Técnicos</h3>
+          <p>Diagramas, memoriais de cálculo, as built e pareceres técnicos — documentação pronta para a obra, para a concessionária e para aprovação.</p>
+          <ul><li>Unifilares, multifilares e diagramas de proteção</li><li>Memoriais e listas de materiais</li><li>Pareceres e análises de risco</li></ul>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ===================== QUEM SOMOS ===================== -->
-<section class="section white" id="quem-somos">
+<!-- ============ SETORES ============ -->
+<section class="section white" id="setores">
+  <div class="container">
+    <div class="section-title reveal">
+      <div class="eyebrow">Onde atuamos</div>
+      <h2>Setores atendidos</h2>
+      <p>A MGX atende desde residências de alto padrão até sites de telecomunicações e edificações públicas.</p>
+    </div>
+
+    <div class="sectors reveal">
+      <div class="sector"><span class="ico">🏬</span><b>Varejo e redes</b><span>Lojas e ambientes comerciais: adequações, AVCB, alarme e sistemas de combate a incêndio.</span></div>
+      <div class="sector"><span class="ico">🏢</span><b>Condomínios e edificações</b><span>Laudos de SPDA, adequação de instalações, extintores, sinalização e regularização.</span></div>
+      <div class="sector"><span class="ico">📡</span><b>Telecomunicações</b><span>Laudos e execução de SPDA e aterramento em sites e estações de telecom.</span></div>
+      <div class="sector"><span class="ico">🌳</span><b>Parques e hotelaria</b><span>Projetos elétricos, SPDA e segurança contra incêndio em parques e áreas de visitação.</span></div>
+      <div class="sector"><span class="ico">🏭</span><b>Indústria</b><span>Subestações, dimensionamento, salas elétricas e documentação técnica.</span></div>
+      <div class="sector"><span class="ico">🏛️</span><b>Edificações públicas</b><span>Projetos e laudos para órgãos públicos, com atendimento a processos licitatórios.</span></div>
+    </div>
+    <p class="note reveal">Referências de trabalhos por setor podem ser apresentadas mediante solicitação, respeitando o sigilo de cada contrato.</p>
+  </div>
+</section>
+
+<!-- ============ EMPRESA ============ -->
+<section class="section paper" id="empresa">
   <div class="container">
     <div class="split">
       <div class="reveal">
         <div class="eyebrow">A empresa</div>
         <h2>Quem somos</h2>
-        <p class="lead" style="color:var(--muted); margin-top:18px">
+        <p class="lead" style="color:var(--muted); margin-top:16px">
           A MGX Engenharia e Soluções Integradas é especializada em projetos complementares, com foco em
-          engenharia elétrica, SPDA e telecom — além de inspeções e laudos técnicos de SPDA.
+          engenharia elétrica, SPDA e telecom — além de inspeções, laudos técnicos e segurança contra incêndio.
         </p>
-        <p style="color:var(--muted); font-size:16px">
+        <p style="color:var(--muted); font-size:15.5px">
           Atuamos com projetos executivos, vistorias, relatórios técnicos e adequações de sistemas, seguindo as
           normas vigentes e priorizando segurança, confiabilidade e funcionalidade para proteção de pessoas,
-          patrimônios e sistemas.
+          patrimônios e sistemas. Todo projeto e laudo é emitido com responsabilidade técnica registrada.
         </p>
+        <ul class="bullets on-light" style="margin-top:18px">
+          <li><span class="check"></span> <span><b>ABNT NBR 5410</b> — Instalações elétricas de baixa tensão</span></li>
+          <li><span class="check"></span> <span><b>ABNT NBR 5419</b> — Proteção contra descargas atmosféricas</span></li>
+          <li><span class="check"></span> <span><b>Instruções Técnicas do CBMMG</b> — prevenção e combate a incêndio</span></li>
+        </ul>
         <div class="cta-row">
           <a class="btn dark" href="https://wa.me/5532984729995" target="_blank" rel="noopener" onclick="return gtag_report_conversion('https://wa.me/5532984729995');">Falar com a MGX</a>
           <a class="btn outline" href="#portfolio">Ver portfólio</a>
         </div>
       </div>
 
-      <div class="panel reveal">
-        <div class="eyebrow">Normas de referência</div>
-        <ul class="bullets on-light">
-          <li><span class="check"></span> <span><b>ABNT NBR 5410</b> — Instalações elétricas de baixa tensão</span></li>
-          <li><span class="check"></span> <span><b>ABNT NBR 5419</b> — Proteção contra descargas atmosféricas</span></li>
-          <li><span class="check"></span> <span><b>Instruções Técnicas do CBMMG</b> — prevenção e combate a incêndio (AVCB)</span></li>
-        </ul>
-        <p class="note">Projetos e laudos emitidos com responsabilidade técnica registrada.</p>
-      </div>
+      <aside class="rt reveal">
+        <div class="eyebrow">Responsável técnico</div>
+        <h3>Marcos Andrade Corrêa</h3>
+        <div class="cargo">Engenheiro Eletricista</div>
+        <dl>
+          <dt>Registro</dt><dd>CREA-MG 339105</dd>
+          <dt>Entidade</dt><dd>Clube de Engenharia de Juiz de Fora</dd>
+          <dt>Empresa</dt><dd>MGX Engenharia e Soluções Integradas LTDA</dd>
+          <dt>CNPJ</dt><dd>47.670.234/0001-00</dd>
+        </dl>
+        <p class="note" style="color:var(--muted-dark)">
+          Projetos e laudos acompanhados da respectiva Anotação de Responsabilidade Técnica (ART),
+          registrada no CREA-MG e verificável.
+        </p>
+      </aside>
     </div>
   </div>
 </section>
 
-<!-- ===================== BIM (escuro) ===================== -->
+<!-- ============ PROCESSO ============ -->
+<section class="section white" id="processo">
+  <div class="container">
+    <div class="section-title reveal">
+      <div class="eyebrow">Método</div>
+      <h2>Como trabalhamos</h2>
+      <p>Um caminho previsível, do primeiro contato à entrega da documentação registrada.</p>
+    </div>
+    <div class="steps four">
+      <div class="step reveal"><div class="num">1</div><h4>Diagnóstico</h4><p>Entendemos a edificação, o uso e a exigência aplicável — norma, concessionária ou Corpo de Bombeiros.</p></div>
+      <div class="step reveal"><div class="num">2</div><h4>Proposta técnica</h4><p>Escopo, prazo e investimento por escrito, com o que está e o que não está incluído bem definido.</p></div>
+      <div class="step reveal"><div class="num">3</div><h4>Execução</h4><p>Projeto em BIM ou inspeção em campo com instrumentos aferidos e registro fotográfico das evidências.</p></div>
+      <div class="step reveal"><div class="num">4</div><h4>Entrega com ART</h4><p>Documentação completa, assinada digitalmente e com ART registrada no CREA-MG.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BIM ============ -->
 <section class="section dark" id="bim">
   <div class="container">
     <div class="section-title reveal">
@@ -654,88 +592,65 @@
         e normas aplicáveis.
       </p>
     </div>
-
     <div class="split even">
       <div class="benefits reveal">
         <div class="benefit"><b>Compatibilização</b><span>Elétrica, estrutura, arquitetura e demais disciplinas em um só modelo.</span></div>
-        <div class="benefit"><b>Interferências</b><span>Detecção antecipada de conflitos antes da obra começar.</span></div>
+        <div class="benefit"><b>Interferências</b><span>Detecção antecipada de conflitos antes de a obra começar.</span></div>
         <div class="benefit"><b>Quantitativos</b><span>Geração automática de listas de materiais e documentação.</span></div>
         <div class="benefit"><b>Rastreabilidade</b><span>Histórico de revisões completo e menor margem de erro humano.</span></div>
       </div>
-
       <div class="reveal">
         <div class="figure" style="aspect-ratio:4/3">
           <img alt="Vista 3D de projeto elétrico modelado em BIM" class="thumb" data-alt="Projeto elétrico modelado em BIM — vista 3D" data-src="img/projeto-3d.jpg" loading="lazy" src="img/projeto-3d.jpg" style="border:0;border-radius:0"/>
         </div>
         <p class="note">
           Para o cliente, contratar um projeto em BIM significa menor risco de surpresas, melhor previsibilidade
-          de custos e um ativo digital que pode ser usado para manutenção e futuras ampliações.
+          de custos e um ativo digital reutilizável para manutenção e futuras ampliações.
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== SPDA ===================== -->
+<!-- ============ SPDA ============ -->
 <section class="section paper" id="spda">
   <div class="container">
     <div class="section-title reveal">
-      <div class="eyebrow">Inspeção &amp; laudo</div>
+      <div class="eyebrow">Inspeção e laudo</div>
       <h2>Inspeção e Laudo Técnico de SPDA</h2>
       <p>Medições em campo, registro fotográfico e relatório técnico para conformidade e redução de risco.</p>
     </div>
 
     <div class="split">
       <div class="reveal">
-        <h3 style="margin-bottom:16px">O que é avaliado</h3>
+        <h3 style="margin-bottom:15px">O que é avaliado</h3>
         <div class="steps">
-          <div class="step">
-            <div class="num">1</div>
-            <h4>Captação</h4>
-            <p>Integridade, fixações e continuidade dos componentes de captação e cobertura.</p>
-          </div>
-          <div class="step">
-            <div class="num">2</div>
-            <h4>Descida</h4>
-            <p>Conferência de trajetos, conexões, emendas e pontos críticos ao longo das descidas.</p>
-          </div>
-          <div class="step">
-            <div class="num">3</div>
-            <h4>Aterramento</h4>
-            <p>Medições e avaliação de interligações e equipotencialização do sistema.</p>
-          </div>
+          <div class="step"><div class="num">1</div><h4>Captação</h4><p>Integridade, fixações e continuidade dos componentes de captação e cobertura.</p></div>
+          <div class="step"><div class="num">2</div><h4>Descida</h4><p>Trajetos, conexões, emendas e pontos críticos ao longo das descidas.</p></div>
+          <div class="step"><div class="num">3</div><h4>Aterramento</h4><p>Medições e avaliação de interligações e equipotencialização do sistema.</p></div>
         </div>
 
-        <div class="cards" style="margin-top:18px">
-          <div class="card">
-            <h3>Resistência de aterramento</h3>
-            <p>Medição com terrômetro, com metodologia definida conforme necessidade do site e boas práticas.</p>
-          </div>
-          <div class="card">
-            <h3>Continuidade elétrica</h3>
-            <p>Ensaios com miliohmímetro para verificar interligações, conexões e equipotencialização.</p>
-          </div>
-          <div class="card">
-            <h3>Relatório técnico</h3>
-            <p>Resultados, evidências fotográficas, não conformidades e recomendações de adequação.</p>
-          </div>
+        <div class="cards" style="margin-top:16px">
+          <div class="card"><h3>Resistência de aterramento</h3><p>Medição com terrômetro, com metodologia definida conforme a necessidade do site e boas práticas.</p></div>
+          <div class="card"><h3>Continuidade elétrica</h3><p>Ensaios com miliohmímetro para verificar interligações, conexões e equipotencialização.</p></div>
+          <div class="card"><h3>Relatório técnico</h3><p>Resultados, evidências fotográficas, não conformidades e recomendações de adequação.</p></div>
         </div>
 
         <div class="cta-row">
-          <a class="btn dark" href="https://wa.me/5532984729995?text=Ol%C3%A1%2C%20quero%20agendar%20inspe%C3%A7%C3%A3o%20e%20laudo%20de%20SPDA." target="_blank" rel="noopener" onclick="return gtag_report_conversion('https://wa.me/5532984729995?text=Ol%C3%A1%2C%20quero%20agendar%20inspe%C3%A7%C3%A3o%20e%20laudo%20de%20SPDA.');">Agendar inspeção via WhatsApp</a>
+          <a class="btn dark" href="https://wa.me/5532984729995?text=Ol%C3%A1%2C%20quero%20agendar%20inspe%C3%A7%C3%A3o%20e%20laudo%20de%20SPDA." target="_blank" rel="noopener" onclick="return gtag_report_conversion('https://wa.me/5532984729995?text=Ol%C3%A1%2C%20quero%20agendar%20inspe%C3%A7%C3%A3o%20e%20laudo%20de%20SPDA.');">Agendar inspeção</a>
           <a class="btn outline" href="#contato">Falar com a MGX</a>
         </div>
       </div>
 
       <aside class="panel reveal">
-        <div class="figure fit" style="aspect-ratio:3/4">
-          <img alt="Exemplo de laudo e inspeção de SPDA" class="thumb" data-alt="Exemplo de laudo e inspeção de SPDA" data-src="img/exemplo-laudo-spda-5.jpg" loading="lazy" src="img/exemplo-laudo-spda-5.jpg" style="border:0;border-radius:0"/>
+        <div class="figure fit" style="aspect-ratio:1/1">
+          <img alt="Laudo de medição de resistência de aterramento" class="thumb" data-alt="Laudo de medição de resistência de aterramento — curva e análise" data-src="img/laudo-exemplo-2.jpg" loading="lazy" src="img/laudo-exemplo-2.jpg" style="border:0;border-radius:0"/>
         </div>
         <div class="meta">
           <span class="pill">Terrômetro</span>
           <span class="pill">Miliohmímetro</span>
           <span class="pill">Rastreabilidade</span>
-          <span class="pill">Relatório</span>
+          <span class="pill">ART</span>
         </div>
         <p class="note">
           A ABNT NBR 5419 prevê que a necessidade e o nível de proteção sejam definidos por Gerenciamento de
@@ -746,7 +661,7 @@
   </div>
 </section>
 
-<!-- ===================== AVCB ===================== -->
+<!-- ============ AVCB ============ -->
 <section class="section white" id="avcb">
   <div class="container">
     <div class="section-title reveal">
@@ -758,17 +673,18 @@
     <div class="split">
       <div class="panel reveal">
         <p class="lead" style="color:var(--muted); margin-top:0">
-          Para lojas, ambientes comerciais e edificações, a regularização do AVCB é essencial para segurança e
+          Para lojas, ambientes comerciais e edificações, a regularização do AVCB é essencial para a segurança e
           para viabilizar processos de licenciamento e funcionamento.
         </p>
-        <p style="color:var(--muted); font-size:16px">
+        <p style="color:var(--muted); font-size:15.5px">
           Atuamos com projetos e adequações seguindo as Instruções Técnicas do CBMMG, priorizando soluções
           executáveis, documentação adequada e atendimento às exigências do Corpo de Bombeiros.
         </p>
-        <ul class="bullets on-light" style="margin-top:18px">
-          <li><span class="check"></span> Projetos e documentação para prevenção e combate a incêndio</li>
+        <ul class="bullets on-light" style="margin-top:16px">
+          <li><span class="check"></span> Projetos de prevenção e combate a incêndio</li>
           <li><span class="check"></span> Apoio técnico para adequações e regularização</li>
-          <li><span class="check"></span> Integração com projetos complementares quando necessário</li>
+          <li><span class="check"></span> Extintores, sinalização e sistemas de alarme</li>
+          <li><span class="check"></span> Integração com os projetos complementares</li>
         </ul>
         <div class="cta-row">
           <a class="btn dark" href="https://wa.me/5532984729995?text=Ol%C3%A1%2C%20preciso%20de%20orienta%C3%A7%C3%A3o%20sobre%20AVCB." target="_blank" rel="noopener" onclick="return gtag_report_conversion('https://wa.me/5532984729995?text=Ol%C3%A1%2C%20preciso%20de%20orienta%C3%A7%C3%A3o%20sobre%20AVCB.');">Solicitar orientação</a>
@@ -778,7 +694,7 @@
 
       <aside class="panel reveal">
         <div class="figure fit" style="aspect-ratio:4/3">
-          <img alt="Projeto de prevenção e combate a incêndio — plantas e legenda" class="thumb" data-alt="Projeto de prevenção e combate a incêndio — plantas e legenda" data-src="img/exemplo-avcb-1.jpg" loading="lazy" src="img/exemplo-avcb-1.jpg" style="border:0;border-radius:0"/>
+          <img alt="Projeto de prevenção e combate a incêndio — plantas e legenda" class="thumb" data-alt="Projeto de prevenção e combate a incêndio — plantas, legenda e cálculo de população" data-src="img/exemplo-avcb-1.jpg" loading="lazy" src="img/exemplo-avcb-1.jpg" style="border:0;border-radius:0"/>
         </div>
         <p class="note">Documentação clara e alinhada às exigências do CBMMG para reduzir retrabalho e acelerar a regularização.</p>
       </aside>
@@ -786,62 +702,61 @@
   </div>
 </section>
 
-<!-- ===================== PORTFÓLIO (escuro) ===================== -->
+<!-- ============ PORTFÓLIO ============ -->
 <section class="section dark" id="portfolio">
   <div class="container">
     <div class="section-title reveal">
       <div class="eyebrow">Trabalhos</div>
       <h2>Portfólio</h2>
-      <p>Clique em qualquer imagem para ampliar e navegar entre os exemplos.</p>
+      <p>Exemplos de projetos, laudos e documentação técnica. Clique para ampliar.</p>
     </div>
 
     <div class="gallery" id="gallery">
-      <button aria-label="Ampliar: projeto elétrico" class="thumb reveal" data-alt="Projeto elétrico — prancha executiva" data-src="img/exemplo-projeto-eletrico-1.jpg" type="button"><img alt="Projeto elétrico — prancha executiva" loading="lazy" src="img/exemplo-projeto-eletrico-1.jpg"/></button>
-      <button aria-label="Ampliar: diagrama unifilar" class="thumb reveal" data-alt="Projeto elétrico — diagrama unifilar" data-src="img/exemplo-projeto-eletrico-2-unifilar.jpg" type="button"><img alt="Projeto elétrico — diagrama unifilar" loading="lazy" src="img/exemplo-projeto-eletrico-2-unifilar.jpg"/></button>
-      <button aria-label="Ampliar: projeto elétrico" class="thumb reveal" data-alt="Projeto elétrico — detalhamento" data-src="img/exemplo-projeto-eletrico-3.jpg" type="button"><img alt="Projeto elétrico — detalhamento" loading="lazy" src="img/exemplo-projeto-eletrico-3.jpg"/></button>
-      <button aria-label="Ampliar: diagrama de proteção" class="thumb reveal" data-alt="Diagrama de proteção" data-src="img/exemplo-projeto-eletrico-5-diagrama-protecao.jpg" type="button"><img alt="Diagrama de proteção" loading="lazy" src="img/exemplo-projeto-eletrico-5-diagrama-protecao.jpg"/></button>
-      <button aria-label="Ampliar: diagrama multifilar" class="thumb reveal" data-alt="Diagrama multifilar" data-src="img/exemplo-projeto-eletrico-6-diagrama-multifilar.jpg" type="button"><img alt="Diagrama multifilar" loading="lazy" src="img/exemplo-projeto-eletrico-6-diagrama-multifilar.jpg"/></button>
-      <button aria-label="Ampliar: projeto de telecom" class="thumb reveal" data-alt="Projeto de telecom" data-src="img/exemplo-projeto-telecom.jpg" type="button"><img alt="Projeto de telecom" loading="lazy" src="img/exemplo-projeto-telecom.jpg"/></button>
-      <button aria-label="Ampliar: projeto de telecom" class="thumb reveal" data-alt="Projeto de telecom — detalhe" data-src="img/exemplo-projeto-telecom-2.jpg" type="button"><img alt="Projeto de telecom — detalhe" loading="lazy" src="img/exemplo-projeto-telecom-2.jpg"/></button>
-      <button aria-label="Ampliar: vista 3D" class="thumb reveal" data-alt="Projeto elétrico — vista 3D em BIM" data-src="img/projeto-3d.jpg" type="button"><img alt="Projeto elétrico — vista 3D em BIM" loading="lazy" src="img/projeto-3d.jpg"/></button>
-      <button aria-label="Ampliar: laudo de SPDA" class="thumb reveal" data-alt="Laudo de SPDA — inspeção em campo" data-src="img/exemplo-laudo-spda-1.jpg" type="button"><img alt="Laudo de SPDA — inspeção em campo" loading="lazy" src="img/exemplo-laudo-spda-1.jpg"/></button>
-      <button aria-label="Ampliar: laudo de SPDA" class="thumb reveal" data-alt="Laudo de SPDA — medições" data-src="img/exemplo-laudo-spda-2.jpg" type="button"><img alt="Laudo de SPDA — medições" loading="lazy" src="img/exemplo-laudo-spda-2.jpg"/></button>
-      <button aria-label="Ampliar: laudo de SPDA" class="thumb reveal" data-alt="Laudo de SPDA — registro fotográfico" data-src="img/exemplo-laudo-spda-3.jpg" type="button"><img alt="Laudo de SPDA — registro fotográfico" loading="lazy" src="img/exemplo-laudo-spda-3.jpg"/></button>
-      <button aria-label="Ampliar: laudo de SPDA" class="thumb reveal" data-alt="Laudo de SPDA — relatório" data-src="img/exemplo-laudo-spda-4.jpg" type="button"><img alt="Laudo de SPDA — relatório" loading="lazy" src="img/exemplo-laudo-spda-4.jpg"/></button>
-      <button aria-label="Ampliar: laudo técnico" class="thumb reveal" data-alt="Laudo técnico — exemplo" data-src="img/laudo-exemplo-1.jpg" type="button"><img alt="Laudo técnico — exemplo" loading="lazy" src="img/laudo-exemplo-1.jpg"/></button>
-      <button aria-label="Ampliar: laudo técnico" class="thumb reveal" data-alt="Laudo técnico — exemplo" data-src="img/laudo-exemplo-2.jpg" type="button"><img alt="Laudo técnico — exemplo" loading="lazy" src="img/laudo-exemplo-2.jpg"/></button>
-      <button aria-label="Ampliar: AVCB" class="thumb reveal" data-alt="AVCB — documentação" data-src="img/exemplo-avcb-1.jpg" type="button"><img alt="AVCB — documentação" loading="lazy" src="img/exemplo-avcb-1.jpg"/></button>
-      <button aria-label="Ampliar: AVCB" class="thumb reveal" data-alt="AVCB — documentação" data-src="img/exemplo-avcb-2.jpg" type="button"><img alt="AVCB — documentação" loading="lazy" src="img/exemplo-avcb-2.jpg"/></button>
+      <button aria-label="Ampliar" class="thumb reveal" data-alt="Projeto elétrico — prancha executiva" data-src="img/exemplo-projeto-eletrico-1.jpg" type="button"><img alt="Projeto elétrico — prancha executiva" loading="lazy" src="img/exemplo-projeto-eletrico-1.jpg"/></button>
+      <button aria-label="Ampliar" class="thumb reveal" data-alt="Projeto elétrico — diagrama unifilar" data-src="img/exemplo-projeto-eletrico-2-unifilar.jpg" type="button"><img alt="Projeto elétrico — diagrama unifilar" loading="lazy" src="img/exemplo-projeto-eletrico-2-unifilar.jpg"/></button>
+      <button aria-label="Ampliar" class="thumb reveal" data-alt="Projeto elétrico — detalhamento" data-src="img/exemplo-projeto-eletrico-3.jpg" type="button"><img alt="Projeto elétrico — detalhamento" loading="lazy" src="img/exemplo-projeto-eletrico-3.jpg"/></button>
+      <button aria-label="Ampliar" class="thumb reveal" data-alt="Diagrama de proteção" data-src="img/exemplo-projeto-eletrico-5-diagrama-protecao.jpg" type="button"><img alt="Diagrama de proteção" loading="lazy" src="img/exemplo-projeto-eletrico-5-diagrama-protecao.jpg"/></button>
+      <button aria-label="Ampliar" class="thumb reveal" data-alt="Diagrama multifilar" data-src="img/exemplo-projeto-eletrico-6-diagrama-multifilar.jpg" type="button"><img alt="Diagrama multifilar" loading="lazy" src="img/exemplo-projeto-eletrico-6-diagrama-multifilar.jpg"/></button>
+      <button aria-label="Ampliar" class="thumb reveal" data-alt="Projeto elétrico — vista 3D em BIM" data-src="img/projeto-3d.jpg" type="button"><img alt="Projeto elétrico — vista 3D em BIM" loading="lazy" src="img/projeto-3d.jpg"/></button>
+      <button aria-label="Ampliar" class="thumb reveal" data-alt="Projeto de telecom" data-src="img/exemplo-projeto-telecom.jpg" type="button"><img alt="Projeto de telecom" loading="lazy" src="img/exemplo-projeto-telecom.jpg"/></button>
+      <button aria-label="Ampliar" class="thumb reveal" data-alt="Projeto de telecom — detalhe" data-src="img/exemplo-projeto-telecom-2.jpg" type="button"><img alt="Projeto de telecom — detalhe" loading="lazy" src="img/exemplo-projeto-telecom-2.jpg"/></button>
+      <button aria-label="Ampliar" class="thumb reveal" data-alt="Projeto de prevenção e combate a incêndio — plantas e legenda" data-src="img/exemplo-avcb-1.jpg" type="button"><img alt="Projeto de prevenção e combate a incêndio" loading="lazy" src="img/exemplo-avcb-1.jpg"/></button>
+      <button aria-label="Ampliar" class="thumb reveal" data-alt="Projeto de prevenção e combate a incêndio — detalhe" data-src="img/exemplo-avcb-2.jpg" type="button"><img alt="Projeto de prevenção e combate a incêndio — detalhe" loading="lazy" src="img/exemplo-avcb-2.jpg"/></button>
+      <button aria-label="Ampliar" class="thumb reveal" data-alt="Laudo de resistência de aterramento — folha de medições" data-src="img/laudo-exemplo-1.jpg" type="button"><img alt="Laudo de resistência de aterramento — folha de medições" loading="lazy" src="img/laudo-exemplo-1.jpg"/></button>
+      <button aria-label="Ampliar" class="thumb reveal" data-alt="Laudo de resistência de aterramento — curva e análise" data-src="img/laudo-exemplo-2.jpg" type="button"><img alt="Laudo de resistência de aterramento — curva e análise" loading="lazy" src="img/laudo-exemplo-2.jpg"/></button>
+      <button aria-label="Ampliar" class="thumb reveal" data-alt="Laudo de SPDA — registro fotográfico das medições" data-src="img/laudo-exemplo-3.jpg" type="button"><img alt="Laudo de SPDA — registro fotográfico das medições" loading="lazy" src="img/laudo-exemplo-3.jpg"/></button>
+      <button aria-label="Ampliar" class="thumb reveal" data-alt="Inspeção de SPDA — quadros e instalações" data-src="img/exemplo-laudo-spda-1.jpg" type="button"><img alt="Inspeção de SPDA — quadros e instalações" loading="lazy" src="img/exemplo-laudo-spda-1.jpg"/></button>
+      <button aria-label="Ampliar" class="thumb reveal" data-alt="Inspeção de SPDA — descidas e conexões" data-src="img/exemplo-laudo-spda-2.jpg" type="button"><img alt="Inspeção de SPDA — descidas e conexões" loading="lazy" src="img/exemplo-laudo-spda-2.jpg"/></button>
+      <button aria-label="Ampliar" class="thumb reveal" data-alt="Inspeção de SPDA — barramento de equipotencialização" data-src="img/exemplo-laudo-spda-3.jpg" type="button"><img alt="Inspeção de SPDA — barramento de equipotencialização" loading="lazy" src="img/exemplo-laudo-spda-3.jpg"/></button>
+      <button aria-label="Ampliar" class="thumb reveal" data-alt="Ensaio de continuidade com miliohmímetro" data-src="img/exemplo-laudo-spda-4.jpg" type="button"><img alt="Ensaio de continuidade com miliohmímetro" loading="lazy" src="img/exemplo-laudo-spda-4.jpg"/></button>
     </div>
-    <p class="note">Se desejar, podemos apresentar imagens anonimizadas (sem endereço ou dados do cliente) para manter o sigilo do projeto.</p>
+    <p class="note">As imagens são apresentadas sem endereço, identificação do cliente ou código do site, preservando o sigilo de cada contrato.</p>
   </div>
 </section>
 
-<!-- ===================== CONTATO ===================== -->
+<!-- ============ CONTATO ============ -->
 <section class="section paper" id="contato">
   <div class="container">
     <div class="contact-wrap reveal">
       <div>
         <div class="eyebrow" style="color:var(--brand)">Contato</div>
         <h2 style="color:#fff">Vamos conversar sobre o seu projeto?</h2>
-        <p style="color:var(--muted-dark); font-size:17px; margin:0">
-          Resposta rápida por WhatsApp. Para agilizar o orçamento, envie o <b style="color:#fff">endereço</b>,
-          o <b style="color:#fff">tipo de obra</b> e o <b style="color:#fff">prazo desejado</b>.
+        <p style="color:var(--muted-dark); font-size:16.5px; margin:12px 0 0">
+          Para agilizar o orçamento, envie o <b style="color:#fff">endereço</b>, o
+          <b style="color:#fff">tipo de obra ou edificação</b> e o <b style="color:#fff">prazo desejado</b>.
+          Retornamos com escopo, prazo e investimento por escrito.
         </p>
       </div>
 
       <div class="contact-list">
         <a class="contact-item" href="https://wa.me/5532984729995?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MGX%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" onclick="return gtag_report_conversion('https://wa.me/5532984729995?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MGX%20e%20gostaria%20de%20um%20or%C3%A7amento.');">
-          <span class="ci-ico">💬</span>
-          <span class="ci-txt"><small>WhatsApp</small><b>(32) 98472-9995</b></span>
+          <span class="ci-ico">💬</span><span class="ci-txt"><small>WhatsApp</small><b>(32) 98472-9995</b></span>
         </a>
         <a class="contact-item" href="#" id="mailLink">
-          <span class="ci-ico">✉</span>
-          <span class="ci-txt"><small>E-mail</small><b id="mailText">carregando…</b></span>
+          <span class="ci-ico">✉</span><span class="ci-txt"><small>E-mail</small><b id="mailText">carregando…</b></span>
         </a>
         <div class="contact-item" style="cursor:default">
-          <span class="ci-ico">📍</span>
-          <span class="ci-txt"><small>Atendimento</small><b>Juiz de Fora e região — MG</b></span>
+          <span class="ci-ico">📍</span><span class="ci-txt"><small>Escritório</small><b>Rua São Sebastião — Juiz de Fora/MG</b></span>
         </div>
       </div>
     </div>
@@ -849,21 +764,39 @@
 </section>
 
 <footer>
-  <div class="container foot">
-    <div>
-      <img alt="MGX Engenharia e Soluções Integradas" loading="lazy" src="img/mgx-logo.png"/>
-      <div>MGX Engenharia e Soluções Integradas</div>
-      <div style="font-size:13px; opacity:.75">CNPJ: 47.670.234/0001-00</div>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <img alt="MGX Engenharia e Soluções Integradas" loading="lazy" src="img/mgx-logo.png"/>
+        <div style="color:rgba(255,255,255,.72)">MGX Engenharia e Soluções Integradas LTDA</div>
+        <div style="margin-top:8px; font-size:13px">CNPJ 47.670.234/0001-00</div>
+        <div style="font-size:13px">Rua São Sebastião — Juiz de Fora/MG</div>
+        <div style="font-size:13px">Responsável técnico: CREA-MG 339105</div>
+      </div>
+      <div>
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="#servicos">Projetos elétricos</a></li>
+          <li><a href="#servicos">Projetos de telecom</a></li>
+          <li><a href="#spda">SPDA e laudos</a></li>
+          <li><a href="#avcb">AVCB</a></li>
+          <li><a href="#bim">Projetos em BIM</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="tel:+5532984729995">(32) 98472-9995</a></li>
+          <li><a href="#" id="mailLinkFoot">carregando…</a></li>
+          <li><a href="https://wa.me/5532984729995" target="_blank" rel="noopener" onclick="return gtag_report_conversion('https://wa.me/5532984729995');">WhatsApp</a></li>
+          <li><a href="#contato">Solicitar orçamento</a></li>
+        </ul>
+      </div>
     </div>
-    <nav class="foot-links" aria-label="Rodapé">
-      <a href="#servicos">Serviços</a>
-      <a href="#spda">SPDA</a>
-      <a href="#avcb">AVCB</a>
-      <a href="#bim">BIM</a>
-      <a href="#portfolio">Portfólio</a>
-      <a href="#contato">Contato</a>
-    </nav>
-    <div style="font-size:13px; opacity:.75">© <span id="ano">2026</span> MGX Engenharia</div>
+    <div class="foot-bottom">
+      <div>© <span id="ano">2026</span> MGX Engenharia e Soluções Integradas LTDA. Todos os direitos reservados.</div>
+      <div>Atendimento em Minas Gerais e Rio de Janeiro</div>
+    </div>
   </div>
 </footer>
 
@@ -890,7 +823,7 @@
 <script>
 /* ---- Lightbox ---- */
 (function(){
-  const thumbs = Array.from(document.querySelectorAll('.thumb[data-src]'));
+  const thumbs = Array.prototype.slice.call(document.querySelectorAll('.thumb[data-src]'));
   const lightbox = document.getElementById('lightbox');
   const lbImg = document.getElementById('lbImg');
   const lbCaption = document.getElementById('lbCaption');
@@ -917,19 +850,16 @@
     document.body.style.overflow='';
     lbImg.src = '';
   }
-  function prev(){ openAt(idx - 1); }
-  function next(){ openAt(idx + 1); }
-
-  thumbs.forEach((t, i) => t.addEventListener('click', () => openAt(i)));
+  thumbs.forEach((t,i) => t.addEventListener('click', () => openAt(i)));
   lbClose.addEventListener('click', close);
-  lbPrev.addEventListener('click', e => { e.stopPropagation(); prev(); });
-  lbNext.addEventListener('click', e => { e.stopPropagation(); next(); });
+  lbPrev.addEventListener('click', e => { e.stopPropagation(); openAt(idx-1); });
+  lbNext.addEventListener('click', e => { e.stopPropagation(); openAt(idx+1); });
   lightbox.addEventListener('click', e => { if(e.target === lightbox) close(); });
   window.addEventListener('keydown', e => {
     if(!lightbox.classList.contains('open')) return;
     if(e.key === 'Escape') close();
-    if(e.key === 'ArrowLeft') prev();
-    if(e.key === 'ArrowRight') next();
+    if(e.key === 'ArrowLeft') openAt(idx-1);
+    if(e.key === 'ArrowRight') openAt(idx+1);
   });
 })();
 
@@ -955,15 +885,15 @@ document.addEventListener('click', function(e){
 
 /* ---- E-mail montado no cliente (evita coleta automática por robôs de spam) ---- */
 (function(){
-  const user = 'mgx.engenharia.si', dom = 'gmail.com';
-  const addr = user + '@' + dom;
+  const addr = 'mgx.engenharia.si' + '@' + 'gmail.com';
   const link = document.getElementById('mailLink');
   const txt  = document.getElementById('mailText');
+  const foot = document.getElementById('mailLinkFoot');
   if(link) link.href = 'mailto:' + addr;
   if(txt)  txt.textContent = addr;
+  if(foot){ foot.href = 'mailto:' + addr; foot.textContent = addr; }
 })();
 
-/* ---- Ano do rodapé ---- */
 document.getElementById('ano').textContent = new Date().getFullYear();
 
 /* ---- Animação de entrada ---- */
@@ -975,7 +905,7 @@ document.getElementById('ano').textContent = new Date().getFullYear();
     els.forEach(el => el.classList.add('in'));
     return;
   }
-  els.forEach((el, i) => { el.style.transitionDelay = Math.min(i % 6, 5) * 55 + 'ms'; });
+  els.forEach((el,i) => { el.style.transitionDelay = Math.min(i % 6, 5) * 50 + 'ms'; });
 
   // Revela tudo que já passou da borda inferior da tela. Uma varredura (em vez de
   // IntersectionObserver) garante que nada fique invisível quando a página pula
