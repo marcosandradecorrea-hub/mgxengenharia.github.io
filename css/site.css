@@ -409,8 +409,8 @@ footer{background:#141414; color:rgba(255,255,255,.62); padding:48px 0 28px; bor
 
 /* lista de entrega */
 .deliver{list-style:none; padding:0; margin:18px 0 0; display:grid; gap:10px}
-.deliver li{display:flex; gap:11px; align-items:flex-start; font-size:15.5px; line-height:1.55}
-.deliver li::before{content:""; flex-shrink:0; width:7px; height:7px; margin-top:9px; border-radius:2px; background:var(--brand-deep)}
+.deliver li{position:relative; padding-left:19px; font-size:15.5px; line-height:1.55}
+.deliver li::before{content:""; position:absolute; left:0; top:9px; width:7px; height:7px; border-radius:2px; background:var(--brand-deep)}
 .dark .deliver li{color:rgba(255,255,255,.87)}
 .dark .deliver li::before{background:var(--brand)}
 
