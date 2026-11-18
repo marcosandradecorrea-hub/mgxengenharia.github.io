@@ -11,8 +11,8 @@
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>MGX Engenharia | Projetos Elétricos, SPDA, Telecom e Laudos Técnicos</title>
-<meta name="description" content="MGX Engenharia e Soluções Integradas — projetos elétricos em BIM/Revit, SPDA, telecom, AVCB e laudos de inspeção com medições rastreáveis e ART. Responsável técnico CREA-MG 339105. Juiz de Fora e região."/>
+<title>Projeto Elétrico, SPDA e AVCB em Juiz de Fora | MGX Engenharia</title>
+<meta name="description" content="Projetos elétricos em BIM (Revit), SPDA, AVCB e laudos em Juiz de Fora. Engenheiro eletricista com ART do CREA-MG. Nota 5,0 no Google. Fale no WhatsApp."/>
 <meta name="theme-color" content="#1A1A1A"/>
 <link rel="canonical" href="https://www.mgxengenhariasi.com.br/"/>
 <link rel="icon" type="image/png" href="img/mgx-icone.png"/>
@@ -20,369 +20,17 @@
 <meta property="og:type" content="website"/>
 <meta property="og:locale" content="pt_BR"/>
 <meta property="og:site_name" content="MGX Engenharia e Soluções Integradas"/>
-<meta property="og:title" content="MGX Engenharia | Projetos Elétricos, SPDA, Telecom e Laudos Técnicos"/>
-<meta property="og:description" content="Projetos elétricos em BIM/Revit, SPDA, telecom, AVCB e laudos de inspeção com ART. Juiz de Fora e região."/>
+<meta property="og:title" content="Projeto Elétrico, SPDA e AVCB em Juiz de Fora | MGX Engenharia"/>
+<meta property="og:description" content="Projetos elétricos em BIM (Revit), SPDA, AVCB e laudos em Juiz de Fora. Engenheiro eletricista com ART do CREA-MG. Nota 5,0 no Google. Fale no WhatsApp."/>
 <meta property="og:url" content="https://www.mgxengenhariasi.com.br/"/>
-<meta property="og:image" content="https://www.mgxengenhariasi.com.br/img/exemplo-projeto-eletrico-4-3d-casa.jpg"/>
+<!-- TROCAR: imagem de compartilhamento 1200x630 feita no Canva (og-*.jpg) -->
+<meta property="og:image" content="https://www.mgxengenhariasi.com.br/img/capa-galpao.jpg"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
-<style>
-  :root{
-    /* Identidade MGX — cores oficiais do papel timbrado e da logo */
-    --brand:#FFD966;        /* amarelo MGX (papel timbrado) */
-    --brand-hi:#FFE79A;     /* amarelo claro — hover sobre fundo escuro */
-    --brand-deep:#8C6209;   /* amarelo escuro — texto sobre fundo claro */
-    --graphite:#404040;     /* grafite MGX (logo e timbrado) */
-    --gray-mid:#7F7F7F;     /* cinza médio MGX */
-
-    --ink:#1A1A1A;
-    --ink-2:#232323;
-    --ink-line:#383838;
-
-    --paper:#F7F6F4;
-    --surface:#FFFFFF;
-    --line:#E1DFDA;
-    --line-2:#CFCCC6;
-    --text:#1F1F1F;
-    --muted:#63635F;
-    --muted-dark:#A8A8A4;
-
-    --r:8px;             /* raio contido: leitura técnica, não "app" */
-    --r-lg:12px;
-    --maxw:1200px;
-  }
-
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth; -webkit-text-size-adjust:100%}
-  body{
-    margin:0;
-    font-family:'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
-    background:var(--paper); color:var(--text);
-    font-size:16.5px; line-height:1.65; -webkit-font-smoothing:antialiased;
-  }
-  img{max-width:100%; display:block}
-  a{color:inherit}
-
-  h1,h2,h3,h4{font-family:'Space Grotesk','Inter',sans-serif; line-height:1.15; letter-spacing:-.02em; margin:0}
-  h2{font-size:clamp(27px,3.6vw,40px); font-weight:600}
-  h3{font-size:18.5px; font-weight:600; letter-spacing:-.005em}
-  h4{font-size:16px; font-weight:600}
-
-  .container{width:min(var(--maxw),92%); margin-inline:auto}
-
-  /* ---------------- Barra institucional ---------------- */
-  .utilbar{background:var(--ink-2); color:var(--muted-dark); font-size:13px; border-bottom:1px solid rgba(255,255,255,.07)}
-  .utilbar-in{display:flex; justify-content:space-between; align-items:center; gap:16px; padding:8px 0; flex-wrap:wrap}
-  .utilbar b{color:var(--brand); font-weight:600}
-  .utilbar a{text-decoration:none}
-  .utilbar a:hover{color:#fff}
-  .util-right{display:flex; gap:20px; flex-wrap:wrap}
-
-  /* ---------------- Topbar ---------------- */
-  .topbar{position:sticky; top:0; z-index:60; background:rgba(26,26,26,.94); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:1px solid rgba(255,255,255,.09)}
-  .topbar-in{display:flex; align-items:center; justify-content:space-between; gap:18px; padding:12px 0}
-  .brand{display:flex; align-items:center; gap:11px; text-decoration:none; flex-shrink:0}
-  .brand img{height:32px; width:auto}
-  .brand-txt{display:flex; flex-direction:column; line-height:1.08}
-  .brand-txt b{font-family:'Space Grotesk',sans-serif; font-size:16.5px; font-weight:600; color:#fff}
-  .brand-txt span{font-size:9px; letter-spacing:.17em; text-transform:uppercase; color:var(--brand); font-weight:600}
-
-  .nav{display:flex; align-items:center; gap:2px}
-  .nav a{text-decoration:none; color:rgba(255,255,255,.78); font-size:14.5px; font-weight:500; padding:8px 11px; border-radius:6px; transition:color .18s,background .18s}
-  .nav a:hover{color:#fff; background:rgba(255,255,255,.08)}
-  .nav .nav-cta{background:var(--brand); color:var(--ink); font-weight:700; margin-left:10px; padding:10px 18px}
-  .nav .nav-cta:hover{background:var(--brand-hi); color:var(--ink)}
-
-  .menu-toggle{display:none; background:transparent; border:1px solid rgba(255,255,255,.22); border-radius:7px; width:44px; height:40px; cursor:pointer; padding:0}
-  .menu-toggle span{display:block; width:18px; height:1.8px; background:#fff; border-radius:2px; margin:3.6px auto; transition:transform .25s,opacity .2s}
-  .menu-toggle.open span:nth-child(1){transform:translateY(5.4px) rotate(45deg)}
-  .menu-toggle.open span:nth-child(2){opacity:0}
-  .menu-toggle.open span:nth-child(3){transform:translateY(-5.4px) rotate(-45deg)}
-  .nav-mobile{display:none; flex-direction:column; padding:0 0 14px; border-top:1px solid rgba(255,255,255,.09)}
-  .nav-mobile.open{display:flex}
-  .nav-mobile a{text-decoration:none; color:rgba(255,255,255,.84); padding:13px 4px; font-size:16px; font-weight:500; border-bottom:1px solid rgba(255,255,255,.07)}
-  .nav-mobile a.mob-cta{background:var(--brand); color:var(--ink); font-weight:700; text-align:center; border-radius:8px; margin-top:12px; border:0}
-
-  /* ---------------- Blocos ---------------- */
-  .dark{background:var(--ink); color:#E8E8E6; position:relative; overflow:hidden}
-  .dark::before{
-    content:""; position:absolute; inset:0; pointer-events:none;
-    background-image:linear-gradient(rgba(255,217,102,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,217,102,.05) 1px,transparent 1px);
-    background-size:72px 72px;
-    mask-image:radial-gradient(ellipse 85% 65% at 50% 0%,#000 30%,transparent 100%);
-    -webkit-mask-image:radial-gradient(ellipse 85% 65% at 50% 0%,#000 30%,transparent 100%);
-  }
-  .dark > *{position:relative; z-index:1}
-  .dark h1,.dark h2,.dark h3,.dark h4{color:#fff}
-  .dark p{color:var(--muted-dark)}
-
-  .section{padding:clamp(54px,7.5vw,100px) 0; scroll-margin-top:70px}
-  .section.paper{background:var(--paper)}
-  .section.white{background:var(--surface); border-block:1px solid var(--line)}
-
-  .eyebrow{display:inline-flex; align-items:center; gap:9px; font-size:11px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--brand-deep); margin-bottom:15px}
-  .dark .eyebrow{color:var(--brand)}
-  .eyebrow::before{content:""; width:24px; height:2px; background:currentColor}
-
-  .section-title{max-width:740px; margin-bottom:clamp(30px,4.5vw,50px)}
-  .section-title p{margin:13px 0 0; color:var(--muted); font-size:17px}
-  .dark .section-title p{color:var(--muted-dark)}
-
-  /* ---------------- Hero ---------------- */
-  .hero{padding:clamp(56px,8vw,104px) 0 0; scroll-margin-top:70px}
-  .hero-grid{display:grid; grid-template-columns:1.3fr .8fr; gap:clamp(30px,5vw,60px); align-items:center}
-  .kicker{display:inline-flex; align-items:center; gap:9px; font-size:12.5px; font-weight:600; color:var(--brand); border:1px solid rgba(255,217,102,.3); background:rgba(255,217,102,.07); padding:7px 15px; border-radius:100px; margin-bottom:24px}
-  .kicker .dot{width:6px; height:6px; border-radius:50%; background:var(--brand); box-shadow:0 0 0 4px rgba(255,217,102,.16)}
-  .hero h1{font-size:clamp(33px,5.6vw,60px); font-weight:700; letter-spacing:-.035em; color:#fff}
-  .hero h1 em{font-style:normal; color:var(--brand)}
-  .lead{font-size:clamp(16.5px,1.8vw,19px); color:var(--muted-dark); margin:20px 0 0; max-width:60ch}
-
-  .cta-row{display:flex; flex-wrap:wrap; gap:12px; margin-top:30px}
-  .btn{display:inline-flex; align-items:center; justify-content:center; gap:9px; padding:14px 26px; border-radius:var(--r); text-decoration:none; font-weight:600; font-size:15.5px; border:1px solid transparent; cursor:pointer; transition:transform .16s,background .18s,border-color .18s; font-family:'Inter',sans-serif}
-  .btn.primary{background:var(--brand); color:var(--ink); font-weight:700}
-  .btn.primary:hover{background:var(--brand-hi); transform:translateY(-2px)}
-  .btn.ghost{border-color:rgba(255,255,255,.24); color:#fff}
-  .btn.ghost:hover{border-color:var(--brand); color:var(--brand); transform:translateY(-2px)}
-  .btn.dark{background:var(--ink); color:#fff}
-  .btn.dark:hover{background:#000; transform:translateY(-2px)}
-  .btn.outline{border-color:var(--line-2); background:var(--surface); color:var(--text)}
-  .btn.outline:hover{border-color:var(--graphite); transform:translateY(-2px)}
-
-  .hero-card{background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.11); border-radius:var(--r-lg); padding:26px}
-  .hero-card h3{font-size:11.5px; letter-spacing:.17em; text-transform:uppercase; color:var(--brand); font-weight:700; margin-bottom:18px}
-  .bullets{list-style:none; padding:0; margin:0; display:grid; gap:13px}
-  .bullets li{display:flex; gap:11px; align-items:flex-start; font-size:15px; line-height:1.5; color:rgba(255,255,255,.87)}
-  .check{flex-shrink:0; width:19px; height:19px; border-radius:50%; margin-top:2px; background:rgba(255,217,102,.14); border:1px solid rgba(255,217,102,.42); position:relative}
-  .check::after{content:""; position:absolute; left:6px; top:3.2px; width:4.2px; height:8px; border:solid var(--brand); border-width:0 1.8px 1.8px 0; transform:rotate(43deg)}
-
-  /* lista de diferenciais abaixo do hero */
-  .hero-bullets{
-    grid-template-columns:repeat(4,1fr); gap:18px 26px;
-    margin-top:clamp(32px,4.5vw,50px); padding-top:clamp(28px,4vw,40px);
-    border-top:1px solid rgba(255,255,255,.12);
-  }
-  .hero-bullets li{font-size:14.5px}
-
-  /* faixa de credenciais */
-  .credbar{margin-top:clamp(32px,4.5vw,52px); border-top:1px solid rgba(255,255,255,.12); display:grid; grid-template-columns:repeat(4,1fr)}
-  .cred{padding:24px 22px 28px; border-right:1px solid rgba(255,255,255,.12)}
-  .cred:last-child{border-right:0}
-  .cred b{display:block; font-family:'Space Grotesk',sans-serif; font-size:21px; font-weight:600; color:var(--brand); margin-bottom:4px; letter-spacing:-.01em}
-  .cred span{font-size:13.5px; color:var(--muted-dark); line-height:1.45; display:block}
-
-  /* ---------------- Serviços ---------------- */
-  .services{display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
-  .svc{background:var(--surface); border:1px solid var(--line); border-radius:var(--r-lg); overflow:hidden; display:flex; flex-direction:column; transition:transform .2s,border-color .2s,box-shadow .2s}
-  .svc:hover{transform:translateY(-4px); border-color:var(--brand); box-shadow:0 18px 44px rgba(26,26,26,.1)}
-  .svc-media{aspect-ratio:16/10; overflow:hidden; background:#EEECE7; border-bottom:1px solid var(--line)}
-  .svc-media img{width:100%; height:100%; object-fit:cover; transition:transform .5s}
-  .svc:hover .svc-media img{transform:scale(1.04)}
-  .svc-body{padding:22px; display:flex; flex-direction:column; flex:1}
-  .svc-body h3{margin-bottom:8px}
-  .svc-body > p{margin:0 0 15px; color:var(--muted); font-size:14.5px; line-height:1.6}
-  .svc-body ul{list-style:none; padding:15px 0 0; margin:auto 0 0; display:grid; gap:6px; border-top:1px solid var(--line)}
-  .svc-body li{font-size:13.5px; color:var(--muted); display:flex; gap:9px; align-items:flex-start}
-  .svc-body li::before{content:""; flex-shrink:0; width:5px; height:5px; border-radius:50%; background:var(--brand-deep); margin-top:8px}
-
-  /* ---------------- Setores ---------------- */
-  .sectors{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:var(--r-lg); overflow:hidden}
-  .sector{background:var(--surface); padding:26px 24px; transition:background .2s}
-  .sector:hover{background:#FFFDF6}
-  .sector .ico{font-size:22px; margin-bottom:12px; display:block}
-  .sector b{display:block; font-family:'Space Grotesk',sans-serif; font-size:16.5px; font-weight:600; margin-bottom:6px}
-  .sector span{font-size:14px; color:var(--muted); line-height:1.55}
-
-  /* ---------------- Painéis ---------------- */
-  .panel{background:var(--surface); border:1px solid var(--line); border-radius:var(--r-lg); padding:clamp(22px,3vw,36px)}
-  .dark .panel{background:rgba(255,255,255,.04); border-color:rgba(255,255,255,.11)}
-  .split{display:grid; grid-template-columns:1.08fr .92fr; gap:24px; align-items:start}
-  .split.even{grid-template-columns:1fr 1fr}
-  .bullets.on-light li{color:var(--text)}
-  .bullets.on-light .check{background:rgba(255,217,102,.2); border-color:rgba(140,98,9,.38)}
-  .bullets.on-light .check::after{border-color:var(--brand-deep)}
-  .note{font-size:13.5px; color:var(--muted); margin:13px 0 0; line-height:1.55}
-  .dark .note{color:var(--muted-dark)}
-
-  /* responsável técnico */
-  .rt{background:var(--ink); color:#fff; border-radius:var(--r-lg); padding:28px; border:1px solid var(--ink-line)}
-  .rt .eyebrow{color:var(--brand)}
-  .rt h3{font-size:20px; margin-bottom:4px; color:#fff}
-  .rt .cargo{color:var(--brand); font-size:14px; font-weight:600; margin-bottom:18px}
-  .rt dl{display:grid; grid-template-columns:auto 1fr; gap:9px 18px; margin:0; font-size:14.5px}
-  .rt dt{color:var(--muted-dark)}
-  .rt dd{margin:0; color:#fff; font-weight:600}
-
-  /* ---------------- Etapas ---------------- */
-  .steps{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
-  .steps.four{grid-template-columns:repeat(4,1fr)}
-  .step{background:var(--surface); border:1px solid var(--line); border-radius:var(--r); padding:22px}
-  .dark .step{background:rgba(255,255,255,.04); border-color:rgba(255,255,255,.11)}
-  .num{width:32px; height:32px; border-radius:7px; display:grid; place-items:center; background:rgba(255,217,102,.22); color:var(--brand-deep); font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:14.5px; margin-bottom:13px}
-  .dark .num{background:rgba(255,217,102,.14); color:var(--brand)}
-  .step h4{margin:0 0 6px}
-  .step p{margin:0; font-size:14px; color:var(--muted); line-height:1.55}
-  .dark .step p{color:var(--muted-dark)}
-
-  .cards{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
-  .card{background:var(--surface); border:1px solid var(--line); border-radius:var(--r); padding:22px; transition:border-color .2s,transform .2s}
-  .card:hover{border-color:var(--brand); transform:translateY(-3px)}
-  .dark .card{background:rgba(255,255,255,.04); border-color:rgba(255,255,255,.11)}
-  .card h3{margin-bottom:7px}
-  .card p{margin:0; font-size:14px; color:var(--muted); line-height:1.55}
-  .dark .card p{color:var(--muted-dark)}
-
-  .benefits{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.12); border-radius:var(--r-lg); overflow:hidden}
-  .benefit{background:var(--ink); padding:24px}
-  .benefit b{display:block; font-family:'Space Grotesk',sans-serif; font-size:16px; font-weight:600; color:#fff; margin-bottom:6px}
-  .benefit span{font-size:14px; color:var(--muted-dark); line-height:1.55}
-
-  .meta{display:flex; flex-wrap:wrap; gap:7px; margin-top:15px}
-  .pill{font-size:12px; font-weight:600; padding:6px 12px; border-radius:100px; background:rgba(255,217,102,.18); color:var(--brand-deep); border:1px solid rgba(140,98,9,.28)}
-  .dark .pill{color:var(--brand); background:rgba(255,217,102,.1); border-color:rgba(255,217,102,.28)}
-
-  .figure{border-radius:var(--r); overflow:hidden; border:1px solid var(--line); background:#EEECE7}
-  .dark .figure{border-color:rgba(255,255,255,.13); background:rgba(255,255,255,.04)}
-  .figure img{width:100%; height:100%; object-fit:cover; cursor:zoom-in; transition:transform .45s}
-  .figure:hover img{transform:scale(1.03)}
-  /* Diagramas e documentos precisam aparecer inteiros — cortar esconde legendas. */
-  .figure.fit{background:#F2F0EB}
-  .figure.fit img{object-fit:contain; padding:10px}
-  .dark .figure.fit{background:rgba(255,255,255,.05)}
-
-  /* ---------------- Portfólio ---------------- */
-  .gallery{display:grid; grid-template-columns:repeat(4,1fr); gap:13px}
-  .thumb{padding:0; border:1px solid rgba(255,255,255,.13); background:rgba(255,255,255,.04); border-radius:var(--r); overflow:hidden; cursor:zoom-in; aspect-ratio:4/3; transition:transform .2s,border-color .2s; position:relative}
-  .thumb:hover{transform:translateY(-4px); border-color:var(--brand)}
-  .thumb img{width:100%; height:100%; object-fit:cover; transition:transform .45s}
-  .thumb:hover img{transform:scale(1.05)}
-  .thumb::after{content:"⤢"; position:absolute; right:8px; bottom:7px; width:25px; height:25px; display:grid; place-items:center; border-radius:6px; font-size:12.5px; background:rgba(26,26,26,.75); color:var(--brand); opacity:0; transition:opacity .2s}
-  .thumb:hover::after{opacity:1}
-
-  /* ---------------- Contato ---------------- */
-  .contact-wrap{display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(24px,4vw,44px); align-items:center; background:var(--ink); border:1px solid var(--ink-line); border-top:3px solid var(--brand); border-radius:var(--r-lg); padding:clamp(26px,4vw,48px)}
-  .contact-list{display:grid; gap:11px}
-  .contact-item{display:flex; align-items:center; gap:13px; padding:14px 17px; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.11); border-radius:var(--r); text-decoration:none; transition:border-color .2s,background .2s,transform .2s}
-  a.contact-item:hover{border-color:var(--brand); background:rgba(255,217,102,.08); transform:translateX(3px)}
-  .ci-ico{flex-shrink:0; width:36px; height:36px; border-radius:8px; display:grid; place-items:center; background:rgba(255,217,102,.15); font-size:16px}
-  .ci-txt{display:flex; flex-direction:column; min-width:0}
-  .ci-txt small{font-size:10.5px; letter-spacing:.15em; text-transform:uppercase; color:var(--brand); font-weight:700}
-  .ci-txt b{font-size:15px; color:#fff; font-weight:600; overflow-wrap:anywhere}
-
-  /* ---------------- Rodapé ---------------- */
-  footer{background:#141414; color:rgba(255,255,255,.62); padding:48px 0 28px; border-top:1px solid rgba(255,255,255,.09); font-size:14px}
-  .foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1.2fr; gap:32px; padding-bottom:30px; border-bottom:1px solid rgba(255,255,255,.09)}
-  .foot-grid img{height:30px; width:auto; margin-bottom:14px}
-  .foot-grid h4{font-size:12px; letter-spacing:.16em; text-transform:uppercase; margin-bottom:14px; color:var(--brand)}
-  .foot-grid ul{list-style:none; padding:0; margin:0; display:grid; gap:9px}
-  .foot-grid a{color:rgba(255,255,255,.66); text-decoration:none; transition:color .18s}
-  .foot-grid a:hover{color:var(--brand)}
-  .foot-bottom{padding-top:20px; display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; font-size:13px; color:rgba(255,255,255,.5)}
-
-  /* ---------------- WhatsApp flutuante ---------------- */
-  .wa-float{position:fixed; right:18px; bottom:18px; z-index:70; display:inline-flex; align-items:center; gap:10px; background:#25D366; color:#fff; text-decoration:none; font-weight:600; font-size:15px; padding:13px 19px; border-radius:100px; box-shadow:0 10px 30px rgba(0,0,0,.28); transition:transform .18s}
-  .wa-float:hover{transform:translateY(-3px)}
-  .wa-float svg{width:21px; height:21px; fill:currentColor; flex-shrink:0}
-
-  /* ---------------- Lightbox ---------------- */
-  .lightbox{position:fixed; inset:0; z-index:100; display:none; background:rgba(12,12,12,.95); padding:22px}
-  .lightbox.open{display:grid; place-items:center}
-  .lb-card{width:min(1100px,100%); max-height:100%; display:flex; flex-direction:column; gap:12px}
-  .lb-top{display:flex; justify-content:space-between; align-items:center; gap:14px; color:rgba(255,255,255,.82); font-size:13.5px}
-  .lb-close{background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.22); color:#fff; padding:8px 15px; border-radius:7px; cursor:pointer; font-size:13.5px; font-weight:500}
-  .lb-close:hover{background:var(--brand); color:var(--ink); border-color:var(--brand)}
-  .lb-imgwrap{flex:1; min-height:0; display:grid; place-items:center; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.13); border-radius:10px; overflow:hidden}
-  .lb-imgwrap img{max-width:100%; max-height:76vh; object-fit:contain}
-  .lb-controls{display:flex; justify-content:center; gap:12px}
-  .lb-btn{background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.22); color:#fff; width:48px; height:42px; border-radius:8px; cursor:pointer; font-size:22px; line-height:1}
-  .lb-btn:hover{background:var(--brand); color:var(--ink); border-color:var(--brand)}
-
-  /* ---------------- Entrada ---------------- */
-  /* Só esconde o conteúdo quando o JS está ativo e funcionando. */
-  .js .reveal{opacity:0; transform:translateY(16px); transition:opacity .55s ease,transform .55s ease}
-  .js .reveal.in{opacity:1; transform:none}
-  @media (prefers-reduced-motion:reduce){
-    html{scroll-behavior:auto}
-    .js .reveal{opacity:1; transform:none; transition:none}
-    *{animation-duration:.01ms !important; transition-duration:.01ms !important}
-  }
-
-  /* ---------------- Foto do hero ---------------- */
-  .hero-photo{position:relative; border-radius:var(--r-lg); overflow:hidden; aspect-ratio:3/4; background:#242424}
-  .hero-photo img{width:100%; height:100%; object-fit:cover}
-  /* moldura em L, no amarelo da marca */
-  .hero-photo::after{
-    content:""; position:absolute; right:0; bottom:0; width:56%; height:42%;
-    border-right:3px solid var(--brand); border-bottom:3px solid var(--brand);
-    border-bottom-right-radius:var(--r-lg); pointer-events:none;
-  }
-  .photo-chip{
-    position:absolute; left:16px; bottom:16px; z-index:2;
-    background:rgba(26,26,26,.82); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px);
-    border:1px solid rgba(255,217,102,.35); border-radius:10px; padding:11px 15px; max-width:76%;
-  }
-  .photo-chip b{display:block; color:var(--brand); font-size:11px; letter-spacing:.15em; text-transform:uppercase; font-weight:700; margin-bottom:3px}
-  .photo-chip span{display:block; color:#fff; font-size:13.5px; line-height:1.4; font-weight:500}
-
-  /* ---------------- Execução em campo ---------------- */
-  .field{display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:190px; gap:13px}
-  .field figure{
-    margin:0; position:relative; overflow:hidden; border-radius:var(--r);
-    border:1px solid rgba(255,255,255,.13); background:rgba(255,255,255,.04);
-  }
-  .field figure img{width:100%; height:100%; object-fit:cover; transition:transform .5s}
-  .field figure:hover img{transform:scale(1.05)}
-  .field .tall{grid-row:span 2}
-  .field .wide{grid-column:span 2}
-  .field figcaption{
-    position:absolute; left:0; right:0; bottom:0; padding:22px 14px 11px;
-    background:linear-gradient(transparent, rgba(16,16,16,.88));
-    color:#fff; font-size:13px; font-weight:500; line-height:1.35;
-  }
-  .field figcaption em{display:block; font-style:normal; color:var(--brand); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; font-weight:700; margin-bottom:2px}
-
-  /* ---------------- Responsivo ---------------- */
-  @media (max-width:1040px){
-    .field{grid-template-columns:repeat(2,1fr); grid-auto-rows:170px}
-    .services,.sectors{grid-template-columns:repeat(2,1fr)}
-    .gallery{grid-template-columns:repeat(3,1fr)}
-    .credbar{grid-template-columns:repeat(2,1fr)}
-    .hero-bullets{grid-template-columns:repeat(2,1fr)}
-    .cred:nth-child(2){border-right:0}
-    .cred:nth-child(1),.cred:nth-child(2){border-bottom:1px solid rgba(255,255,255,.12)}
-    .steps.four{grid-template-columns:repeat(2,1fr)}
-    .foot-grid{grid-template-columns:1fr 1fr}
-  }
-  @media (max-width:860px){
-    .nav{display:none}
-    .menu-toggle{display:block}
-    .hero-grid{grid-template-columns:1fr; gap:28px}
-    .split,.split.even{grid-template-columns:1fr}
-    .steps,.steps.four{grid-template-columns:1fr}
-    .hero-bullets{grid-template-columns:1fr; gap:12px}
-    .cards{grid-template-columns:1fr}
-    .benefits{grid-template-columns:1fr}
-    .contact-wrap{grid-template-columns:1fr}
-    .utilbar .util-right{display:none}
-  }
-  @media (max-width:620px){
-    body{font-size:16px}
-    .container{width:min(var(--maxw),100% - 32px)}
-    .services,.sectors{grid-template-columns:1fr}
-    .gallery{grid-template-columns:repeat(2,1fr)}
-    .field{grid-template-columns:1fr; grid-auto-rows:220px}
-    .field .tall,.field .wide{grid-row:auto; grid-column:auto}
-    .cta-row .btn{width:100%}
-    .foot-grid{grid-template-columns:1fr}
-    .wa-float span{display:none}
-    .wa-float{padding:15px; border-radius:50%}
-  }
-</style>
+<link rel="stylesheet" href="css/site.css"/>
 <script>
-/* Marca que o JS está ativo (permite a animação sem piscar o conteúdo).
-   Rede de segurança: se o script de animação não inicializar em 3s, remove a
-   marca e todo o conteúdo volta a ficar visível. */
 (function(){
   document.documentElement.classList.add('js');
   window.__revealReady = false;
@@ -390,6 +38,61 @@
 })();
 </script>
 <script> function gtag_report_conversion(url) {   var callback = function () {     if (typeof(url) != 'undefined') {       window.location = url;     }   };   gtag('event', 'conversion', {       'send_to': 'AW-17968482592/zp1vCLGu0oEcEKCShfhC',       'event_callback': callback   });   return false; } </script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "ProfessionalService",
+ "name": "MGX Engenharia e Soluções Integradas",
+ "url": "https://www.mgxengenhariasi.com.br/",
+ "logo": "https://www.mgxengenhariasi.com.br/img/mgx-logo.png",
+ "image": "https://www.mgxengenhariasi.com.br/img/capa-galpao.jpg",
+ "telephone": "+55-32-98472-9995",
+ "email": "contato@mgxengenhariasi.com.br",
+ "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "Rua Visconde de Mauá, 620",
+  "addressLocality": "Juiz de Fora",
+  "addressRegion": "MG",
+  "postalCode": "36015-260",
+  "addressCountry": "BR"
+ },
+ "areaServed": [
+  {
+   "@type": "City",
+   "name": "Juiz de Fora"
+  },
+  {
+   "@type": "Country",
+   "name": "Brasil"
+  }
+ ],
+ "openingHoursSpecification": [
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday"
+   ],
+   "opens": "08:00",
+   "closes": "18:00"
+  }
+ ],
+ "knowsAbout": [
+  "Projeto elétrico",
+  "BIM",
+  "Revit",
+  "SPDA",
+  "Cabeamento estruturado",
+  "AVCB",
+  "Projeto de incêndio",
+  "Projeto hidrossanitário",
+  "Laudo de instalações elétricas"
+ ]
+}
+</script>
 </head>
 <body>
 
@@ -405,7 +108,7 @@
 
 <div class="topbar">
   <div class="container topbar-in">
-    <a class="brand" href="#topo">
+    <a class="brand" href="index.html">
       <img alt="MGX Engenharia e Soluções Integradas" src="img/mgx-icone.png"/>
       <span class="brand-txt">
         <b>MGX Engenharia</b>
@@ -413,30 +116,26 @@
       </span>
     </a>
     <nav aria-label="Menu" class="nav">
-      <a href="#servicos">Serviços</a>
-      <a href="#execucao">Execução</a>
-      <a href="#setores">Setores</a>
-      <a href="#empresa">A empresa</a>
-      <a href="#processo">Como trabalhamos</a>
-      <a href="#spda">SPDA</a>
-      <a href="#portfolio">Portfólio</a>
-      <a class="nav-cta" href="https://wa.me/5532984729995?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MGX%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" onclick="return gtag_report_conversion('https://wa.me/5532984729995?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MGX%20e%20gostaria%20de%20um%20or%C3%A7amento.');">Orçamento</a>
+      <a href="projetos-bim.html">Projetos BIM</a>
+      <a href="projeto-eletrico-juiz-de-fora.html">Projeto elétrico JF</a>
+      <a href="spda.html">SPDA</a>
+      <a href="avcb.html">AVCB</a>
+      <a href="laudo-eletrico.html">Laudos</a>
+      <a href="#contato">Contato</a>
+      <a class="nav-cta" href="https://wa.me/5532984729995?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MGX%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" onclick="return gtag_report_conversion('https://wa.me/5532984729995?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MGX%20e%20quero%20um%20or%C3%A7amento.');">Orçamento pelo WhatsApp</a>
     </nav>
     <button aria-label="Abrir menu" aria-expanded="false" class="menu-toggle" id="menuToggle" onclick="toggleMenu()"><span></span><span></span><span></span></button>
   </div>
   <div class="container">
     <nav aria-label="Menu mobile" class="nav-mobile" id="navMobile">
-      <a href="#servicos" onclick="closeMenu()">Serviços</a>
-      <a href="#execucao" onclick="closeMenu()">Execução em campo</a>
-      <a href="#setores" onclick="closeMenu()">Setores atendidos</a>
-      <a href="#empresa" onclick="closeMenu()">A empresa</a>
-      <a href="#processo" onclick="closeMenu()">Como trabalhamos</a>
-      <a href="#bim" onclick="closeMenu()">Projetos em BIM</a>
-      <a href="#spda" onclick="closeMenu()">SPDA (laudo e inspeção)</a>
-      <a href="#avcb" onclick="closeMenu()">AVCB</a>
-      <a href="#portfolio" onclick="closeMenu()">Portfólio</a>
+      <a href="index.html" class="on">Página inicial</a>
+      <a href="projetos-bim.html">Projetos em BIM (a distância)</a>
+      <a href="projeto-eletrico-juiz-de-fora.html">Projeto elétrico em Juiz de Fora</a>
+      <a href="spda.html">SPDA (para-raios)</a>
+      <a href="avcb.html">AVCB e projeto de incêndio</a>
+      <a href="laudo-eletrico.html">Laudo das instalações elétricas</a>
       <a href="#contato" onclick="closeMenu()">Contato</a>
-      <a class="mob-cta" href="https://wa.me/5532984729995?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MGX%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" onclick="return gtag_report_conversion('https://wa.me/5532984729995?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MGX%20e%20gostaria%20de%20um%20or%C3%A7amento.');">Solicitar orçamento</a>
+      <a class="mob-cta" href="https://wa.me/5532984729995?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MGX%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" onclick="return gtag_report_conversion('https://wa.me/5532984729995?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MGX%20e%20quero%20um%20or%C3%A7amento.');">Orçamento pelo WhatsApp</a>
     </nav>
   </div>
 </div>
@@ -446,354 +145,147 @@
   <div class="container">
     <div class="hero-grid">
       <div>
-        <div class="kicker"><span class="dot"></span> Juiz de Fora · Zona da Mata · Minas Gerais e Rio de Janeiro</div>
-        <h1>Engenharia elétrica, SPDA e segurança contra incêndio com <em>responsabilidade técnica</em>.</h1>
+        <div class="kicker"><span class="dot"></span> Juiz de Fora e região · Projetos em BIM para todo o Brasil</div>
+        <h1>Projeto elétrico, SPDA e AVCB em Juiz de Fora, com projeto em <em>BIM</em>.</h1>
         <p class="lead">
-          Projetos executivos, inspeções e laudos para edificações comerciais, residenciais, industriais e
-          sites de telecomunicações — com medições rastreáveis, documentação completa e ART emitida.
+          Fazemos o projeto inteiro no Revit, em 3D e compatibilizado com a estrutura. Em Juiz de Fora e região,
+          também fazemos a inspeção e o laudo de SPDA e das instalações elétricas, e o projeto de incêndio para o AVCB.
+          Tudo com ART.
         </p>
         <div class="cta-row">
-          <a class="btn primary" href="https://wa.me/5532984729995?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MGX%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" onclick="return gtag_report_conversion('https://wa.me/5532984729995?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MGX%20e%20gostaria%20de%20um%20or%C3%A7amento.');">Solicitar orçamento</a>
-          <a class="btn ghost" href="#servicos">Ver serviços</a>
+          <a class="btn primary" href="https://wa.me/5532984729995?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MGX%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" onclick="return gtag_report_conversion('https://wa.me/5532984729995?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MGX%20e%20quero%20um%20or%C3%A7amento.');">Orçamento pelo WhatsApp</a>
+          <a class="btn ghost" href="projetos-bim.html">Ver projetos em BIM</a>
         </div>
+        <div class="rating"><span class="stars" aria-hidden="true">★★★★★</span> <span><b>5,0 no Google</b> · 8 avaliações</span></div>
+        <!-- TROCAR: pôr o link do Perfil da Empresa no Google na nota acima, quando o Marcos passar o link curto -->
       </div>
-
       <aside class="hero-photo">
         <img alt="Engenheiro da MGX em levantamento de campo com estação total" fetchpriority="high" src="img/campo-levantamento-estacao-total.jpg"/>
         <div class="photo-chip">
           <b>Levantamento em campo</b>
-          <span>Estação total para locação e cadastro da edificação</span>
+          <span>Estação total para cadastro da edificação</span>
         </div>
       </aside>
     </div>
 
-    <ul class="bullets hero-bullets">
-      <li><span class="check"></span> Responsável técnico registrado no CREA-MG</li>
-      <li><span class="check"></span> ART emitida em projetos e laudos</li>
-      <li><span class="check"></span> Projetos em BIM (Revit) e compatibilizados</li>
-      <li><span class="check"></span> Medições com instrumentos aferidos</li>
-    </ul>
-
     <div class="credbar">
-      <div class="cred"><b>Desde 2022</b><span>Empresa constituída e ativa, hoje MGX Engenharia e Soluções Integradas LTDA</span></div>
-      <div class="cred"><b>CREA-MG 339105</b><span>Engenheiro eletricista como responsável técnico</span></div>
-      <div class="cred"><b>NBR 5410 · 5419</b><span>Instalações de baixa tensão e proteção contra descargas</span></div>
-      <div class="cred"><b>ITs do CBMMG</b><span>Prevenção e combate a incêndio para AVCB</span></div>
+      <div class="cred"><b>CREA-MG 339105</b><span>Engenheiro eletricista responsável</span></div>
+      <div class="cred"><b>ART</b><span>Em todo projeto e laudo</span></div>
+      <div class="cred"><b>100% em BIM</b><span>Revit 3D, sem projeto em CAD 2D</span></div>
+      <div class="cred"><b>Desde 2022</b><span>MGX Engenharia e Soluções Integradas</span></div>
     </div>
   </div>
 </header>
 
-<!-- ============ SERVIÇOS ============ -->
+<!-- ============ O QUE VOCÊ PRECISA ============ -->
 <section class="section paper" id="servicos">
   <div class="container">
     <div class="section-title reveal">
-      <div class="eyebrow">O que fazemos</div>
-      <h2>Serviços</h2>
-      <p>Soluções normativas e executáveis, priorizando segurança, funcionalidade e confiabilidade.</p>
+      <div class="eyebrow">Serviços</div>
+      <h2>O que você precisa?</h2>
     </div>
-
-    <div class="services">
-      <article class="svc reveal">
-        <div class="svc-media"><img alt="Projeto elétrico modelado em BIM — vista 3D" loading="lazy" src="img/exemplo-projeto-eletrico-4-3d-casa.jpg"/></div>
-        <div class="svc-body">
-          <h3>Projetos Elétricos (BIM/Revit)</h3>
-          <p>Projetos executivos para residências de alto padrão, edifícios comerciais e residenciais, com documentação completa e clareza para execução.</p>
-          <ul><li>Quadros, diagramas e detalhamentos</li><li>Compatibilização BIM entre disciplinas</li><li>Memoriais e quantitativos</li></ul>
+    <div class="choose">
+      <article class="choice reveal">
+        <div class="choice-media"><img alt="Levantamento em campo de edificação com estação total" loading="lazy" src="img/campo-estacao-total-edificacao.jpg"/></div>
+        <div class="choice-body">
+          <h3>Para a sua obra ou imóvel em Juiz de Fora</h3>
+          <ul class="links">
+            <li><a href="projeto-eletrico-juiz-de-fora.html">Projeto elétrico residencial e comercial</a></li>
+            <li><a href="spda.html">SPDA (para-raios): projeto, instalação e laudo</a></li>
+            <li><a href="avcb.html">AVCB e projeto de incêndio</a></li>
+            <li><a href="laudo-eletrico.html">Laudo das instalações elétricas</a></li>
+            <li><a href="projeto-eletrico-juiz-de-fora.html#cemig">Pedido de carga na CEMIG</a></li>
+          </ul>
+          <p class="smallprint" style="margin-top:0">Também executamos a instalação de SPDA e a parte de campo do AVCB: placas de sinalização, extintores e luminárias de emergência.</p>
         </div>
       </article>
-
-      <article class="svc reveal">
-        <div class="svc-media"><img alt="Projeto de infraestrutura de telecomunicações" loading="lazy" src="img/exemplo-projeto-telecom.jpg"/></div>
-        <div class="svc-body">
-          <h3>Projetos de Telecom</h3>
-          <p>Infraestrutura de telecomunicações para redes e sistemas: backbone, racks, prumadas e pontos, com foco em organização e expansibilidade.</p>
-          <ul><li>Racks e salas técnicas</li><li>Backbone e prumadas</li><li>Identificação e documentação</li></ul>
-        </div>
-      </article>
-
-      <article class="svc reveal">
-        <div class="svc-media"><img alt="Projeto de SPDA — captação, descida e aterramento" loading="lazy" src="img/exemplo-laudo-spda-5.jpg"/></div>
-        <div class="svc-body">
-          <h3>Projetos de SPDA (Para-raios)</h3>
-          <p>Projeto de SPDA conforme ABNT NBR 5419, definido por gerenciamento de risco e detalhado para execução e manutenção do sistema.</p>
-          <ul><li>Captação, descidas e aterramento</li><li>Equipotencialização e interfaces</li><li>Análise de risco e nível de proteção</li></ul>
-        </div>
-      </article>
-
-      <article class="svc reveal">
-        <div class="svc-media"><img alt="Laudo de medição de resistência de aterramento" loading="lazy" src="img/laudo-exemplo-2.jpg"/></div>
-        <div class="svc-body">
-          <h3>Laudos e Inspeções de SPDA</h3>
-          <p>Inspeções em campo com medições, registro fotográfico e relatório técnico assinado, para conformidade e redução de risco.</p>
-          <ul><li>Resistência de aterramento com terrômetro</li><li>Continuidade com miliohmímetro</li><li>Relatório com não conformidades e ART</li></ul>
-        </div>
-      </article>
-
-      <article class="svc reveal">
-        <div class="svc-media"><img alt="Projeto de prevenção e combate a incêndio (AVCB)" loading="lazy" src="img/exemplo-avcb-1.jpg"/></div>
-        <div class="svc-body">
-          <h3>AVCB e Segurança contra Incêndio</h3>
-          <p>Projetos, adequações e acompanhamento para regularização junto ao Corpo de Bombeiros, com foco em liberação para funcionamento do imóvel.</p>
-          <ul><li>Projetos de prevenção e combate a incêndio</li><li>Orientação documental e adequações</li><li>Conformidade com as ITs do CBMMG</li></ul>
-        </div>
-      </article>
-
-      <article class="svc reveal">
-        <div class="svc-media"><img alt="Diagrama multifilar de proteção" loading="lazy" src="img/exemplo-projeto-eletrico-6-diagrama-multifilar.jpg"/></div>
-        <div class="svc-body">
-          <h3>Documentação e Pareceres Técnicos</h3>
-          <p>Diagramas, memoriais de cálculo, as built e pareceres técnicos — documentação pronta para a obra, para a concessionária e para aprovação.</p>
-          <ul><li>Unifilares, multifilares e diagramas de proteção</li><li>Memoriais e listas de materiais</li><li>Pareceres e análises de risco</li></ul>
+      <article class="choice dark reveal">
+        <div class="choice-media"><img alt="Residência com todas as disciplinas compatibilizadas no Revit" loading="lazy" src="img/bim-todas-disciplinas.jpg"/></div>
+        <div class="choice-body">
+          <h3>Projeto a distância, para qualquer cidade</h3>
+          <ul class="links">
+            <li><a href="projetos-bim.html#eletrico">Projeto elétrico em BIM</a></li>
+            <li><a href="projetos-bim.html#telecom">Cabeamento estruturado, telecom e CFTV</a></li>
+            <li><a href="projetos-bim.html#hidro">Projeto hidrossanitário</a></li>
+            <li><a href="projetos-bim.html#escritorios">Modelagem elétrica no Revit para escritórios</a></li>
+          </ul>
+          <div class="cta-row"><a class="btn primary" href="projetos-bim.html">Ver como funciona</a></div>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ============ EXECUÇÃO EM CAMPO ============ -->
-<section class="section dark" id="execucao">
+<!-- ============ POR QUE BIM ============ -->
+<section class="section dark" id="porque-bim">
   <div class="container">
     <div class="section-title reveal">
-      <div class="eyebrow">Além do projeto</div>
-      <h2>Execução em campo</h2>
-      <p>
-        A MGX não entrega só a prancha. Em segurança contra incêndio e SPDA, executamos e acompanhamos a
-        instalação — extintores, sinalização, abrigos e aterramento — até a edificação ficar em conformidade.
-      </p>
+      <div class="eyebrow">Por que BIM faz diferença na obra</div>
+      <h2>O projeto já sai conferido com a estrutura.</h2>
+      <p>Recebemos o IFC do calculista e modelamos a elétrica dentro dele. Eletroduto que bate em viga aparece na tela, não na obra.</p>
     </div>
+    <div class="shots">
+      <figure class="shot reveal">
+          <button class="shot-img" type="button" data-src="img/bim-ifc-estrutura.jpg" data-alt="Estrutura de concreto recebida em IFC e usada como base do projeto elétrico" aria-label="Ampliar: Estrutura de concreto recebida em IFC e usada como base do projeto elétrico"><img alt="Estrutura de concreto recebida em IFC e usada como base do projeto elétrico" loading="lazy" src="img/bim-ifc-estrutura.jpg"/></button>
+          <figcaption><b>Estrutura como base</b>O modelo do calculista entra no projeto.</figcaption>
+        </figure>
+        <figure class="shot reveal">
+          <button class="shot-img" type="button" data-src="img/bim-eletrica-x-estrutura.jpg" data-alt="Eletrodutos em laranja compatibilizados com a estrutura em azul, no Revit" aria-label="Ampliar: Eletrodutos em laranja compatibilizados com a estrutura em azul, no Revit"><img alt="Eletrodutos em laranja compatibilizados com a estrutura em azul, no Revit" loading="lazy" src="img/bim-eletrica-x-estrutura.jpg"/></button>
+          <figcaption><b>Interferência resolvida antes</b>Elétrica em laranja, estrutura em azul.</figcaption>
+        </figure>
+        <figure class="shot reveal">
+          <button class="shot-img fit" type="button" data-src="img/plugin-lista-quadros.jpg" data-alt="Quantitativo dos quadros gerado pelo plugin próprio, com fabricante e código de referência" aria-label="Ampliar: Quantitativo dos quadros gerado pelo plugin próprio, com fabricante e código de referência"><img alt="Quantitativo dos quadros gerado pelo plugin próprio, com fabricante e código de referência" loading="lazy" src="img/plugin-lista-quadros.jpg"/></button>
+          <figcaption><b>Quantitativo do modelo</b>A lista de material sai do mesmo modelo.</figcaption>
+        </figure>
+    </div>
+    <div class="cta-row"><a class="btn ghost" href="projetos-bim.html">Ver projetos em BIM</a></div>
+  </div>
+</section>
 
-    <div class="field reveal">
-      <figure class="tall">
-        <img alt="Levantamento de campo com estação total" loading="lazy" src="img/campo-estacao-total-edificacao.jpg"/>
-        <figcaption><em>Levantamento</em>Cadastro da edificação com estação total</figcaption>
-      </figure>
-      <figure class="wide">
-        <img alt="Abrigo de extintor instalado em edificação" loading="lazy" src="img/incendio-abrigo-extintor.jpg"/>
-        <figcaption><em>Incêndio</em>Abrigo de extintor instalado e sinalizado</figcaption>
-      </figure>
-      <figure class="tall">
-        <img alt="Extintor e placas de sinalização de segurança instalados" loading="lazy" src="img/incendio-extintor-placas.jpg"/>
-        <figcaption><em>Incêndio</em>Extintor e placas conforme as ITs do CBMMG</figcaption>
-      </figure>
-      <figure>
-        <img alt="Sinalização de rota de fuga instalada em corredor" loading="lazy" src="img/incendio-sinalizacao-corredor.jpg"/>
-        <figcaption><em>Sinalização</em>Rota de fuga em ambiente comercial</figcaption>
-      </figure>
-      <figure>
-        <img alt="Extintor e sinalização de saída instalados em hall" loading="lazy" src="img/incendio-extintor-hall.jpg"/>
-        <figcaption><em>Sinalização</em>Saída de emergência em edificação</figcaption>
-      </figure>
+<!-- ============ FERRAMENTAS ============ -->
+<section class="section white" id="ferramentas">
+  <div class="container">
+    <div class="section-title reveal">
+      <div class="eyebrow">Template e plugin próprios</div>
+      <h2>Ferramentas próprias, projeto padronizado.</h2>
+      <p>Desenvolvemos um template e um plugin para o Revit, para uso próprio. Quadro de cargas, unifilar, dimensionamento e lista de materiais saem do modelo, do mesmo jeito em todo projeto. Sobra mais tempo para conferir o que importa.</p>
     </div>
-
-    <div class="cta-row">
-      <a class="btn primary" href="https://wa.me/5532984729995?text=Ol%C3%A1%2C%20preciso%20de%20execu%C3%A7%C3%A3o%20de%20itens%20de%20seguran%C3%A7a%20contra%20inc%C3%AAndio." target="_blank" rel="noopener" onclick="return gtag_report_conversion('https://wa.me/5532984729995?text=Ol%C3%A1%2C%20preciso%20de%20execu%C3%A7%C3%A3o%20de%20itens%20de%20seguran%C3%A7a%20contra%20inc%C3%AAndio.');">Falar sobre execução</a>
-      <a class="btn ghost" href="#avcb">Ver AVCB</a>
+    <div class="shots">
+        <figure class="shot reveal">
+          <button class="shot-img fit" type="button" data-src="img/plugin-aba.jpg" data-alt="Aba do plugin próprio no Revit, com os painéis do fluxo do projeto" aria-label="Ampliar: Aba do plugin próprio no Revit, com os painéis do fluxo do projeto"><img alt="Aba do plugin próprio no Revit, com os painéis do fluxo do projeto" loading="lazy" src="img/plugin-aba.jpg"/></button>
+          <figcaption><b>Aba própria no Revit</b>O fluxo do projeto em uma aba só.</figcaption>
+        </figure>
+        <figure class="shot reveal">
+          <button class="shot-img fit" type="button" data-src="img/plugin-quadro-montado.jpg" data-alt="Quadros montados gerados pelo plugin a partir dos circuitos do modelo" aria-label="Ampliar: Quadros montados gerados pelo plugin a partir dos circuitos do modelo"><img alt="Quadros montados gerados pelo plugin a partir dos circuitos do modelo" loading="lazy" src="img/plugin-quadro-montado.jpg"/></button>
+          <figcaption><b>Quadros montados</b>DR, DPS, disjuntores e barras, gerados dos circuitos.</figcaption>
+        </figure>
+        <figure class="shot reveal">
+          <!-- TROCAR: imagem nova do plugin (dimensionamento refeito, sem "sem dados", na mesma rodada das outras saídas) -->
+          <div class="placeholder">Imagem em atualização</div>
+          <figcaption><b>Dimensionamento</b>Circuito a circuito, pela ABNT NBR 5410, com memorial.</figcaption>
+        </figure>
     </div>
+    <div class="cta-row"><a class="btn outline" href="projetos-bim.html#ferramentas">Ver o que o plugin gera</a></div>
   </div>
 </section>
 
 <!-- ============ SETORES ============ -->
-<section class="section white" id="setores">
+<section class="section paper" id="setores">
   <div class="container">
     <div class="section-title reveal">
       <div class="eyebrow">Onde atuamos</div>
-      <h2>Setores atendidos</h2>
-      <p>A MGX atende desde residências de alto padrão até sites de telecomunicações e edificações públicas.</p>
+      <h2>Onde já trabalhamos</h2>
     </div>
-
     <div class="sectors reveal">
-      <div class="sector"><span class="ico">🏬</span><b>Varejo e redes</b><span>Lojas e ambientes comerciais: adequações, AVCB, alarme e sistemas de combate a incêndio.</span></div>
-      <div class="sector"><span class="ico">🏢</span><b>Condomínios e edificações</b><span>Laudos de SPDA, adequação de instalações, extintores, sinalização e regularização.</span></div>
-      <div class="sector"><span class="ico">📡</span><b>Telecomunicações</b><span>Laudos e execução de SPDA e aterramento em sites e estações de telecom.</span></div>
-      <div class="sector"><span class="ico">🌳</span><b>Parques e hotelaria</b><span>Projetos elétricos, SPDA e segurança contra incêndio em parques e áreas de visitação.</span></div>
-      <div class="sector"><span class="ico">🏭</span><b>Indústria</b><span>Subestações, dimensionamento, salas elétricas e documentação técnica.</span></div>
-      <div class="sector"><span class="ico">🏛️</span><b>Edificações públicas</b><span>Projetos e laudos para órgãos públicos, com atendimento a processos licitatórios.</span></div>
+      <div class="sector"><span class="ico"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></span><b>Residências</b><span>Projeto elétrico, telecom e SPDA.</span></div>
+      <div class="sector"><span class="ico"><svg viewBox="0 0 24 24"><path d="M4 9h16l-1-5H5z"/><path d="M5 9v11h14V9"/><path d="M9 20v-6h6v6"/></svg></span><b>Lojas e redes de varejo</b><span>AVCB, alarme e adequações.</span></div>
+      <div class="sector"><span class="ico"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/></svg></span><b>Condomínios</b><span>Laudo de SPDA, instalações elétricas e regularização.</span></div>
+      <div class="sector"><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 21V9"/><path d="M8 21l4-12 4 12"/><path d="M7.5 6.5a6 6 0 0 1 9 0M5 4a9.5 9.5 0 0 1 14 0"/></svg></span><b>Telecomunicações</b><span>SPDA e aterramento em sites.</span></div>
+      <div class="sector"><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l6 9H6z"/><path d="M12 8l7 10H5z"/><path d="M12 18v3"/></svg></span><b>Parques e hotelaria</b><span>Elétrico, SPDA e incêndio.</span></div>
+      <div class="sector"><span class="ico"><svg viewBox="0 0 24 24"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M3 21h18"/></svg></span><b>Indústria e galpões</b><span>Eletrocalhas, quadros e documentação.</span></div>
+      <div class="sector span-all"><span class="ico"><svg viewBox="0 0 24 24"><path d="M3 9l9-5 9 5"/><path d="M5 9v9M9 9v9M15 9v9M19 9v9"/><path d="M3 20h18"/></svg></span><b>Edificações públicas</b><span>Projetos e laudos, inclusive em licitações.</span></div>
     </div>
-    <p class="note reveal">Referências de trabalhos por setor podem ser apresentadas mediante solicitação, respeitando o sigilo de cada contrato.</p>
-  </div>
-</section>
-
-<!-- ============ EMPRESA ============ -->
-<section class="section paper" id="empresa">
-  <div class="container">
-    <div class="split">
-      <div class="reveal">
-        <div class="eyebrow">A empresa</div>
-        <h2>Quem somos</h2>
-        <p class="lead" style="color:var(--muted); margin-top:16px">
-          A MGX Engenharia e Soluções Integradas é especializada em projetos complementares, com foco em
-          engenharia elétrica, SPDA e telecom — além de inspeções, laudos técnicos e segurança contra incêndio.
-        </p>
-        <p style="color:var(--muted); font-size:15.5px">
-          Atuamos com projetos executivos, vistorias, relatórios técnicos e adequações de sistemas, seguindo as
-          normas vigentes e priorizando segurança, confiabilidade e funcionalidade para proteção de pessoas,
-          patrimônios e sistemas. Todo projeto e laudo é emitido com responsabilidade técnica registrada.
-        </p>
-        <ul class="bullets on-light" style="margin-top:18px">
-          <li><span class="check"></span> <span><b>ABNT NBR 5410</b> — Instalações elétricas de baixa tensão</span></li>
-          <li><span class="check"></span> <span><b>ABNT NBR 5419</b> — Proteção contra descargas atmosféricas</span></li>
-          <li><span class="check"></span> <span><b>Instruções Técnicas do CBMMG</b> — prevenção e combate a incêndio</span></li>
-        </ul>
-        <div class="cta-row">
-          <a class="btn dark" href="https://wa.me/5532984729995?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MGX%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" onclick="return gtag_report_conversion('https://wa.me/5532984729995?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MGX%20e%20gostaria%20de%20um%20or%C3%A7amento.');">Falar com a MGX</a>
-          <a class="btn outline" href="#portfolio">Ver portfólio</a>
-        </div>
-      </div>
-
-      <aside class="rt reveal">
-        <div class="eyebrow">Responsável técnico</div>
-        <h3>Marcos Andrade Corrêa</h3>
-        <div class="cargo">Engenheiro Eletricista</div>
-        <dl>
-          <dt>Registro</dt><dd>CREA-MG 339105</dd>
-          <dt>Empresa</dt><dd>MGX Engenharia e Soluções Integradas LTDA</dd>
-          <dt>CNPJ</dt><dd>47.670.234/0001-00</dd>
-        </dl>
-        <p class="note" style="color:var(--muted-dark)">
-          Projetos e laudos acompanhados da respectiva Anotação de Responsabilidade Técnica (ART),
-          registrada no CREA-MG e verificável.
-        </p>
-      </aside>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PROCESSO ============ -->
-<section class="section white" id="processo">
-  <div class="container">
-    <div class="section-title reveal">
-      <div class="eyebrow">Método</div>
-      <h2>Como trabalhamos</h2>
-      <p>Um caminho previsível, do primeiro contato à entrega da documentação registrada.</p>
-    </div>
-    <div class="steps four">
-      <div class="step reveal"><div class="num">1</div><h4>Diagnóstico</h4><p>Entendemos a edificação, o uso e a exigência aplicável — norma, concessionária ou Corpo de Bombeiros.</p></div>
-      <div class="step reveal"><div class="num">2</div><h4>Proposta técnica</h4><p>Escopo, prazo e investimento por escrito, com o que está e o que não está incluído bem definido.</p></div>
-      <div class="step reveal"><div class="num">3</div><h4>Execução</h4><p>Projeto em BIM ou inspeção em campo com instrumentos aferidos e registro fotográfico das evidências.</p></div>
-      <div class="step reveal"><div class="num">4</div><h4>Entrega com ART</h4><p>Documentação completa, assinada digitalmente e com ART registrada no CREA-MG.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ BIM ============ -->
-<section class="section dark" id="bim">
-  <div class="container">
-    <div class="section-title reveal">
-      <div class="eyebrow">Metodologia</div>
-      <h2>Projetos em BIM</h2>
-      <p>
-        O BIM não é apenas modelagem 3D. É uma metodologia que integra todas as informações do empreendimento
-        em um modelo digital inteligente — cada elemento carrega especificações, circuitos, potência, materiais
-        e normas aplicáveis.
-      </p>
-    </div>
-    <div class="split even">
-      <div class="benefits reveal">
-        <div class="benefit"><b>Compatibilização</b><span>Elétrica, estrutura, arquitetura e demais disciplinas em um só modelo.</span></div>
-        <div class="benefit"><b>Interferências</b><span>Detecção antecipada de conflitos antes de a obra começar.</span></div>
-        <div class="benefit"><b>Quantitativos</b><span>Geração automática de listas de materiais e documentação.</span></div>
-        <div class="benefit"><b>Rastreabilidade</b><span>Histórico de revisões completo e menor margem de erro humano.</span></div>
-      </div>
-      <div class="reveal">
-        <div class="figure" style="aspect-ratio:4/3">
-          <img alt="Vista 3D de projeto elétrico modelado em BIM" class="thumb" data-alt="Projeto elétrico modelado em BIM — vista 3D" data-src="img/projeto-3d.jpg" loading="lazy" src="img/projeto-3d.jpg" style="border:0;border-radius:0"/>
-        </div>
-        <p class="note">
-          Para o cliente, contratar um projeto em BIM significa menor risco de surpresas, melhor previsibilidade
-          de custos e um ativo digital reutilizável para manutenção e futuras ampliações.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SPDA ============ -->
-<section class="section paper" id="spda">
-  <div class="container">
-    <div class="section-title reveal">
-      <div class="eyebrow">Inspeção e laudo</div>
-      <h2>Inspeção e Laudo Técnico de SPDA</h2>
-      <p>Medições em campo, registro fotográfico e relatório técnico para conformidade e redução de risco.</p>
-    </div>
-
-    <div class="split">
-      <div class="reveal">
-        <h3 style="margin-bottom:15px">O que é avaliado</h3>
-        <div class="steps">
-          <div class="step"><div class="num">1</div><h4>Captação</h4><p>Integridade, fixações e continuidade dos componentes de captação e cobertura.</p></div>
-          <div class="step"><div class="num">2</div><h4>Descida</h4><p>Trajetos, conexões, emendas e pontos críticos ao longo das descidas.</p></div>
-          <div class="step"><div class="num">3</div><h4>Aterramento</h4><p>Medições e avaliação de interligações e equipotencialização do sistema.</p></div>
-        </div>
-
-        <div class="cards" style="margin-top:16px">
-          <div class="card"><h3>Resistência de aterramento</h3><p>Medição com terrômetro, com metodologia definida conforme a necessidade do site e boas práticas.</p></div>
-          <div class="card"><h3>Continuidade elétrica</h3><p>Ensaios com miliohmímetro para verificar interligações, conexões e equipotencialização.</p></div>
-          <div class="card"><h3>Relatório técnico</h3><p>Resultados, evidências fotográficas, não conformidades e recomendações de adequação.</p></div>
-        </div>
-
-        <div class="cta-row">
-          <a class="btn dark" href="https://wa.me/5532984729995?text=Ol%C3%A1%2C%20quero%20agendar%20inspe%C3%A7%C3%A3o%20e%20laudo%20de%20SPDA." target="_blank" rel="noopener" onclick="return gtag_report_conversion('https://wa.me/5532984729995?text=Ol%C3%A1%2C%20quero%20agendar%20inspe%C3%A7%C3%A3o%20e%20laudo%20de%20SPDA.');">Agendar inspeção</a>
-          <a class="btn outline" href="#contato">Falar com a MGX</a>
-        </div>
-      </div>
-
-      <aside class="panel reveal">
-        <div class="figure fit" style="aspect-ratio:1/1">
-          <img alt="Laudo de medição de resistência de aterramento" class="thumb" data-alt="Laudo de medição de resistência de aterramento — curva e análise" data-src="img/laudo-exemplo-2.jpg" loading="lazy" src="img/laudo-exemplo-2.jpg" style="border:0;border-radius:0"/>
-        </div>
-        <div class="meta">
-          <span class="pill">Terrômetro</span>
-          <span class="pill">Miliohmímetro</span>
-          <span class="pill">Rastreabilidade</span>
-          <span class="pill">ART</span>
-        </div>
-        <p class="note">
-          A ABNT NBR 5419 prevê que a necessidade e o nível de proteção sejam definidos por Gerenciamento de
-          Riscos, conforme características da edificação, ocupação e consequências de danos.
-        </p>
-      </aside>
-    </div>
-  </div>
-</section>
-
-<!-- ============ AVCB ============ -->
-<section class="section white" id="avcb">
-  <div class="container">
-    <div class="section-title reveal">
-      <div class="eyebrow">Regularização</div>
-      <h2>AVCB — Corpo de Bombeiros</h2>
-      <p>Regularização e segurança para operação, alvará e conformidade.</p>
-    </div>
-
-    <div class="split">
-      <div class="panel reveal">
-        <p class="lead" style="color:var(--muted); margin-top:0">
-          Para lojas, ambientes comerciais e edificações, a regularização do AVCB é essencial para a segurança e
-          para viabilizar processos de licenciamento e funcionamento.
-        </p>
-        <p style="color:var(--muted); font-size:15.5px">
-          Atuamos com projetos e adequações seguindo as Instruções Técnicas do CBMMG, priorizando soluções
-          executáveis, documentação adequada e atendimento às exigências do Corpo de Bombeiros.
-        </p>
-        <ul class="bullets on-light" style="margin-top:16px">
-          <li><span class="check"></span> Projetos de prevenção e combate a incêndio</li>
-          <li><span class="check"></span> Apoio técnico para adequações e regularização</li>
-          <li><span class="check"></span> Extintores, sinalização e sistemas de alarme</li>
-          <li><span class="check"></span> Integração com os projetos complementares</li>
-        </ul>
-        <div class="cta-row">
-          <a class="btn dark" href="https://wa.me/5532984729995?text=Ol%C3%A1%2C%20preciso%20de%20orienta%C3%A7%C3%A3o%20sobre%20AVCB." target="_blank" rel="noopener" onclick="return gtag_report_conversion('https://wa.me/5532984729995?text=Ol%C3%A1%2C%20preciso%20de%20orienta%C3%A7%C3%A3o%20sobre%20AVCB.');">Solicitar orientação</a>
-          <a class="btn outline" href="#portfolio">Ver exemplos</a>
-        </div>
-      </div>
-
-      <aside class="panel reveal">
-        <div class="figure fit" style="aspect-ratio:4/3">
-          <img alt="Projeto de prevenção e combate a incêndio — plantas e legenda" class="thumb" data-alt="Projeto de prevenção e combate a incêndio — plantas, legenda e cálculo de população" data-src="img/exemplo-avcb-1.jpg" loading="lazy" src="img/exemplo-avcb-1.jpg" style="border:0;border-radius:0"/>
-        </div>
-        <p class="note">Documentação clara e alinhada às exigências do CBMMG para reduzir retrabalho e acelerar a regularização.</p>
-      </aside>
-    </div>
+    <p class="note reveal">Referências por setor são apresentadas sob pedido, respeitando o sigilo de cada contrato.</p>
   </div>
 </section>
 
@@ -802,30 +294,75 @@
   <div class="container">
     <div class="section-title reveal">
       <div class="eyebrow">Trabalhos</div>
-      <h2>Portfólio</h2>
-      <p>Exemplos de projetos, laudos e documentação técnica. Clique para ampliar.</p>
+      <h2>Projetos e laudos</h2>
+      <p>Imagens sem nome, endereço ou selo de cliente. Clique para ampliar.</p>
     </div>
-
     <div class="gallery" id="gallery">
-      <button aria-label="Ampliar" class="thumb reveal" data-alt="Projeto elétrico — prancha executiva" data-src="img/exemplo-projeto-eletrico-1.jpg" type="button"><img alt="Projeto elétrico — prancha executiva" loading="lazy" src="img/exemplo-projeto-eletrico-1.jpg"/></button>
-      <button aria-label="Ampliar" class="thumb reveal" data-alt="Projeto elétrico — diagrama unifilar" data-src="img/exemplo-projeto-eletrico-2-unifilar.jpg" type="button"><img alt="Projeto elétrico — diagrama unifilar" loading="lazy" src="img/exemplo-projeto-eletrico-2-unifilar.jpg"/></button>
-      <button aria-label="Ampliar" class="thumb reveal" data-alt="Projeto elétrico — detalhamento" data-src="img/exemplo-projeto-eletrico-3.jpg" type="button"><img alt="Projeto elétrico — detalhamento" loading="lazy" src="img/exemplo-projeto-eletrico-3.jpg"/></button>
-      <button aria-label="Ampliar" class="thumb reveal" data-alt="Diagrama de proteção" data-src="img/exemplo-projeto-eletrico-5-diagrama-protecao.jpg" type="button"><img alt="Diagrama de proteção" loading="lazy" src="img/exemplo-projeto-eletrico-5-diagrama-protecao.jpg"/></button>
-      <button aria-label="Ampliar" class="thumb reveal" data-alt="Diagrama multifilar" data-src="img/exemplo-projeto-eletrico-6-diagrama-multifilar.jpg" type="button"><img alt="Diagrama multifilar" loading="lazy" src="img/exemplo-projeto-eletrico-6-diagrama-multifilar.jpg"/></button>
-      <button aria-label="Ampliar" class="thumb reveal" data-alt="Projeto elétrico — vista 3D em BIM" data-src="img/projeto-3d.jpg" type="button"><img alt="Projeto elétrico — vista 3D em BIM" loading="lazy" src="img/projeto-3d.jpg"/></button>
-      <button aria-label="Ampliar" class="thumb reveal" data-alt="Projeto de telecom" data-src="img/exemplo-projeto-telecom.jpg" type="button"><img alt="Projeto de telecom" loading="lazy" src="img/exemplo-projeto-telecom.jpg"/></button>
-      <button aria-label="Ampliar" class="thumb reveal" data-alt="Projeto de telecom — detalhe" data-src="img/exemplo-projeto-telecom-2.jpg" type="button"><img alt="Projeto de telecom — detalhe" loading="lazy" src="img/exemplo-projeto-telecom-2.jpg"/></button>
-      <button aria-label="Ampliar" class="thumb reveal" data-alt="Projeto de prevenção e combate a incêndio — plantas e legenda" data-src="img/exemplo-avcb-1.jpg" type="button"><img alt="Projeto de prevenção e combate a incêndio" loading="lazy" src="img/exemplo-avcb-1.jpg"/></button>
-      <button aria-label="Ampliar" class="thumb reveal" data-alt="Projeto de prevenção e combate a incêndio — detalhe" data-src="img/exemplo-avcb-2.jpg" type="button"><img alt="Projeto de prevenção e combate a incêndio — detalhe" loading="lazy" src="img/exemplo-avcb-2.jpg"/></button>
-      <button aria-label="Ampliar" class="thumb reveal" data-alt="Laudo de resistência de aterramento — folha de medições" data-src="img/laudo-exemplo-1.jpg" type="button"><img alt="Laudo de resistência de aterramento — folha de medições" loading="lazy" src="img/laudo-exemplo-1.jpg"/></button>
-      <button aria-label="Ampliar" class="thumb reveal" data-alt="Laudo de resistência de aterramento — curva e análise" data-src="img/laudo-exemplo-2.jpg" type="button"><img alt="Laudo de resistência de aterramento — curva e análise" loading="lazy" src="img/laudo-exemplo-2.jpg"/></button>
-      <button aria-label="Ampliar" class="thumb reveal" data-alt="Laudo de SPDA — registro fotográfico das medições" data-src="img/laudo-exemplo-3.jpg" type="button"><img alt="Laudo de SPDA — registro fotográfico das medições" loading="lazy" src="img/laudo-exemplo-3.jpg"/></button>
-      <button aria-label="Ampliar" class="thumb reveal" data-alt="Inspeção de SPDA — quadros e instalações" data-src="img/exemplo-laudo-spda-1.jpg" type="button"><img alt="Inspeção de SPDA — quadros e instalações" loading="lazy" src="img/exemplo-laudo-spda-1.jpg"/></button>
-      <button aria-label="Ampliar" class="thumb reveal" data-alt="Inspeção de SPDA — descidas e conexões" data-src="img/exemplo-laudo-spda-2.jpg" type="button"><img alt="Inspeção de SPDA — descidas e conexões" loading="lazy" src="img/exemplo-laudo-spda-2.jpg"/></button>
-      <button aria-label="Ampliar" class="thumb reveal" data-alt="Inspeção de SPDA — barramento de equipotencialização" data-src="img/exemplo-laudo-spda-3.jpg" type="button"><img alt="Inspeção de SPDA — barramento de equipotencialização" loading="lazy" src="img/exemplo-laudo-spda-3.jpg"/></button>
-      <button aria-label="Ampliar" class="thumb reveal" data-alt="Ensaio de continuidade com miliohmímetro" data-src="img/exemplo-laudo-spda-4.jpg" type="button"><img alt="Ensaio de continuidade com miliohmímetro" loading="lazy" src="img/exemplo-laudo-spda-4.jpg"/></button>
+      <button aria-label="Ampliar: Galpão com eletrocalhas e quadros, modelado no Revit" class="thumb reveal" data-alt="Galpão com eletrocalhas e quadros, modelado no Revit" data-src="img/capa-galpao.jpg" type="button"><img alt="Galpão com eletrocalhas e quadros, modelado no Revit" loading="lazy" src="img/capa-galpao.jpg"/></button>
+      <button aria-label="Ampliar: Residência com elétrica, hidráulica, telecom e estrutura no mesmo modelo" class="thumb reveal" data-alt="Residência com elétrica, hidráulica, telecom e estrutura no mesmo modelo" data-src="img/bim-todas-disciplinas.jpg" type="button"><img alt="Residência com elétrica, hidráulica, telecom e estrutura no mesmo modelo" loading="lazy" src="img/bim-todas-disciplinas.jpg"/></button>
+      <button aria-label="Ampliar: Corte na laje com eletrodutos e caixas" class="thumb reveal" data-alt="Corte na laje com eletrodutos e caixas" data-src="img/bim-corte-laje.jpg" type="button"><img alt="Corte na laje com eletrodutos e caixas" loading="lazy" src="img/bim-corte-laje.jpg"/></button>
+      <button aria-label="Ampliar: SPDA de galpão em 3D: captação, descidas e aterramento" class="thumb reveal" data-alt="SPDA de galpão em 3D: captação, descidas e aterramento" data-src="img/spda-galpao.jpg" type="button"><img alt="SPDA de galpão em 3D: captação, descidas e aterramento" loading="lazy" src="img/spda-galpao.jpg"/></button>
+      <button aria-label="Ampliar: Telecom e CFTV: rack, eletrocalha e câmeras" class="thumb reveal" data-alt="Telecom e CFTV: rack, eletrocalha e câmeras" data-src="img/telecom-cftv-galpao.jpg" type="button"><img alt="Telecom e CFTV: rack, eletrocalha e câmeras" loading="lazy" src="img/telecom-cftv-galpao.jpg"/></button>
+      <button aria-label="Ampliar: Planta elétrica de documentação com fiação gerada pelo plugin" class="thumb reveal" data-alt="Planta elétrica de documentação com fiação gerada pelo plugin" data-src="img/plugin-planta.jpg" type="button"><img alt="Planta elétrica de documentação com fiação gerada pelo plugin" loading="lazy" src="img/plugin-planta.jpg"/></button>
+      <button aria-label="Ampliar: Diagrama unifilar gerado pelo plugin a partir do modelo" class="thumb reveal" data-alt="Diagrama unifilar gerado pelo plugin a partir do modelo" data-src="img/plugin-unifilar.jpg" type="button"><img alt="Diagrama unifilar gerado pelo plugin a partir do modelo" loading="lazy" src="img/plugin-unifilar.jpg"/></button>
+      <button aria-label="Ampliar: Projeto de prevenção e combate a incêndio" class="thumb reveal" data-alt="Projeto de prevenção e combate a incêndio" data-src="img/exemplo-avcb-1.jpg" type="button"><img alt="Projeto de prevenção e combate a incêndio" loading="lazy" src="img/exemplo-avcb-1.jpg"/></button>
     </div>
-    <p class="note">As imagens são apresentadas sem endereço, identificação do cliente ou código do site, preservando o sigilo de cada contrato.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="https://wa.me/5532984729995?text=Ol%C3%A1%2C%20quero%20receber%20o%20portf%C3%B3lio%20em%20PDF%20da%20MGX." target="_blank" rel="noopener" onclick="return gtag_report_conversion('https://wa.me/5532984729995?text=Ol%C3%A1%2C%20quero%20receber%20o%20portf%C3%B3lio%20em%20PDF%20da%20MGX.');">Pedir o portfólio completo em PDF</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMO TRABALHAMOS ============ -->
+<section class="section white" id="processo">
+  <div class="container">
+    <div class="section-title reveal">
+      <div class="eyebrow">Método</div>
+      <h2>Como trabalhamos</h2>
+    </div>
+    <div class="steps four">
+      <div class="step reveal"><div class="num">1</div><h4>Você manda o que tem</h4><p>Planta, fotos ou o endereço, pelo WhatsApp ou por e-mail.</p></div>
+      <div class="step reveal"><div class="num">2</div><h4>Proposta por escrito</h4><p>Escopo, prazo e valor, com o que entra e o que não entra.</p></div>
+      <div class="step reveal"><div class="num">3</div><h4>Projeto ou inspeção</h4><p>Projeto modelado no Revit. Inspeção em campo, com registro de fotos.</p></div>
+      <div class="step reveal"><div class="num">4</div><h4>Entrega com ART</h4><p>PDF e pranchas impressas, DWG quando você pedir, e ART registrada no CREA.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESPONSÁVEL TÉCNICO ============ -->
+<section class="section white" id="empresa">
+  <div class="container">
+    <div class="split">
+      <div class="reveal">
+        <div class="eyebrow">Quem assina</div>
+        <h2>Engenharia com responsabilidade técnica registrada</h2>
+        <p class="lead" style="color:var(--muted); margin-top:16px">
+          A MGX Engenharia e Soluções Integradas faz projetos complementares e laudos desde 2022. O responsável técnico
+          é o engenheiro eletricista Marcos Andrade Corrêa, que acompanha cada projeto e cada laudo, do primeiro contato
+          à entrega.
+        </p>
+        <p style="color:var(--muted); font-size:15.5px">
+          Os projetos de incêndio e hidrossanitário são feitos pelo corpo técnico da empresa, com ART do profissional
+          habilitado para cada disciplina. Quem responde no WhatsApp é a equipe que vai fazer o trabalho.
+        </p>
+      </div>
+      <aside class="rt reveal">
+        <div class="eyebrow">Responsável técnico</div>
+        <h3>Marcos Andrade Corrêa</h3>
+        <div class="cargo">Engenheiro Eletricista</div>
+        <dl>
+          <dt>Registro</dt><dd>CREA-MG 339105</dd>
+          <dt>RNP</dt><dd>1420947222</dd>
+          <dt>Empresa</dt><dd>MGX Engenharia e Soluções Integradas LTDA</dd>
+          <dt>CNPJ</dt><dd>47.670.234/0001-00</dd>
+          <dt>CREA da empresa</dt><dd>0001834320</dd>
+        </dl>
+        <p class="note" style="color:var(--muted-dark)">
+          Projetos e laudos saem com a Anotação de Responsabilidade Técnica (ART) registrada no CREA, que qualquer
+          pessoa pode conferir.
+        </p>
+      </aside>
+    </div>
   </div>
 </section>
 
@@ -836,22 +373,24 @@
       <div>
         <div class="eyebrow" style="color:var(--brand)">Contato</div>
         <h2 style="color:#fff">Vamos conversar sobre o seu projeto?</h2>
-        <p style="color:var(--muted-dark); font-size:16.5px; margin:12px 0 0">
-          Para agilizar o orçamento, envie o <b style="color:#fff">endereço</b>, o
-          <b style="color:#fff">tipo de obra ou edificação</b> e o <b style="color:#fff">prazo desejado</b>.
-          Retornamos com escopo, prazo e investimento por escrito.
-        </p>
+        <p style="color:var(--muted-dark); font-size:16.5px; margin:12px 0 0">Mande pelo WhatsApp a cidade, o tipo de obra e a planta, se tiver. Respondemos com escopo, prazo e valor por escrito.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://wa.me/5532984729995?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MGX%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" onclick="return gtag_report_conversion('https://wa.me/5532984729995?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MGX%20e%20quero%20um%20or%C3%A7amento.');">Chamar no WhatsApp</a>
+          <a class="btn ghost" href="tel:+5532984729995" onclick="return gtag_report_conversion('tel:+5532984729995');">Ligar</a>
+        </div>
       </div>
-
       <div class="contact-list">
-        <a class="contact-item" href="https://wa.me/5532984729995?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MGX%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" onclick="return gtag_report_conversion('https://wa.me/5532984729995?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MGX%20e%20gostaria%20de%20um%20or%C3%A7amento.');">
-          <span class="ci-ico">💬</span><span class="ci-txt"><small>WhatsApp</small><b>(32) 98472-9995</b></span>
+        <a class="contact-item" href="https://wa.me/5532984729995?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MGX%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" onclick="return gtag_report_conversion('https://wa.me/5532984729995?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MGX%20e%20quero%20um%20or%C3%A7amento.');">
+          <span class="ci-ico"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg></span><span class="ci-txt"><small>WhatsApp</small><b>(32) 98472-9995</b></span>
         </a>
-        <a class="contact-item" href="#" id="mailLink">
-          <span class="ci-ico">✉</span><span class="ci-txt"><small>E-mail</small><b id="mailText">carregando…</b></span>
+        <a class="contact-item js-mail" href="mailto:contato@mgxengenhariasi.com.br">
+          <span class="ci-ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><span class="ci-txt"><small>E-mail</small><b class="js-mail-txt">contato@mgxengenhariasi.com.br</b></span>
         </a>
         <div class="contact-item" style="cursor:default">
-          <span class="ci-ico">📍</span><span class="ci-txt"><small>Escritório</small><b>Rua Visconde de Mauá, 620 — Juiz de Fora/MG</b></span>
+          <span class="ci-ico"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><span class="ci-txt"><small>Escritório</small><b>Rua Visconde de Mauá, 620 · Juiz de Fora/MG</b></span>
+        </div>
+        <div class="contact-item" style="cursor:default">
+          <span class="ci-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span class="ci-txt"><small>Atendimento</small><b>Segunda a sexta, das 8h às 18h. Respondemos rápido, inclusive fora do horário.</b></span>
         </div>
       </div>
     </div>
@@ -864,43 +403,42 @@
       <div>
         <img alt="MGX Engenharia e Soluções Integradas" loading="lazy" src="img/mgx-logo.png"/>
         <div style="color:rgba(255,255,255,.72)">MGX Engenharia e Soluções Integradas LTDA</div>
-        <div style="margin-top:8px; font-size:13px">CNPJ 47.670.234/0001-00</div>
-        <div style="font-size:13px">Rua Visconde de Mauá, 620 — Juiz de Fora/MG</div>
-        <div style="font-size:13px">Responsável técnico: CREA-MG 339105</div>
+        <div style="margin-top:8px; font-size:13px">CNPJ 47.670.234/0001-00 · CREA-MG 0001834320</div>
+        <div style="font-size:13px">Rua Visconde de Mauá, 620 · Juiz de Fora/MG</div>
+        <div style="font-size:13px">Responsável técnico: Marcos Andrade Corrêa, CREA-MG 339105</div>
       </div>
       <div>
         <h4>Serviços</h4>
         <ul>
-          <li><a href="#servicos">Projetos elétricos</a></li>
-          <li><a href="#servicos">Projetos de telecom</a></li>
-          <li><a href="#spda">SPDA e laudos</a></li>
-          <li><a href="#avcb">AVCB</a></li>
-          <li><a href="#bim">Projetos em BIM</a></li>
+          <li><a href="projetos-bim.html">Projetos em BIM (a distância)</a></li>
+          <li><a href="projeto-eletrico-juiz-de-fora.html">Projeto elétrico em Juiz de Fora</a></li>
+          <li><a href="spda.html">SPDA (para-raios)</a></li>
+          <li><a href="avcb.html">AVCB e projeto de incêndio</a></li>
+          <li><a href="laudo-eletrico.html">Laudo das instalações elétricas</a></li>
         </ul>
       </div>
       <div>
         <h4>Contato</h4>
         <ul>
           <li><a href="tel:+5532984729995">(32) 98472-9995</a></li>
-          <li><a href="#" id="mailLinkFoot">carregando…</a></li>
-          <li><a href="https://wa.me/5532984729995?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MGX%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" onclick="return gtag_report_conversion('https://wa.me/5532984729995?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MGX%20e%20gostaria%20de%20um%20or%C3%A7amento.');">WhatsApp</a></li>
-          <li><a href="#contato">Solicitar orçamento</a></li>
+          <li><a class="js-mail js-mail-txt" href="mailto:contato@mgxengenhariasi.com.br">contato@mgxengenhariasi.com.br</a></li>
+          <li><a href="https://wa.me/5532984729995?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MGX%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" onclick="return gtag_report_conversion('https://wa.me/5532984729995?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MGX%20e%20quero%20um%20or%C3%A7amento.');">WhatsApp</a></li>
+          <li>Segunda a sexta, das 8h às 18h</li>
         </ul>
       </div>
     </div>
     <div class="foot-bottom">
       <div>© <span id="ano">2026</span> MGX Engenharia e Soluções Integradas LTDA. Todos os direitos reservados.</div>
-      <div>Atendimento em Minas Gerais e Rio de Janeiro</div>
+      <div>Inspeções e laudos em Juiz de Fora e região. Projetos em BIM para todo o Brasil.</div>
     </div>
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/5532984729995?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MGX%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" aria-label="Falar no WhatsApp" onclick="return gtag_report_conversion('https://wa.me/5532984729995?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MGX%20e%20gostaria%20de%20um%20or%C3%A7amento.');">
+<a class="wa-float" href="https://wa.me/5532984729995?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MGX%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" aria-label="Falar no WhatsApp" onclick="return gtag_report_conversion('https://wa.me/5532984729995?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MGX%20e%20quero%20um%20or%C3%A7amento.');">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.75-.71 2-1.4.25-.69.25-1.28.17-1.4-.07-.13-.27-.2-.57-.35M12.04 21.5h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.2-3.58.94.96-3.49-.23-.36a9.42 9.42 0 0 1-1.44-5.03c0-5.2 4.24-9.44 9.47-9.44 2.53 0 4.9.99 6.69 2.78a9.39 9.39 0 0 1 2.77 6.67c0 5.2-4.24 9.45-9.46 9.45m8.05-17.5A11.32 11.32 0 0 0 12.04.67C5.76.67.65 5.78.65 12.05c0 1.99.52 3.94 1.51 5.65L.56 23.33l5.77-1.51a11.35 11.35 0 0 0 5.71 1.53h.01c6.28 0 11.39-5.11 11.39-11.38 0-3.04-1.18-5.9-3.34-8.05"/></svg>
   <span>WhatsApp</span>
 </a>
 
-<!-- Lightbox -->
 <div aria-hidden="true" class="lightbox" id="lightbox">
   <div aria-label="Visualizador de imagens" aria-modal="true" class="lb-card" role="dialog">
     <div class="lb-top">
@@ -915,115 +453,6 @@
   </div>
 </div>
 
-<script>
-/* ---- Lightbox ---- */
-(function(){
-  const thumbs = Array.prototype.slice.call(document.querySelectorAll('.thumb[data-src]'));
-  const lightbox = document.getElementById('lightbox');
-  const lbImg = document.getElementById('lbImg');
-  const lbCaption = document.getElementById('lbCaption');
-  const lbClose = document.getElementById('lbClose');
-  const lbPrev = document.getElementById('lbPrev');
-  const lbNext = document.getElementById('lbNext');
-  if(!thumbs.length || !lightbox) return;
-
-  let idx = 0;
-  const items = thumbs.map(t => ({ src: t.dataset.src, alt: t.dataset.alt || 'Imagem' }));
-
-  function openAt(i){
-    idx = (i + items.length) % items.length;
-    lbImg.src = items[idx].src;
-    lbImg.alt = items[idx].alt;
-    lbCaption.textContent = (idx+1) + ' / ' + items.length + ' — ' + items[idx].alt;
-    lightbox.classList.add('open');
-    lightbox.setAttribute('aria-hidden','false');
-    document.body.style.overflow='hidden';
-  }
-  function close(){
-    lightbox.classList.remove('open');
-    lightbox.setAttribute('aria-hidden','true');
-    document.body.style.overflow='';
-    lbImg.src = '';
-  }
-  thumbs.forEach((t,i) => t.addEventListener('click', () => openAt(i)));
-  lbClose.addEventListener('click', close);
-  lbPrev.addEventListener('click', e => { e.stopPropagation(); openAt(idx-1); });
-  lbNext.addEventListener('click', e => { e.stopPropagation(); openAt(idx+1); });
-  lightbox.addEventListener('click', e => { if(e.target === lightbox) close(); });
-  window.addEventListener('keydown', e => {
-    if(!lightbox.classList.contains('open')) return;
-    if(e.key === 'Escape') close();
-    if(e.key === 'ArrowLeft') openAt(idx-1);
-    if(e.key === 'ArrowRight') openAt(idx+1);
-  });
-})();
-
-/* ---- Menu mobile ---- */
-function toggleMenu(){
-  const btn = document.getElementById('menuToggle');
-  const nav = document.getElementById('navMobile');
-  btn.classList.toggle('open');
-  nav.classList.toggle('open');
-  btn.setAttribute('aria-expanded', btn.classList.contains('open') ? 'true' : 'false');
-}
-function closeMenu(){
-  const btn = document.getElementById('menuToggle');
-  document.getElementById('navMobile').classList.remove('open');
-  btn.classList.remove('open');
-  btn.setAttribute('aria-expanded','false');
-}
-document.addEventListener('click', function(e){
-  const btn = document.getElementById('menuToggle');
-  const nav = document.getElementById('navMobile');
-  if(!btn.contains(e.target) && !nav.contains(e.target)) closeMenu();
-});
-
-/* ---- E-mail montado no cliente (evita coleta automática por robôs de spam) ---- */
-(function(){
-  const addr = 'mgx.engenharia.si' + '@' + 'gmail.com';
-  const link = document.getElementById('mailLink');
-  const txt  = document.getElementById('mailText');
-  const foot = document.getElementById('mailLinkFoot');
-  if(link) link.href = 'mailto:' + addr;
-  if(txt)  txt.textContent = addr;
-  if(foot){ foot.href = 'mailto:' + addr; foot.textContent = addr; }
-})();
-
-document.getElementById('ano').textContent = new Date().getFullYear();
-
-/* ---- Animação de entrada ---- */
-(function(){
-  const els = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
-  window.__revealReady = true;
-
-  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-    els.forEach(el => el.classList.add('in'));
-    return;
-  }
-  els.forEach((el,i) => { el.style.transitionDelay = Math.min(i % 6, 5) * 50 + 'ms'; });
-
-  // Revela tudo que já passou da borda inferior da tela. Uma varredura (em vez de
-  // IntersectionObserver) garante que nada fique invisível quando a página pula
-  // direto para uma âncora — nesse caso as seções acima nunca "entram" na tela.
-  let pending = [].concat(els), queued = false;
-  function sweep(){
-    queued = false;
-    const limit = window.innerHeight * 0.94;
-    pending = pending.filter(el => {
-      if(el.getBoundingClientRect().top < limit){ el.classList.add('in'); return false; }
-      return true;
-    });
-    if(!pending.length){
-      window.removeEventListener('scroll', onChange);
-      window.removeEventListener('resize', onChange);
-    }
-  }
-  function onChange(){ if(!queued){ queued = true; requestAnimationFrame(sweep); } }
-  window.addEventListener('scroll', onChange, { passive:true });
-  window.addEventListener('resize', onChange);
-  window.addEventListener('load', onChange);
-  sweep();
-})();
-</script>
+<script src="js/site.js"></script>
 </body>
 </html>
